@@ -30,14 +30,108 @@
 <!-- END Home Head Section -->
 
 
-<!-- Top Servicemen -->
 
+<!-- OUR Services Section -->
+<div id="our-services" class="services-section container">
 
-<!-- End Top Servicemen -->
+    <div class="section-head">
+        <h2 class="mx-auto">OUR SERVICES</h2>
+    </div>
+    <div class="row section-subhead">
+        <div class="col-md-6">
+            <p class="text-center mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, iste ipsa. Provident.</p>
+        </div>
+    </div>
+    
+    <div class="row section-content services-section-content">
+        <div class="col-lg-3 col-md-4 col-sm-6 services-section-content-col mb-5" *ngFor="let item of products ">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="services-section-icon">
+                        <i class="{{item.icon}}"></i>
+                    </span>
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <p class="card-text">{{item.desc}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
 
+<!-- END Our Services Section -->
 
+<!-- Handyman section -->
+<div id="handyman-section" class="handyman-section container">
+    <div class="section-head">
+        <h2 class="mx-auto">HANDYMAN FOR YOU</h2>
+    </div>
+    <div class="row section-subhead">
+        <div class="col-md-6">
+            <p class="text-center mx-auto">Handyman from various services</p>
+        </div>
+    </div>
 
+    <div class="handyman-section-cases card-container justify-content-center">
+        <div class="card" (click)="handymanCase.value = 'electricians'">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+            <span>Electricians</span>
+        </div>
+        <div class="card" (click)="handymanCase.value = 'carpenters'">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+            <span>Carpenters</span>
+        </div>
+        <div class="card" (click)="handymanCase.value = 'plumbers'">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>    
+            <span>Plumbers</span>
+        </div>
+    </div>
 
+    <div class="handyman-section-values" [ngSwitch]="handymanCase.value" >
+
+        <div class="container mt-3" *ngSwitchCase="'electricians'">
+            <div class="row text-center section-subhead">
+                <div class="col-12 primary-light-gray">Some Electricians in the town</div>
+            </div>
+            <div class="row card-container mt-3 mt-lg-2 justify-content-center">
+                <div class="card col-sm-3 handyman-section-values-img primary-light-gray"
+                    style="background-image: url('../../assets/img/image01.jpg')"
+                    *ngFor="let electrician of electricians">
+                    {{electrician.name}}
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mt-3" *ngSwitchCase="'carpenters'">
+            <div class="row text-center section-subhead">
+                <div class="col-12 primary-light-gray">Some Carpenters in the town</div>
+            </div>
+            <div class="row card-container mt-3 mt-lg-2 justify-content-center">
+                <div class="card col-sm-3 handyman-section-values-img primary-light-gray"
+                [ngStyle]="{'background-image': carpenter.img_url}"
+                    *ngFor="let carpenter of carpenters">
+                    <div class="handyman-section-values-content">
+                        {{carpenter.name}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mt-3" *ngSwitchCase="'plumbers'">
+            <div class="row text-center section-subhead">
+                <div class="col-12 primary-light-gray">Some Plumbers in the town</div>
+            </div>
+            <div class="row card-container mt-3 mt-lg-2 justify-content-center">
+                <div class="card"
+                    *ngFor="let plumber of plumbers">
+                    {{plumber.name}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- END Handyman section -->
 
 
 <!-- appointment section -->
@@ -83,31 +177,3 @@
     </div>
 </div>
 <!-- END appointment section -->
-
-
-<!-- OUR Services Section -->
-<div id="our-services" class="services-section container">
-    <div class="section-head">
-        <h2 class="mx-auto">OUR SERVICES</h2>
-    </div>
-    <div class="row services-section-subhead">
-        <div class="col-md-6">
-            <p class="text-center mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, iste ipsa. Provident.</p>
-        </div>
-    </div>
-
-    <div class="row section-content services-section-content">
-        <div class="col-lg-3 col-md-4 col-sm-6 services-section-content-col mb-5" *ngFor="let item of products ">
-            <div class="card">
-                <div class="card-body text-center">
-                    <span class="services-section-icon">
-                        <i class="{{item.icon}}"></i>
-                    </span>
-                    <h5 class="card-title">{{item.name}}</h5>
-                    <p class="card-text">{{item.desc}}</p>
-                </div>
-              </div>
-        </div>
-    </div>
-</div>
-<!-- END Our Services Section -->

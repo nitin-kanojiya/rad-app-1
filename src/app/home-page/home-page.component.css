@@ -56,6 +56,7 @@
     background-color: #FA9600;
     animation: scaling 0.5s 1;
     transform: scale(1.1, 1.2);
+    box-shadow: 2px 3px 5px #9BA5BA;
 
 }
 .head-contact span a{
@@ -153,6 +154,13 @@
 .section-head {
 	margin: 4rem 0 0 0;
 }
+.section-subhead{
+    justify-content: center;
+}
+.section-subhead div{
+    color: #9BA5BA;
+    font-size: 1.1rem;
+}
 
 
 /* ********************** 
@@ -180,6 +188,8 @@
 .services-section-content-col:hover div.card{
     border: 0.5px solid #9BA5BA;
     border-radius: 0.5rem;
+    box-shadow: 3px 3px 5px #9BA5BA;
+
 }
 .services-section-content-col div.card div .card-text{
     display: none;
@@ -239,8 +249,8 @@
 .appointment-section-form button{
     padding-left: 3rem;
     padding-right: 3rem;
-    color: #FFFFFF;
     font-weight: 400;
+    color: #FFFFFF;
     background-color: #3c6bda;
     border: 1px solid #2861CF;
     border-radius: 2rem;
@@ -251,6 +261,8 @@
     background-color: #FA9600;
     animation: scaling 0.5s 1;
     transform: scale(1.1, 1.2);
+    box-shadow: 3px 1px 5px #fa960042;
+
 }
 
 @media only screen and (max-width:768px){
@@ -262,4 +274,100 @@
     .appointment-section-form textarea {
         width: 86%;
     }
+}
+
+
+/* ********************** 
+    Handyman section
+********************** */
+.handyman-section .section-head h2{
+    font-size: 1.6rem;
+}
+
+.card svg.material-icons path {
+  fill: #fff;
+}
+
+.handyman-section-cases.card-container, .handyman-section-values .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.handyman-section-cases .card{
+    color: #FFFFFF;
+    background-color: #3c6bda;
+    border: 1px solid #2861CF;
+    border-radius: 2rem;
+    height: 40px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    cursor: pointer;
+}
+.handyman-section-cases .card:hover{
+    transform: scale(1.1, 1.2);
+    animation: scaling 0.5s 1;
+    background-color: #FA9600;
+    border-color: #FA9600;
+    box-shadow: 3px 3px 5px #9BA5BA;
+}
+.handyman-section-values .card {
+    border-radius: 4px;
+    border: 1px solid #eee;
+    height: 200px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;   
+}
+.handyman-section-values .card:hover {
+    border: 1px solid #BFBFBF;
+    box-shadow: 5px 5px 5px #9BA5BA;
+    cursor: pointer;
+    color: #FA9600;
+    
+}
+.handyman-section-values .card::after {
+    content: '';
+    position: absolute;
+    width: 100%; height:100%;
+    top:0; left:0;
+    background:#000000af;
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+}
+.handyman-section-values .card:hover::after {
+    opacity: 1;
+}
+
+.handyman-section-values-img{
+    background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	height:5rem;
+	width:5rem;
+}
+.handyman-section-values .card .handyman-section-values-content{
+
+    font-variant-caps: all-petite-caps;
+}
+.handyman-section-values .card:hover .handyman-section-values-content{
+    color: #FA9600;
+    font-size: 1.5rem;
+    z-index: 2;
+    transform: translateY(-20px);
 }

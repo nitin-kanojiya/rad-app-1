@@ -7,7 +7,7 @@ mat-toolbar{
 .img-logo{
     margin-left: 2rem;
     padding: 0.5rem;
-    width: 5rem;
+    width: 5.2rem;
     border: 1px solid white;
     border-radius: 10px;
 }
@@ -22,13 +22,14 @@ ul li{
     display: inline;
     margin-right: 2rem;
     padding: 0.5rem;
+    cursor: pointer;
 }
 a{
     text-decoration: none;
 }
 a span{
     color: #22262D;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 ul li:hover a span{
     color: #4F84EB;

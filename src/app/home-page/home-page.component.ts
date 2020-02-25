@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { tns } from 'tiny-slider/src/tiny-slider';
 
 @Component({
   selector: 'app-home-page',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class HomePageComponent implements OnInit {
 
   constructor() { }
+
+
   products=[
     { 
       "name": "Painting",
@@ -50,6 +53,69 @@ export class HomePageComponent implements OnInit {
       "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, repellat."
     }
   ];
+
+  handymanCase={
+    value:"carpenters"
+  }
+  plumbers=[
+    {
+      "name": "name p1",
+      "age": 21
+    },
+    {
+      "name": "name p2",
+      "age": 20
+    },
+    {
+      "name": "name 3",
+      "age": 22
+    },
+    {
+      "name": "name 4",
+      "age": 20
+    }
+  ];
+  electricians=[
+    {
+      "name": "name e1",
+      "age": 21
+    },
+    {
+      "name": "name e2",
+      "age": 20
+    },
+    {
+      "name": "name 3",
+      "age": 22
+    },
+    {
+      "name": "name 4",
+      "age": 20
+    }
+  ];
+  carpenters=[
+    {
+      "name": "Mukesh suri",
+      "age": 21,
+      "img_url": "url('../../assets/img/carpenter/carpenter(1).jpg')"
+    },
+    {
+      "name": "raj Ambani",
+      "age": 20,
+      "img_url": "url('../../assets/img/carpenter/carpenter(2).jpg')"
+    },
+    {
+      "name": "Pandit ramfal",
+      "age": 22,
+      "img_url": "url('../../assets/img/carpenter/carpenter(3).jpg')"
+    },
+    {
+      "name": "Mohd Abdul",
+      "age": 20,
+      "img_url": "url('../../assets/img/carpenter/carpenter(4).jpg')"
+    }
+  ];
+   
   ngOnInit() {
   }
 
