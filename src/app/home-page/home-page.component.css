@@ -4,7 +4,7 @@
 
 .head-section-img{
     background-color: #ffffff;
-    clip-path: polygon(26% 0%, 100% 0%, 100% 100%, 0% 100%);
+    /* clip-path: polygon(26% 0%, 100% 0%, 100% 100%, 0% 100%); */
     overflow: hidden;
 }
 .head-img{
@@ -280,6 +280,10 @@
 /* ********************** 
     Handyman section
 ********************** */
+.handyman-section{
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
 .handyman-section .section-head h2{
     font-size: 1.6rem;
 }
@@ -370,4 +374,64 @@
     font-size: 1.5rem;
     z-index: 2;
     transform: translateY(-20px);
+    text-shadow: 1px 1px 3px #22262D;
+}
+
+/* ********************** 
+    Why us section
+********************** */
+
+.why-us-section{
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+.why-us-section-content div span i{
+    font-size: 2rem;
+    border: 1px solid #9ba5ba79;
+    border-radius: 250rem;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    box-shadow: 2px 2px 20px #9BA5BA;
+}
+/* ********************** 
+    Call us section
+********************** */
+
+.call-us-section{
+    padding-bottom: 4rem;
+}
+.call-us-section div .number{
+    font-size: 2rem;
+}
+
+/* ********************** 
+    Map section
+********************** */
+
+.map-section{
+    position: relative;
+    height:50%;
+}
+.map-section h3{
+    z-index: 5;
+}
+.map-section iframe{
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+}
+@media only screen and (max-width: 567px){
+	.map-section{
+		height: 30%;
+	}
+}
+.map-section::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #3c6bda2d;
 }

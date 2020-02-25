@@ -55,42 +55,50 @@ export class HomePageComponent implements OnInit {
   ];
 
   handymanCase={
-    value:"carpenters"
+    value:"plumbers"
   }
   plumbers=[
     {
-      "name": "name p1",
-      "age": 21
+      "name": "ranjan pant",
+      "age": 21,
+      "img_url": "url('../../assets/img/plumber/plumber (1).jpg')"
     },
     {
-      "name": "name p2",
-      "age": 20
+      "name": "ravi kaler",
+      "age": 20,
+      "img_url": "url('../../assets/img/plumber/plumber (2).jpg')"
     },
     {
-      "name": "name 3",
-      "age": 22
+      "name": "rohit kamboj",
+      "age": 22,
+      "img_url": "url('../../assets/img/plumber/plumber (3).jpg')"
     },
     {
-      "name": "name 4",
-      "age": 20
+      "name": "shahid khan",
+      "age": 20,
+      "img_url": "url('../../assets/img/plumber/plumber (4).jpg')"
     }
   ];
   electricians=[
     {
-      "name": "name e1",
-      "age": 21
+      "name": "Aftab ahmed",
+      "age": 21,
+      "img_url": "url('../../assets/img/electrician/electrician (1).jpg')"
     },
     {
-      "name": "name e2",
-      "age": 20
+      "name": "Veer singh",
+      "age": 20,
+      "img_url": "url('../../assets/img/electrician/electrician (2).jpg')"
     },
     {
-      "name": "name 3",
-      "age": 22
+      "name": "bhole lal",
+      "age": 22,
+      "img_url": "url('../../assets/img/electrician/electrician (3).jpg')"
     },
     {
-      "name": "name 4",
-      "age": 20
+      "name": "rizwi shah",
+      "age": 20,
+      "img_url": "url('../../assets/img/electrician/electrician (4).jpg')"
     }
   ];
   carpenters=[
