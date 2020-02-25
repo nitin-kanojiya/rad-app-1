@@ -1,0 +1,113 @@
+<!-- Home Head Section -->
+<div id="home-head" class="home-head-section container-fluid">
+    <div class="row">
+        <div class="home-head-section-data col-sm-7 col-lg-7">
+            <h3 class="company-name">radiating.Planet</h3>
+            <span class="head-section-data-head">Handyman Services</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe.</p>
+            <div class="head-contact">
+                    <button class="contact-btn btn ">
+                        Contact Us
+                    </button>
+                    
+                    <span class="btn">
+                        <a href="">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </span>                    
+                    <span class="btn">
+                        <a href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </span>
+            </div>
+        </div>
+        <div class="head-section-img text-center col-lg-5 col-sm-5">
+            <img src="../../assets/img/worker-2.png" class="head-img" alt="">
+        </div>
+    </div>
+</div>
+<!-- END Home Head Section -->
+
+
+<!-- Top Servicemen -->
+
+
+<!-- End Top Servicemen -->
+
+
+
+
+
+
+<!-- appointment section -->
+<div id="appointment-section" class="container-fluid appointment-section primary-bg-dark">
+    <div class="row appointment-section-head">
+        <p class="mx-auto text-center">Book your service</p>
+    </div>
+    <div class="row appointment-section-subhead">
+        <div class="text-center primary-light-gray mx-auto col-md-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, vero qui quos dignissimos tempore itaque laboriosam impedit a sunt similique.
+        </div>
+    </div>
+
+    <div class="appointment-section-form  text-light">
+        <div class="row mt-3 mx-auto text-center">
+            <div class=" col-md-4 mt-3 col-lg-4">
+                <div class="row justify-content-center">
+                    <input class="form-control" id="" placeholder="First name" type="text">
+                </div>
+                <div class="row mt-3 justify-content-center">
+                    <input class="form-control" id="" placeholder="Last name" type="text">
+                </div>
+            </div>
+            <div class="col-md-4 mt-3 col-lg-4">
+                <div class="row justify-content-center">
+                    <input class="form-control" id="" placeholder="Your Email" type="text">
+                </div>
+                <div class="row mt-3 justify-content-center">
+                    <input class="form-control" id="" placeholder="Service Type" type="text">
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-4 justify-content-center">
+                <textarea class="form-control my-3 mx-auto" id="" name="" placeholder="Message" cols="" rows="3" ></textarea>
+            </div>            
+        </div>
+        <div class="row my-3">
+            <div class="col-3"></div>
+            <div class="text-center col-6">
+                <button class="btn ">SUBMIT</button>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+</div>
+<!-- END appointment section -->
+
+
+<!-- OUR Services Section -->
+<div id="our-services" class="services-section container">
+    <div class="section-head">
+        <h2 class="mx-auto">OUR SERVICES</h2>
+    </div>
+    <div class="row services-section-subhead">
+        <div class="col-md-6">
+            <p class="text-center mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, iste ipsa. Provident.</p>
+        </div>
+    </div>
+
+    <div class="row section-content services-section-content">
+        <div class="col-lg-3 col-md-4 col-sm-6 services-section-content-col mb-5" *ngFor="let item of products ">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="services-section-icon">
+                        <i class="{{item.icon}}"></i>
+                    </span>
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <p class="card-text">{{item.desc}}</p>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+<!-- END Our Services Section -->

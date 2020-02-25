@@ -1,0 +1,265 @@
+/* ********************** 
+    Home head section
+********************** */
+
+.head-section-img{
+    background-color: #ffffff;
+    clip-path: polygon(26% 0%, 100% 0%, 100% 100%, 0% 100%);
+    overflow: hidden;
+}
+.head-img{
+    position: relative;
+    width: inherit;
+    left: 50px;
+}
+.home-head-section-data{
+    height: inherit;
+    margin: 2rem 0 0 0;
+    padding-left: 5rem;
+}
+.head-section-data-head{
+    margin-top: 20rem;
+    font-family: 'Montserrat';
+    color: #FA9600;
+    font-size: 3.0rem;
+    font-weight: 800;
+}
+.home-head-section-data p{
+    font-size: 1.4rem;
+    color: #22262D;
+}
+.home-head-section-data h3{
+    color: #22262D;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+.company-name{
+    font-family: 'Niconne' ;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+.head-contact{
+    margin-top: 2rem;
+}
+.head-contact .contact-btn{
+    padding-right: 2rem;
+    padding-left: 2rem;
+    color: #FFFFFF;
+    font-weight: 400;
+    background-color: #3c6bda;
+    border: 2px solid #2861CF;
+    border-radius: 2rem;
+}
+.head-contact .contact-btn:hover {
+    border: #FA9600;
+    color: #ffffff;
+    background-color: #FA9600;
+    animation: scaling 0.5s 1;
+    transform: scale(1.1, 1.2);
+
+}
+.head-contact span a{
+    color: #3c6bda;
+}
+.head-contact span {
+    font-size: 2rem;
+    margin-left: 2rem;
+    transform: scale(1.2, 1.2);
+}
+.head-contact span:hover a{
+    color: #FA9600;
+}
+.head-contact span:hover {
+    transform: scale(1.3, 1.3);
+}
+
+@keyframes scaling {
+    from{
+        transform: scale(1, 1);
+    }
+    to{
+        transform: scale(1.1, 1.2);
+    }
+}
+ @media only screen and (max-width:992px){
+    .head-section-img{
+        background-color: #ffffff;
+        /* clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); */
+        overflow: hidden;
+    }
+    .head-img{
+        
+        top: 5px;
+    }
+    .home-head-section-data{
+        height: inherit;
+        margin: 2rem 0 0 0;
+        padding-left: 1rem;
+        padding-right: 0;
+    }    
+    .home-head-section-data p{
+        width: inherit;
+
+        margin-top: 2rem;
+    }  
+    .head-section-data-head{
+        line-height: 2.5rem;
+    }
+ }
+ @media only screen and (max-width:900px) and (min-width:576px){
+    .head-img {
+        width: auto;
+        top: 5px;
+        left: auto;
+    }    
+ }
+
+@media only screen and (max-width:768px) and (min-width:576px){
+    .head-contact span {
+        margin-left: 1rem;
+    }       
+}
+@media only screen and (max-width:576px){
+    .head-section-img{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        overflow: hidden;
+        display: none;
+    }
+    .head-img{
+        display: none;
+    }
+    .home-head-section-data{
+        height: inherit;
+        margin: 2rem 0 0 0;
+        padding-left: 1rem;
+        padding-right: 0;
+    }
+    .home-head-section-data p{
+        padding-right: 1rem;
+        width: inherit;
+        margin-top: 1rem;
+    }
+}
+
+/* ********************** 
+    section head content
+********************** */
+
+.section-head h2{
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    width: fit-content;
+}
+.section-head {
+	margin: 4rem 0 0 0;
+}
+
+
+/* ********************** 
+    services section
+********************** */
+.services-section-subhead{
+    justify-content: center;
+}
+.services-section-subhead div{
+    color: #9BA5BA;
+    font-size: 1.1rem;
+}
+.services-section-content{
+    margin-top: 2rem;
+    color: #9BA5BA;
+}
+.services-section-icon{
+    font-size: 2rem;
+}
+.services-section-content-col div.card{
+    border: 0.1px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.services-section-content-col:hover div.card{
+    border: 0.5px solid #9BA5BA;
+    border-radius: 0.5rem;
+}
+.services-section-content-col div.card div .card-text{
+    display: none;
+    transform: translateY(100px);
+}
+.services-section-content-col div.card:hover div .card-text{
+    display: block;
+    transform: translateY(-30px);
+    animation: translateDescAnim 1s 1;
+    margin-bottom: 0;
+}
+@keyframes translateDescAnim{
+    from{
+        transform: translateY(100px);
+    }
+    to{
+        transform: translateY(-30px);
+    }
+}
+
+.services-section-content-col div.card:hover div span i{
+    transform: translate(-70px, 0px);
+}
+.services-section-content-col div.card:hover div span{
+    color: #FA9600;
+}
+.services-section-content-col div.card:hover div .card-title{
+    color: #22262D;
+    transform: translate(50px,-38px);
+}
+
+/* ********************** 
+    Appointment section
+********************** */
+.appointment-section{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.appointment-section-head{
+    font-variant-caps: all-petite-caps;
+    color: #FFFFFF;
+    font-size: 2rem;
+    font-weight: 200;
+    letter-spacing: 0.5rem;
+}
+.appointment-section-subhead{
+    color: #d4d4d4;
+}
+.appointment-section-form input{
+    width: 80%;
+}
+.appointment-section-form input, .appointment-section-form textarea {
+    background-color: #22262D;
+    color: #FFFFFF;
+    border: 1px solid #d4d4d4;
+}
+.appointment-section-form button{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    color: #FFFFFF;
+    font-weight: 400;
+    background-color: #3c6bda;
+    border: 1px solid #2861CF;
+    border-radius: 2rem;
+}
+.appointment-section-form button:hover{
+    border: #FA9600;
+    color: #ffffff;
+    background-color: #FA9600;
+    animation: scaling 0.5s 1;
+    transform: scale(1.1, 1.2);
+}
+
+@media only screen and (max-width:768px){
+    .appointment-section-form textarea {
+        width: 84%;
+    }
+}
+@media only screen and (max-width:576px){
+    .appointment-section-form textarea {
+        width: 86%;
+    }
+}

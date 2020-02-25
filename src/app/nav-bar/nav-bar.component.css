@@ -1,0 +1,35 @@
+mat-toolbar{
+    padding: 3rem 2rem 3rem 2rem;
+}
+.space-filler{
+    flex: 1 1 auto;
+}
+.img-logo{
+    margin-left: 2rem;
+    padding: 0.5rem;
+    width: 5rem;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 700;
+    font-variant-caps: all-petite-caps;
+}
+ul li{
+    display: inline;
+    margin-right: 2rem;
+    padding: 0.5rem;
+}
+a{
+    text-decoration: none;
+}
+a span{
+    color: #22262D;
+    font-size: 1.1rem;
+}
+ul li:hover a span{
+    color: #4F84EB;
+}
