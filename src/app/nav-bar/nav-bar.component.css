@@ -8,8 +8,6 @@ mat-toolbar{
     margin-left: 2rem;
     padding: 0.5rem;
     width: 5.2rem;
-    border: 1px solid white;
-    border-radius: 10px;
 }
 ul{
     margin: 0;
@@ -34,3 +32,9 @@ a span{
 ul li:hover a span{
     color: #4F84EB;
 }
+.company-name{
+    font-family: 'Niconne' ;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+
