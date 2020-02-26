@@ -9,14 +9,24 @@ mat-toolbar{
     padding: 0.5rem;
     width: 5.2rem;
 }
-ul{
+ ul{
     margin: 0;
     padding: 0;
     list-style: none;
     font-weight: 700;
     font-variant-caps: all-petite-caps;
 }
-ul li{
+.mobile-toolbar-container{
+    background-color: #FFFFFF;
+    margin: 4rem auto 4rem auto;
+}
+.mobile-toolbar-container ul{
+    margin-left: 3rem;
+}
+.mobile-toolbar-container ul li{
+    margin-bottom: 1rem;
+}
+.desktop-toolbar ul li{
     display: inline;
     margin-right: 2rem;
     padding: 0.5rem;
@@ -38,3 +48,18 @@ ul li:hover a span{
     font-weight: 700;
 }
 
+.mobile-toolbar{
+    display: none;
+}
+@media only screen and (max-width: 603px){
+    .desktop-toolbar{
+        display: none;
+    }
+    .mobile-toolbar{
+        display: block;
+    }    
+}
+.mobile-toolbar i{
+    font-size: 2rem;
+    cursor: pointer;
+}

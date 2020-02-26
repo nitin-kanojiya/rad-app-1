@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class NavBarComponent implements OnInit {
 
   constructor() { }
+  showToolbar= false;
 
   ngOnInit() {
+  }
+
+  navEvent(){
+    this.showToolbar= !this.showToolbar;
   }
 
 }

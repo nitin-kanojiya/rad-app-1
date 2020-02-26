@@ -3,27 +3,70 @@
 
     <img class="img-logo" src="../../assets/img/logo_b.png" alt="">
     <span class="space-filler"></span>
-    <ul>
-        <li>
-            <a href="">
-                <span>home</span>
-            </a>
-        </li>
-        <li>
-            <a href="">
-                <span>About us</span>
-            </a>
-        </li>
-        <li>
-            <a href="">
-                <span>services</span>
-            </a>
-        </li>
-        <li>
-            <a href="">
-                <span>contact us</span>
-            </a>
-        </li>
-    </ul>
-    <span class="space-filler"></span>
+    <div class="mobile-toolbar">
+        <span class=""
+            (click)="navEvent()">
+
+            <i [hidden]="showToolbar"
+            class="fas fa-align-right"></i>
+            
+            <i [hidden]="!showToolbar"
+            class="fas fa-times"></i>            
+        </span>
+
+        
+    </div>
+    <div class="desktop-toolbar">
+        <ul>
+            <li>
+                <a href="">
+                    <span>home</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>About us</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>services</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>contact us</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <span class="desktop-toolbar space-filler"></span>
+
 </mat-toolbar>
+<div class=" container-fluid mobile-toolbar-container"
+[hidden]="!showToolbar">
+    <div class="row">
+        <ul>
+            <li>
+                <a href="">
+                    <span>home</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>About us</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>services</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>contact us</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
