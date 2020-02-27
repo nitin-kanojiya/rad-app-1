@@ -1,0 +1,24 @@
+.section-head h2{
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    width: fit-content;
+}
+.section-head {
+    margin: 4rem 0 0 0;
+}
+h3{
+    width: fit-content;
+}
+
+/****************************
+    Our team
+****************************/
+.team-img{
+    width: 10rem;
+    height: 10rem;
+    background-position:center;
+	background-repeat:no-repeat;
+    background-size:cover;
+    border: 2px solid #2861CF;
+    border-radius: 50%;
+}

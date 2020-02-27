@@ -6,7 +6,12 @@
             <span class="head-section-data-head">Handyman Services</span>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe.</p>
             <div class="head-contact">
-                    <button [routerLink]="['/contact-us']" class="contact-btn btn ">
+
+                    <button class="register-btn btn ml-3 mb-2" [routerLink]="['/register']">
+                        Work for Us
+                    </button>
+                <br>
+                    <button [routerLink]="['/contact-us']" class="contact-btn btn mt-2">
                         Contact Us
                     </button>
                     <span class="btn">
@@ -19,10 +24,6 @@
                             <i class="fab fa-instagram"></i>
                         </a>
                     </span>
-                    <br>                  
-                    <button class="register-btn btn " [routerLink]="['/register']">
-                        Register Yourself
-                    </button>
             </div>
         </div>
         <div class="head-section-img bg-light text-center col-lg-5 col-sm-5">
@@ -198,27 +199,27 @@
 
 
 
-<!-- appointment section -->
-<div id="appointment-section" class="container-fluid appointment-section primary-bg-dark">
-    <div class="row appointment-section-head">
+<!-- book-service section -->
+<div id="book-service-section" class="container-fluid book-service-section primary-bg-dark">
+    <div class="row book-service-section-head">
         <p class="mx-auto text-center">Book your service</p>
     </div>
-    <div class="row appointment-section-subhead">
+    <div class="row book-service-section-subhead">
         <div class="text-center primary-light-gray mx-auto col-md-6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, vero qui quos dignissimos tempore itaque laboriosam impedit a sunt similique.
         </div>
     </div>
 
-    <div class="appointment-section-form  text-light">
+    <div class="book-service-section-form  text-light">
         <div class="row mt-5 mx-auto text-center">
             <div class="col-lg-9">
 
                 <div class="row mb-2 justify-content-center">
                     <div class=" col-md-4">
-                        <input class="form-control mx-auto" id="" placeholder="First name" type="text">
+                        <input class="form-control mx-auto" id="" placeholder="Full name" type="text">
                     </div>
                     <div class=" col-md-4 mt-3 mt-md-0">
-                        <input class="form-control mx-auto" id="" placeholder="Last name" type="text">
+                        <input class="form-control mx-auto" id="" placeholder="Contact Number" type="text">
                     </div>
                 </div>
                 
@@ -246,7 +247,7 @@
         </div>
     </div>
 </div>
-<!-- END appointment section -->
+<!-- END book-service section -->
 
 <!-- Map section -->
 <div class="map-section">
