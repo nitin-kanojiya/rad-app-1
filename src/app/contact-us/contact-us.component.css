@@ -1,0 +1,47 @@
+.map{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.map iframe{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    position: absolute;
+    top: 20%;
+    z-index: 2;
+}
+@media only screen and (max-width: 750px){
+    .container{
+        position: relative;
+        top: 80%;
+    }    
+}
+
+.row{
+    background-color: #22262d;
+    width: fit-content;
+    color: #FFFFFF;
+    /* font-weight: bold; */
+}
+.section-head h2{
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    width: fit-content;
+}
+.section-head {
+    margin: 4rem 0 0 0;
+}
+.contact-items{
+    font-size: 1.1rem;
+}
+.contact-items i{
+    font-size: 1.4rem;
+    color: #4F84EB;
+    margin-right: 0.5rem;
+}
+.contact-items .row{
+    margin: 2rem;
+}

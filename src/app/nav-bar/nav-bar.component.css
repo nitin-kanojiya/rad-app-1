@@ -41,6 +41,7 @@ ul li:hover a span{
     cursor: pointer;
 }
 .mobile-toolbar-container{
+    z-index: 100;
     background-color: #FFFFFF;
     margin: 4rem auto 4rem auto;
 }
