@@ -3,6 +3,7 @@
 
     <img class="img-logo" src="../../assets/img/logo_b.png" alt="">
     <span class="space-filler"></span>
+    
     <div class="mobile-toolbar">
         <span class=""
             (click)="navEvent()">
@@ -12,24 +13,23 @@
             
             <i [hidden]="!showToolbar"
             class="fas fa-times"></i>            
-        </span>
-
-        
+        </span>        
     </div>
+
     <div class="desktop-toolbar">
         <ul>
             <li>
-                <a href="">
+                <a [routerLink]="['/']"  href="">
                     <span>home</span>
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="" [routerLink]="['/']">
                     <span>About us</span>
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="" [routerLink]="['/services']">
                     <span>services</span>
                 </a>
             </li>
@@ -38,11 +38,16 @@
                     <span>contact us</span>
                 </a>
             </li>
+            <li>
+                <a href="">
+                    <span>Register</span>
+                </a>
+            </li>
         </ul>
     </div>
     <span class="desktop-toolbar space-filler"></span>
-
 </mat-toolbar>
+
 <div class=" container-fluid mobile-toolbar-container"
 [hidden]="!showToolbar">
     <div class="row">
@@ -67,6 +72,12 @@
                     <span>contact us</span>
                 </a>
             </li>
+            <li>
+                <a href="">
+                    <span>register</span>
+                </a>
+            </li>
+
         </ul>
     </div>
 </div>

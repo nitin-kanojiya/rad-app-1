@@ -9,7 +9,6 @@
                     <button class="contact-btn btn ">
                         Contact Us
                     </button>
-                    
                     <span class="btn">
                         <a href="">
                             <i class="fab fa-facebook-square"></i>
@@ -20,6 +19,10 @@
                             <i class="fab fa-instagram"></i>
                         </a>
                     </span>
+                    <br>                  
+                    <button class="register-btn btn ">
+                        Register Yourself
+                    </button>
             </div>
         </div>
         <div class="head-section-img bg-light text-center col-lg-5 col-sm-5">
@@ -80,7 +83,7 @@
     </div>
     
     <div class="row section-content services-section-content">
-        <div class="col-lg-3 col-md-4 col-sm-6 services-section-content-col mb-5" *ngFor="let item of products ">
+        <div class="col-lg-3 col-md-4 col-sm-6 services-section-content-col mb-5" *ngFor="let item of services ">
             <div class="card">
                 <div class="card-body text-center">
                     <span class="services-section-icon">
@@ -109,6 +112,10 @@
     </div>
 
     <div class="handyman-section-cases card-container justify-content-center">
+        <div class="card" (click)="handymanCase.value = 'labours'">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+            <span>Labours</span>
+        </div>
         <div class="card" (click)="handymanCase.value = 'electricians'">
             <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
             <span>Electricians</span>
@@ -124,6 +131,20 @@
     </div>
 
     <div class="handyman-section-values" [ngSwitch]="handymanCase.value" >
+        <div class="container mt-3" *ngSwitchCase="'labours'">
+            <div class="row text-center section-subhead">
+                <div class="col-12 primary-dark-gray">Some Labours in the town</div>
+            </div>
+            <div class="row card-container mt-3 mt-lg-2 justify-content-center">
+                <div class="card col-sm-3 handyman-section-values-img primary-light-gray"
+                [ngStyle]="{'background-image': labour.img_url}"
+                    *ngFor="let labour of labours">
+                    <div class="handyman-section-values-content">
+                        {{labour.name}}
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="container mt-3" *ngSwitchCase="'electricians'">
             <div class="row text-center section-subhead">

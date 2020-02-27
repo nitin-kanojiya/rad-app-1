@@ -11,9 +11,9 @@ export class HomePageComponent implements OnInit {
   constructor() { }
 
 
-  products=[
+  services=[
     { 
-      "name": "Painting",
+      "name": "Painter",
       "icon": "fas fa-paint-roller",
       "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, repellat."
     },
@@ -55,8 +55,30 @@ export class HomePageComponent implements OnInit {
   ];
 
   handymanCase={
-    value:"plumbers"
+    value:"labours"
   }
+  labours=[
+    {
+      "name": "ranjan pant",
+      "age": 21,
+      "img_url": "url('../../assets/img/labour/labour (1).jpg')"
+    },
+    {
+      "name": "ravi kaler",
+      "age": 20,
+      "img_url": "url('../../assets/img/labour/labour (2).jpg')"
+    },
+    {
+      "name": "rohit kamboj",
+      "age": 22,
+      "img_url": "url('../../assets/img/labour/labour (3).jpg')"
+    },
+    {
+      "name": "shahid khan",
+      "age": 20,
+      "img_url": "url('../../assets/img/labour/labour (4).jpg')"
+    }
+  ];
   plumbers=[
     {
       "name": "ranjan pant",

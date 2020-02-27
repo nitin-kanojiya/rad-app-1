@@ -1,3 +1,6 @@
+/* ***************************
+    Toolbar 
+*************************** */
 mat-toolbar{
     padding: 3rem 2rem 3rem 2rem;
 }
@@ -16,22 +19,6 @@ mat-toolbar{
     font-weight: 700;
     font-variant-caps: all-petite-caps;
 }
-.mobile-toolbar-container{
-    background-color: #FFFFFF;
-    margin: 4rem auto 4rem auto;
-}
-.mobile-toolbar-container ul{
-    margin-left: 3rem;
-}
-.mobile-toolbar-container ul li{
-    margin-bottom: 1rem;
-}
-.desktop-toolbar ul li{
-    display: inline;
-    margin-right: 2rem;
-    padding: 0.5rem;
-    cursor: pointer;
-}
 a{
     text-decoration: none;
 }
@@ -42,24 +29,56 @@ a span{
 ul li:hover a span{
     color: #4F84EB;
 }
-.company-name{
-    font-family: 'Niconne' ;
-    letter-spacing: 5px;
-    font-weight: 700;
-}
 
+/* ***************************
+    Mobile Toolbar 
+*************************** */
 .mobile-toolbar{
     display: none;
 }
-@media only screen and (max-width: 603px){
+.mobile-toolbar i{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.mobile-toolbar-container{
+    background-color: #FFFFFF;
+    margin: 4rem auto 4rem auto;
+}
+.mobile-toolbar-container ul{
+    margin-left: 3rem;
+}
+.mobile-toolbar-container ul li{
+    margin-bottom: 1rem;
+}
+
+/* ***************************
+    Desktop Toolbar 
+*************************** */
+
+.desktop-toolbar ul li{
+    display: inline;
+    margin-right: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+/* *******************
+    Responsive
+******************** */
+@media only screen and (max-width: 750px){
     .desktop-toolbar{
         display: none;
     }
     .mobile-toolbar{
         display: block;
-    }    
+    }
 }
-.mobile-toolbar i{
-    font-size: 2rem;
-    cursor: pointer;
+
+/* *******************
+    Company name
+******************** */
+.company-name{
+    font-family: 'Niconne' ;
+    letter-spacing: 5px;
+    font-weight: 700;
 }

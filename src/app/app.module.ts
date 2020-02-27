@@ -11,21 +11,31 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSelectModule} from '@angular/material/select';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './footer/footer.component';
+import { OurServicesComponent } from './our-services/our-services.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from "ng2-search-filter";
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     HomePageComponent,
-    FooterComponent
+    FooterComponent,
+    OurServicesComponent,
+    AboutUsComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatSelectModule
+    MatSelectModule,
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

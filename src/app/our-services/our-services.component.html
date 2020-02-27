@@ -1,0 +1,43 @@
+<!-- Video -->
+<div class="container-fluid my-video">    
+    <video autoplay muted loop>
+        <source src="../../assets/video/handyman.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<!--END Video -->
+    
+<!-- Head and Search  -->
+<div class="head-search container my-5">
+    <div class="section-head">
+        <h2 class="mx-auto">OUR SERVICES</h2>
+    </div>
+    <div class="row input-group mt-5 mx-auto" style="width: 80%;">
+        <input type="text" class="form-control"
+          [(ngModel)]="searchText" 
+          autocomplete="off" 
+          placeholder= "Search Service.."
+          aria-label= "Search Service..">
+      </div>
+</div>
+<!-- END Head and Search  -->
+
+<!-- Services Showcases -->
+<div class="services-section container-fluid p-0">
+    <div class="row no-gutters my-md-2" *ngFor="let service of services | filter:searchText; let i=index"  >
+        <div class="col-md-6 text-white showcase-img"
+            [ngClass]="{'order-2': i%2==0 }" 
+            [ngStyle]="{'background-image': service.img_url}" >
+        </div>
+        <div class="col-md-6 my-auto showcase-text"
+            [ngClass]="{'order-2': i%2!=0}">
+            <h3>{{i+1}}. {{service.name}}</h3>
+            <p class="mb-0"> 
+                {{service.desc}}
+                <br>
+                <a href="#">Book servicemen</a>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- END Services Showcases -->

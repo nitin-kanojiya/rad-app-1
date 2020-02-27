@@ -40,24 +40,29 @@
 }
 .head-contact{
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
-.head-contact .contact-btn{
+.head-contact .contact-btn, .head-contact .register-btn{
     padding-right: 2rem;
     padding-left: 2rem;
     color: #FFFFFF;
     font-weight: 400;
-    background-color: #3c6bda;
+    background-color: #2861CF;
     border: 2px solid #2861CF;
     border-radius: 2rem;
 }
-.head-contact .contact-btn:hover {
+.head-contact .contact-btn:hover, .head-contact .register-btn:hover {
     border: #FA9600;
     color: #ffffff;
     background-color: #FA9600;
     animation: scaling 0.5s 1;
     transform: scale(1.1, 1.2);
     box-shadow: 2px 3px 5px #9BA5BA;
-
+}
+.head-contact .register-btn{
+    background-color: #FFFFFF;
+    color: #FA9600;
+    border-color: #FA9600;
 }
 .head-contact span a{
     color: #3c6bda;
