@@ -16,6 +16,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from "ng2-search-filter";
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { RegisterComponent } from './register/register.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { AboutUsComponent } from './about-us/about-us.component';
     HomePageComponent,
     FooterComponent,
     OurServicesComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ContactUsComponent,
+    RegisterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     CommonModule,

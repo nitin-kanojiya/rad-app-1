@@ -1,7 +1,7 @@
 <mat-toolbar class=" bg-light primary-dark-gray">
     <!-- <h3 class="company-name">radiating.Planet</h3> -->
 
-    <img class="img-logo" src="../../assets/img/logo_b.png" alt="">
+    <img class="img-logo" [routerLink]="['/']" src="../../assets/img/logo_b.png" alt="">
     <span class="space-filler"></span>
     
     <div class="mobile-toolbar">
@@ -18,28 +18,28 @@
 
     <div class="desktop-toolbar">
         <ul>
-            <li>
-                <a [routerLink]="['/']"  href="">
+            <li  [routerLink]="['/']" >
+                <a>
                     <span>home</span>
                 </a>
             </li>
-            <li>
-                <a href="" [routerLink]="['/']">
+            <li [routerLink]="['/about-us']">
+                <a>
                     <span>About us</span>
                 </a>
             </li>
-            <li>
-                <a href="" [routerLink]="['/services']">
+            <li [routerLink]="['/services']">
+                <a>
                     <span>services</span>
                 </a>
             </li>
-            <li>
-                <a href="">
+            <li [routerLink]="['/contact-us']">
+                <a>
                     <span>contact us</span>
                 </a>
             </li>
-            <li>
-                <a href="">
+            <li [routerLink]="['/register']">
+                <a>
                     <span>Register</span>
                 </a>
             </li>
@@ -52,32 +52,31 @@
 [hidden]="!showToolbar">
     <div class="row">
         <ul>
-            <li>
-                <a href="">
+            <li  [routerLink]="['/']" >
+                <a>
                     <span>home</span>
                 </a>
             </li>
-            <li>
-                <a href="">
+            <li [routerLink]="['/about-us']">
+                <a>
                     <span>About us</span>
                 </a>
             </li>
-            <li>
-                <a href="">
+            <li [routerLink]="['/services']">
+                <a>
                     <span>services</span>
                 </a>
             </li>
-            <li>
-                <a href="">
+            <li [routerLink]="['/contact-us']">
+                <a>
                     <span>contact us</span>
                 </a>
             </li>
-            <li>
-                <a href="">
-                    <span>register</span>
+            <li [routerLink]="['/register']">
+                <a>
+                    <span>Register</span>
                 </a>
             </li>
-
         </ul>
     </div>
 </div>

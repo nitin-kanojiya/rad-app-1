@@ -267,8 +267,12 @@
     animation: scaling 0.5s 1;
     transform: scale(1.1, 1.2);
     box-shadow: 3px 1px 5px #fa960042;
-
 }
+
+.appointment-section-form .number{
+    font-size: 1.8rem;
+}
+
 
 @media only screen and (max-width:768px){
     .appointment-section-form textarea {
@@ -396,16 +400,6 @@
     border-radius: 250rem;
     padding: 1.5rem 1.5rem 1.5rem 1.5rem;
     box-shadow: 2px 2px 20px #9BA5BA;
-}
-/* ********************** 
-    Call us section
-********************** */
-
-.call-us-section{
-    padding-bottom: 4rem;
-}
-.call-us-section div .number{
-    font-size: 1.8rem;
 }
 
 /* ********************** 
