@@ -52,18 +52,15 @@
     border-radius: 2rem;
 }
 .head-contact .contact-btn:hover, .head-contact .register-btn:hover {
-    border: #FA9600;
-    color: #ffffff;
-    background-color: #FA9600;
     /* animation: scaling 0.5s 1; */
     transform: scale(1.3, 1.3);
     box-shadow: 2px 3px 5px #9BA5BA;
 }
 .head-contact .register-btn{
     border-radius: 0.5rem;
-    color: #2861CF;
-    background-color: #FFF;
-    border: 2px solid #2861CF;
+    border: #FA9600;
+    color: #ffffff;
+    background-color: #FA9600;
     transform: scale(1.2, 1.2);
 }
 .head-contact span a{
