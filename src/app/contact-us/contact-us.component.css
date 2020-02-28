@@ -20,8 +20,11 @@
     }    
 }
 
-.row{
-    background-color: #22262d;
+.container>.row{
+    background-color: #22262de7;
+    border: 1px solid #22262d;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 10px #9BA5BA;
     width: fit-content;
     color: #FFFFFF;
     /* font-weight: bold; */

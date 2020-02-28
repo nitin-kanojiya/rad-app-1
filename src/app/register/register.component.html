@@ -1,1 +1,92 @@
-<p>register works!</p>
+<div class="container-fluid">
+    <form class="mx-auto">
+        <div class="section-head">
+            <h2 class="mx-auto text-center primary-dark-orange">REGISTER YOURSELF</h2>
+            <p class="mx-auto lead">Work as a handyman</p>
+        </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="fullname">Full Name</label>
+                <input type="text" class="form-control" id="fullname" placeholder="As per your Aadhar Card">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="aadhar">Aadhar number</label>
+                <input type="text" class="form-control" id="aadhar" placeholder="0000-0000-0000">
+              </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="mobilenumber1">Mobile Number 1</label>
+                  <input type="text" class="form-control" id="mobilenumber1" placeholder="+91-">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="mobilenumber2">Mobile Number 2</label>
+                  <input type="text" class="form-control" id="mobilenumber2" placeholder="+91-">
+                </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="currAddress">Current Address</label>
+              <input type="text" class="form-control" id="currAddress" placeholder="House Number, Street, Locality">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="currCity">City</label>
+                    <input type="text" class="form-control" id="currCity">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="currState">State</label>
+                    <input type="text" class="form-control" id="currState">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="currZip">Zip</label>
+                    <input type="text" class="form-control" id="currZip" placeholder="000000">
+                </div>
+            </div>
+  
+            <div class="form-group">
+                <label for="permPoliceStation">Police Station</label>
+                <input type="text" class="form-control" id="permPoliceStation">
+            </div>
+
+  
+            <div class="form-group">
+                <label for="permAddress">Permanent Address</label>
+                <input type="text" class="form-control" id="permAddress" placeholder="House Number, Street, Locality">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="permCity">City</label>
+                    <input type="text" class="form-control" id="permCity">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="permState">State</label>
+                    <input type="text" class="form-control" id="permState">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="permZip">Zip</label>
+                    <input type="text" class="form-control" id="permZip" placeholder="000000">
+                </div>
+            </div>
+  
+            <div class="form-group">
+                <label for="permPoliceStation">Police Station</label>
+                <input type="text" class="form-control" id="permPoliceStation">
+            </div>
+  
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="termsCheck" 
+                    [checked]="termsCheck"
+                    (change)="termsCheck=!termsCheck"
+                    >
+                <label class="form-check-label" for="termsCheck"
+                    [ngClass]="{'text-success': termsCheck, 'text-danger': !termsCheck}">
+                  I declare all details filled by me are as per the government records
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="submit-btn btn">Submit</button>
+          </form>
+</div>

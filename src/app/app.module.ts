@@ -19,6 +19,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatSidenavModule,
     MatSelectModule,
     FormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
