@@ -51,8 +51,18 @@
     border: 2px solid #2861CF;
     border-radius: 2rem;
 }
-.head-contact .contact-btn:hover, .head-contact .register-btn:hover {
-    /* animation: scaling 0.5s 1; */
+.head-contact .contact-btn:hover{
+    border: #FA9600;
+    color: #ffffff;
+    background-color: #FA9600;
+    transform: scale(1.1, 1.2);
+    box-shadow: 2px 3px 5px #9BA5BA;
+    animation: scaling 0.5s 1;
+} 
+.head-contact .register-btn:hover {
+    border: #FA9600;
+    color: #ffffff;
+    background-color: #FA9600;
     transform: scale(1.3, 1.3);
     box-shadow: 2px 3px 5px #9BA5BA;
 }

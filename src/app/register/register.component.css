@@ -1,0 +1,47 @@
+.container-fluid{
+    width: 100%;
+    height: fit-content;
+    background-image: url('../../assets/img/reg_bg.jpg');
+    background-size: 29rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+form{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    background-color: #22262D;
+    border: 1px solid #22262D;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 10px 5px #9BA5BA;
+    color: #FFFFFF;
+    padding: 2rem;
+}
+
+.section-head h2{
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    width: fit-content;
+  }
+  .section-head>p{
+      width: fit-content;
+  }
+  .section-head {
+  margin: 0 0 2rem 0;
+  }
+  .submit-btn{
+  padding-right: 2rem;
+  padding-left: 2rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: #2861CF;
+  border: 2px solid #2861CF;
+  border-radius: 2rem;
+}
+.submit-btn:hover {
+    border: #FA9600;
+    color: #ffffff;
+    background-color: #FA9600;
+    transform: scale(1.2, 1.1);
+    box-shadow: 0.5px 0.5px 3px #FA9600;
+}
