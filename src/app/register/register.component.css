@@ -17,7 +17,9 @@ form{
     color: #FFFFFF;
     padding: 2rem;
 }
-
+/***********************
+    Section Head
+*************************/
 .section-head h2{
     font-family: 'Merriweather', serif;
     font-weight: 700;
@@ -29,6 +31,10 @@ form{
   .section-head {
   margin: 0 0 2rem 0;
   }
+/***********************
+    Submit Btn
+*************************/
+
   .submit-btn{
   padding-right: 2rem;
   padding-left: 2rem;
@@ -46,6 +52,7 @@ form{
     background-color: #9BA5BA;
     border: 2px solid #9BA5BA;
     border-radius: 2rem;  
+    cursor: default;
 }
 .submit-btn:hover {
     border: #FA9600;
