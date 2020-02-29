@@ -20,6 +20,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDatepickerModule } from "@angular/material/datepicker";
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatSelectModule,
     FormsModule,
     Ng2SearchPipeModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
