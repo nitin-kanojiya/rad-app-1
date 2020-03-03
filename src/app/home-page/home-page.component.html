@@ -2,9 +2,13 @@
 <div id="home-head" class="bg-light home-head-section container-fluid">
     <div class="row">
         <div class="home-head-section-data col-sm-7 col-lg-7">
-            <h3 class="company-name">Radiating Planet</h3>
+            <!-- <h3 class="company-name">Radiating Planet</h3> -->
             <span class="head-section-data-head">Handyman Services</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe.</p>
+            <p>
+                Book your service at your door step with our locals and verified sericemen.
+                Positive attitude, behavioral worker.
+                Skill and experienced at your pocket price.                 
+            </p>
             <div class="head-contact">
 
                     <button class="register-btn btn ml-3 mb-lg-5 mb-2" [routerLink]="['/register']">
@@ -41,24 +45,31 @@
     </div>
     <div class="row section-subhead">
         <div class="col-md-6">
-            <p class="text-center mx-auto">Handyman from various services</p>
+            <p class="text-center mx-auto">
+                <!-- Handyman from various services -->
+            </p>
         </div>
     </div>
     <div class="row my-5  why-us-section-content justify-content-center text-center mx-auto">
-        <div class="col-6 col-sm-4">
+        <div class="col-6 col-sm-3">
+            <span >
+                <i class="fas fa-user-check"></i>
+            </span>
+            <h5 class="mt-3">Verified Personals</h5>
+        </div>
+        <div class="col-6 col-sm-3">
             <span >
                 <i class="fas fa-handshake"></i>
             </span>
             <h5 class="mt-3">Bond Back Guarantee</h5>
         </div>
-        <div class="col-6 col-sm-4">
+        <div class="col-6 col-sm-3 mt-sm-0 mt-3">
             <span >
                 <i class="fas fa-coins"></i>
             </span>
             <h5 class="mt-3">Affordable Rates</h5>
-
         </div>
-        <div class="col-6 col-sm-4 mt-sm-0 mt-3">
+        <div class="col-6 col-sm-3 mt-sm-0 mt-3">
             <span>
                 <i class="fas fa-user-clock"></i>
             </span>
@@ -79,14 +90,20 @@
     </div>
     <div class="row section-subhead">
         <div class="col-md-6">
-            <p class="text-center mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, iste ipsa. Provident.</p>
+            <p class="text-center mx-auto">
+                We provide various services and expertise person who has the 
+                perfectionism in their field of work at affordable rates.            
+            </p>
         </div>
     </div>
     
     <div class="row section-content services-section-content">
         <div class="col-lg-3 col-md-4 col-sm-6 services-section-content-col mb-5" *ngFor="let item of services ">
-            <div class="card" [routerLink]="['/services']">
-                <div class="card-body text-center">
+            <div class="card" >
+                <div class="card-body text-center" 
+                    (click)="gotoList(item.id)" 
+                    [routerLink]="['/services']">
+        
                     <span class="services-section-icon">
                         <i class="{{item.icon}}"></i>
                     </span>
@@ -95,6 +112,19 @@
                 </div>
             </div>
         </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 services-section-content-col mb-5">
+            <div class="card" >
+                <div class="card-body text-center"
+                    [routerLink]="['/services']">        
+                    <span class="services-section-icon">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </span>
+                    <h5 class="card-title">And More</h5>
+                    <p class="card-text">Click to know many other services.</p>
+                </div>
+            </div>
+        </div>
+
     </div>
     
 </div>
@@ -113,32 +143,37 @@
     </div>
 
     <div class="handyman-section-cases card-container justify-content-center">
-        <div class="card" (click)="handymanCase.value = 'labours'">
+        <div class="card" (click)="handymanCase.value = 'labour'">
             <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
             <span>Labours</span>
         </div>
-        <div class="card" (click)="handymanCase.value = 'electricians'">
+        <div class="card" (click)="handymanCase.value = 'electrician'">
             <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
             <span>Electricians</span>
         </div>
-        <div class="card" (click)="handymanCase.value = 'carpenters'">
+        <div class="card" (click)="handymanCase.value = 'carpenter'">
             <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
             <span>Carpenters</span>
         </div>
-        <div class="card" (click)="handymanCase.value = 'plumbers'">
+        <div class="card" (click)="handymanCase.value = 'plumber'">
             <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>    
             <span>Plumbers</span>
         </div>
     </div>
 
     <div class="handyman-section-values" [ngSwitch]="handymanCase.value" >
-        <div class="container mt-3" *ngSwitchCase="'labours'">
+        <div 
+            class="container mt-3" *ngSwitchCase="'labour'">
             <div class="row text-center section-subhead">
-                <div class="col-12 primary-dark-gray">Some Labours in the town</div>
+                <div
+                    class="col-12 primary-dark-gray">Some Labours in the town</div>
             </div>
-            <div class="row card-container mt-3 mt-lg-2 justify-content-center">
-                <div class="card col-sm-3 handyman-section-values-img primary-light-gray"
-                [ngStyle]="{'background-image': labour.img_url}"
+            <div
+                class="row card-container mt-3 mt-lg-2 justify-content-center">
+                <div
+                (click)="findIdForList()"
+                class="card col-sm-3 handyman-section-values-img primary-light-gray"
+                [ngStyle]="{'background-image': 'url(\''+labour.img_url+'\')' }"
                     *ngFor="let labour of labours">
                     <div class="handyman-section-values-content">
                         {{labour.name}}
@@ -147,12 +182,14 @@
             </div>
         </div>
 
-        <div class="container mt-3" *ngSwitchCase="'electricians'">
+        <div class="container mt-3" *ngSwitchCase="'electrician'">
             <div class="row text-center section-subhead">
                 <div class="col-12 primary-dark-gray">Some Electricians in the town</div>
             </div>
             <div class="row card-container mt-3 mt-lg-2 justify-content-center">
-                <div class="card col-sm-3 handyman-section-values-img primary-light-gray"
+                <div
+                (click)="findIdForList()" 
+                class="card col-sm-3 handyman-section-values-img primary-light-gray"
                 [ngStyle]="{'background-image': electrician.img_url}"
                     *ngFor="let electrician of electricians">
                     <div class="handyman-section-values-content">
@@ -162,12 +199,14 @@
             </div>
         </div>
         
-        <div class="container mt-3" *ngSwitchCase="'carpenters'">
+        <div class="container mt-3" *ngSwitchCase="'carpenter'">
             <div class="row text-center section-subhead">
                 <div class="col-12 primary-dark-gray">Some Carpenters in the town</div>
             </div>
             <div class="row card-container mt-3 mt-lg-2 justify-content-center">
-                <div class="card col-sm-3 handyman-section-values-img primary-light-gray"
+                <div
+                (click)="findIdForList()"
+                class="card col-sm-3 handyman-section-values-img primary-light-gray"
                 [ngStyle]="{'background-image': carpenter.img_url}"
                     *ngFor="let carpenter of carpenters">
                     <div class="handyman-section-values-content">
@@ -177,12 +216,14 @@
             </div>
         </div>
         
-        <div class="container mt-3" *ngSwitchCase="'plumbers'">
+        <div class="container mt-3" *ngSwitchCase="'plumber'">
             <div class="row text-center section-subhead">
                 <div class="col-12 primary-dark-gray">Some Plumbers in the town</div>
             </div>
             <div class="row card-container mt-3 mt-lg-2 justify-content-center">
-                <div class="card col-sm-3 handyman-section-values-img primary-light-gray"
+                <div
+                (click)="findIdForList()"
+                class="card col-sm-3 handyman-section-values-img primary-light-gray"
                 [ngStyle]="{'background-image': plumber.img_url}"
                     *ngFor="let plumber of plumbers">
                     <div class="handyman-section-values-content">

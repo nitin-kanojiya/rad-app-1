@@ -1,5 +1,6 @@
 <div class="container-fluid">
-    <form class="mx-auto">
+    <form (submit)="onSubmitForm(registerForm)" class="mx-auto" #registerForm="ngForm">
+
         <div class="section-head">
             <h2 class="mx-auto text-center primary-dark-orange">REGISTER YOURSELF</h2>
             <p class="mx-auto lead primary-light-gray">Work as a handyman</p>
@@ -7,38 +8,74 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="fullname">Full Name</label>
-                <input type="text" class="form-control" id="fullname" placeholder="As per your Aadhar Card">
+                <input 
+                name="fullname"
+                required
+                ngModel
+                #fullname="ngModel"
+                type="text" class="form-control" 
+                id="fullname" placeholder="As per your Aadhar Card">
               </div>
               <div class="form-group col-md-6">
-                <label for="mobilenumber1">Mobile Number 1</label>
-                <input type="text" class="form-control" id="mobilenumber1" placeholder="+91-">
+                <label for="mobilenumber">Mobile Number</label>
+                <input 
+                name="mobilenumber"
+                required
+                ngModel
+                #mobilenumber="ngModel"
+                type="tel" class="form-control" id="mobilenumber" placeholder="+91-">
               </div>
             </div>
 
             <div class="form-group">
               <label for="aadhar">Aadhar Card number</label>
-              <input type="text" class="form-control" id="aadhar" placeholder="0000-0000-0000">
+              <input 
+              name="aadharnumber"
+              required
+              ngModel
+              #aadharnumber="ngModel"
+              type="tel" class="form-control" id="aadhar" placeholder="0000-0000-0000">
             </div>
   
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="servicename">Your Service Name</label>
-                <input type="text" class="form-control" id="servicename" placeholder="eg. Electrician">
+                <input 
+                name="servicename"
+                required
+                ngModel
+                #servicename="ngModel"
+                type="text" class="form-control" id="servicename" placeholder="eg. Electrician">
               </div>
               <div class="form-group col-md-6">
                 <label for="distance">Maximum Distance</label>
-                <input type="text" class="form-control" id="distance" placeholder="Distance for Service">
+                <input 
+                name="distance"
+                required
+                ngModel
+                #distance="ngModel"
+                type="number" class="form-control" id="distance" placeholder="Distance in km">
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="dob">Date Of Birth</label>
-                <input type="date" class="form-control" id="dob" placeholder="">
+                <input 
+                name="dob"
+                required
+                ngModel
+                #dob="ngModel"
+                type="date" class="form-control" id="dob" placeholder="">
               </div>
               <div class="form-group col-md-6">
                 <label for="experience">Service Experience</label>
-                <input type="text" class="form-control" id="experience" placeholder="In years">
+                <input 
+                name="experience"
+                required
+                ngModel
+                #experience="ngModel"
+                type="number" class="form-control" id="experience" placeholder="In years">
               </div>
             </div>
 
@@ -50,11 +87,21 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                   <label for="currCity">City</label>
-                  <input type="text" class="form-control" id="currCity" placeholder="eg.Dehradun">
+                  <input 
+                  name="currCity"
+                  required
+                  ngModel
+                  #currCity="ngModel"
+                  type="text" class="form-control" id="currCity" placeholder="eg.Dehradun">
               </div>
               <div class="form-group col-md-6">
                   <label for="currState">State</label>
-                  <input type="text" class="form-control" id="currState" placeholder="eg.Uttarakhand">
+                  <input 
+                  name="currState"
+                  required
+                  ngModel
+                  #currState="ngModel"
+                  type="text" class="form-control" id="currState" placeholder="eg.Uttarakhand">
               </div>
             </div>
 
@@ -116,8 +163,11 @@
                 </label>
               </div>
             </div>
+
             <button type="submit"
               [ngClass]="{'submit-btn': termsCheck, 'disabled': !termsCheck, 'submit-btn-disabled': !termsCheck}"
-             class="btn ">Submit</button>
+             class="btn ">
+             Submit
+            </button>
           </form>
 </div>

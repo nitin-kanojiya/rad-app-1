@@ -48,3 +48,13 @@
 .contact-items .row{
     margin: 2rem;
 }
+@media only screen and (max-width: 568px){
+    .contact-items{
+        font-size: 1rem;
+    }
+    .contact-items i{
+        font-size: 1.2rem;
+        color: #4F84EB;
+        margin-right: 0.2rem;
+    }
+}

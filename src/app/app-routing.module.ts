@@ -7,6 +7,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HandymanListComponent } from './handyman/handyman-list/handyman-list.component';
+import { HandymanDetailsComponent } from './handyman/handyman-details/handyman-details.component';
 
 
 const routes: Routes = [
@@ -27,12 +29,18 @@ const routes: Routes = [
     path: 'register', component: RegisterComponent
   },
   {
+    path: 'list', component: HandymanListComponent
+  },
+  {
+    path: 'details', component: HandymanDetailsComponent
+  },
+  {
     path: '**', component: PageNotFoundComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), CommonModule],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'}), CommonModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

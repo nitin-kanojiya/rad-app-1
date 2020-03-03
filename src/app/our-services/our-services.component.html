@@ -1,10 +1,18 @@
 <!-- Video -->
-<div class="container-fluid my-video">    
-    <video autoplay muted loop>
-        <source src="../../assets/video/handyman.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
+<header>
+    <div class="overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="/assets/video/handyman.mp4" type="video/mp4">
     </video>
-</div>
+    <div class="container h-100">
+      <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-100 text-white">
+          <h1 class="display-3"></h1>
+          <p class="lead mb-0"></p>
+        </div>
+      </div>
+    </div>
+</header>
 <!--END Video -->
     
 <!-- Head and Search  -->
@@ -24,10 +32,11 @@
 
 <!-- Services Showcases -->
 <div class="services-section container-fluid p-0">
-    <div class="row no-gutters my-md-2" *ngFor="let service of services | filter:searchText; let i=index"  >
+    <div class="row no-gutters my-md-2" *ngFor="let service of ourservices | filter:searchText; let i=index"  >
         <div class="col-md-6 text-white showcase-img"
             [ngClass]="{'order-2': i%2==0 }" 
-            [ngStyle]="{'background-image': service.img_url}" >
+            [ngStyle]="{'background-image': 'url('+service.img_url+')' }" 
+            >
         </div>
         <div class="col-md-6 my-auto showcase-text"
             [ngClass]="{'order-2': i%2!=0}">
@@ -35,7 +44,7 @@
             <p class="mb-0"> 
                 {{service.desc}}
                 <br>
-                <a href="#">Book servicemen</a>
+                <a (click)="gotoList(service.id)">Explore servicemen</a>
             </p>
         </div>
     </div>

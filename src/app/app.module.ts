@@ -21,6 +21,8 @@ import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from "@angular/material/datepicker";
+import { HandymanDetailsComponent } from './handyman/handyman-details/handyman-details.component';
+import { HandymanListComponent } from './handyman/handyman-list/handyman-list.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { MatDatepickerModule } from "@angular/material/datepicker";
     AboutUsComponent,
     ContactUsComponent,
     RegisterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HandymanDetailsComponent,
+    HandymanListComponent
   ],
   imports: [
     CommonModule,
