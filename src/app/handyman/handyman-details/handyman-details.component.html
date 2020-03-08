@@ -13,35 +13,72 @@
       </div>
   
       <div class="col-md-4">
-        <h3 class="my-3">About</h3>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, odit?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, eligendi?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, iste.
-        </p>
-        <h3 class="my-3">Personal Details</h3>
-        <ul class="list-unstyled">
-          <li>Age - {{dataHandyman.age}}</li>
-          <li>Service Experience</li>
-          <li>Contact Number</li>
-        </ul>
+        <!-- <star-rating
+          value="{{dataHandyman.rating}}"
+          totalstars="5"
+          checkedcolor="#fa9600" 
+          uncheckedcolor="#ccc"
+          size="24px" 
+          readonly="true"
+          (rate)="onRate($event)">
+        </star-rating> -->
+        <ngb-rating [(rate)]="selectedRating" max=5 (click)="ratingChanged()" >
+            <ng-template let-fill="fill" let-index="index">
+                <span class="star" [class.filled]="fill === 100">&#9733;</span>
+            </ng-template>
+        </ngb-rating>
+
+        <table class="my-3 table text-capitalize table-borderless">
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td>{{dataHandyman.name}}</td>
+            </tr>
+            <tr>
+              <td>D.O.B</td>
+              <td>{{dataHandyman.dob}}</td>
+            </tr>
+            <tr>
+              <td>Service</td>
+              <td>{{dataHandyman.serviceName}}</td>
+            </tr>
+            <tr>
+              <td>Experience</td>
+              <td>{{dataHandyman.serviceExperience}}</td>
+            </tr>
+            <tr>
+              <td>Contact Number</td>
+              <td>{{dataHandyman.contactNumber}}</td>
+            </tr>
+            <tr>
+              <td>City</td>
+              <td>{{dataHandyman.city}}</td>
+            </tr>
+            <tr>
+              <td>State</td>
+              <td>{{dataHandyman.state}}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
   
     </div>
   
-    <h3 class="my-4">Related Handyman</h3>
+    <h3 class="mt-5 mb-3">Related Handyman</h3>
   
     <div class="row">
   
-      <div class="col-md-3 col-sm-6 mb-4" *ngFor="let handyman of handymanList">
+      <div class="col-md-3 col-sm-6 mb-4" *ngFor="let handyman of relatedHandymanList">
         <a 
-        style="cursor: pointer;">
-            <img class="img-fluid" 
-            [src]="handyman.img_url" alt="">
+          (click)="gotoDetails(handyman.id)"
+          style="cursor: pointer;">
+          
+          <div class="related-img" 
+            [ngStyle]="{ 'background-image': 'url(\''+handyman.img_url+'\')' }"></div>
+            <h6 class="text-capitalize">
+              {{handyman.name}}
+            </h6>
         </a>
-        <h6 class="text-capitalize text-center">
-            {{handyman.name}}
-        </h6>
             
       </div>
 

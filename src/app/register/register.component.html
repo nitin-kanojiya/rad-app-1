@@ -1,5 +1,9 @@
 <div class="container-fluid">
-    <form (submit)="onSubmitForm(registerForm)" class="mx-auto" #registerForm="ngForm">
+    <form
+      (submit)="onSubmitForm(registerForm)" 
+      class="mx-auto" 
+      [formGroup]="registerForm"
+      >
 
         <div class="section-head">
             <h2 class="mx-auto text-center primary-dark-orange">REGISTER YOURSELF</h2>
@@ -7,47 +11,54 @@
         </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="fullname">Full Name</label>
+                <label for="name">Full Name</label>
                 <input 
-                name="fullname"
-                required
-                ngModel
-                #fullname="ngModel"
+                name="name"
+                formControlName="name"
                 type="text" class="form-control" 
-                id="fullname" placeholder="As per your Aadhar Card">
+                id="name" placeholder="As in Aadhar Card">
               </div>
+
               <div class="form-group col-md-6">
-                <label for="mobilenumber">Mobile Number</label>
+                <label for="contactNumber">Mobile Number</label>
                 <input 
-                name="mobilenumber"
-                required
-                ngModel
-                #mobilenumber="ngModel"
-                type="tel" class="form-control" id="mobilenumber" placeholder="+91-">
+                name="contactNumber"
+                formControlName="contactNumber"
+                type="tel" 
+                class="form-control" 
+                id="contactNumber" 
+                maxlength="10" 
+                minlength="10" 
+                placeholder="10 digits">
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="aadhar">Aadhar Card number</label>
-              <input 
-              name="aadharnumber"
-              required
-              ngModel
-              #aadharnumber="ngModel"
-              type="tel" class="form-control" id="aadhar" placeholder="0000-0000-0000">
-            </div>
   
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="servicename">Your Service Name</label>
+                <label for="aadhar">Aadhar Card number</label>
                 <input 
-                name="servicename"
-                required
-                ngModel
-                #servicename="ngModel"
-                type="text" class="form-control" id="servicename" placeholder="eg. Electrician">
+                name="aadharNumber"
+                formControlName="aadharNumber"
+                type="tel" 
+                class="form-control" 
+                id="aadhar" 
+                minlength="12" 
+                maxlength="12" 
+                placeholder="0000-0000-0000">
               </div>
               <div class="form-group col-md-6">
+                <label for="dob">Date Of Birth</label>
+                <input 
+                name="dob"
+                formControlName="dob"
+                type="date" 
+                class="form-control" 
+                id="dob" 
+                placeholder="">
+              </div>
+
+              <!-- <div class="form-group col-md-6">
                 <label for="distance">Maximum Distance</label>
                 <input 
                 name="distance"
@@ -55,27 +66,39 @@
                 ngModel
                 #distance="ngModel"
                 type="number" class="form-control" id="distance" placeholder="Distance in km">
-              </div>
+              </div> -->
             </div>
 
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="dob">Date Of Birth</label>
-                <input 
-                name="dob"
-                required
-                ngModel
-                #dob="ngModel"
-                type="date" class="form-control" id="dob" placeholder="">
+                <label for="servicename">Your Service Name</label>
+                <!-- <input 
+
+                type="text" class="form-control"  placeholder="eg. Electrician"> -->
+                <select
+                  name="serviceName"
+                  formControlName="serviceName"
+                  id="servicename"
+                  class="form-control">
+                    <option selected>
+                      Choose one
+                    </option>
+                    <option *ngFor="let option of ourservices">
+                      {{option.name}}
+                    </option>
+                </select>
+
               </div>
+
               <div class="form-group col-md-6">
                 <label for="experience">Service Experience</label>
                 <input 
-                name="experience"
-                required
-                ngModel
-                #experience="ngModel"
-                type="number" class="form-control" id="experience" placeholder="In years">
+                name="serviceExperience"
+                formControlName="serviceExperience"
+                type="number" 
+                class="form-control" 
+                id="experience" 
+                placeholder="In years">
               </div>
             </div>
 
@@ -86,22 +109,18 @@
             </div> -->
             <div class="form-row">
               <div class="form-group col-md-6">
-                  <label for="currCity">City</label>
+                  <label for="city">City</label>
                   <input 
-                  name="currCity"
-                  required
-                  ngModel
-                  #currCity="ngModel"
-                  type="text" class="form-control" id="currCity" placeholder="eg.Dehradun">
+                  name="city"
+                  formControlName="city"
+                  type="text" class="form-control" id="city" placeholder="eg.Dehradun">
               </div>
               <div class="form-group col-md-6">
-                  <label for="currState">State</label>
+                  <label for="state">State</label>
                   <input 
-                  name="currState"
-                  required
-                  ngModel
-                  #currState="ngModel"
-                  type="text" class="form-control" id="currState" placeholder="eg.Uttarakhand">
+                  name="state"
+                  formControlName="state"
+                  type="text" class="form-control" id="state" placeholder="eg.Uttarakhand">
               </div>
             </div>
 
@@ -150,24 +169,53 @@
               <input type="text" class="form-control" id="permPoliceStation">
             </div> -->
 
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label for="pick">Upload Image</label>
+                  <input 
+                  (change) = "onImagePicked($event)"
+                  type="file" 
+                  class="form-control" 
+                  id="profile-image">
+              </div>
+              <div 
+                *ngIf="imagePreview !== '' && imagePreview && registerForm.get('previewImg').valid"
+                class="form-group col-md-6 image-preview"
+                [ngStyle]="{'background-image': 'url(\''+imagePreview+'\')' }"
+                >
+                <!-- <img [src]="imagePreview" alt=""> -->
+              </div>
+            </div>
+
             
             <div class="form-group">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="termsCheck" 
-                    [checked]="termsCheck"
-                    (change)="termsCheck=!termsCheck"
+                <input
+                class="form-check-input"
+                type="checkbox"
+                id="termsCheck" 
+                [checked]="termsCheck"
+                (change)="termsCheck=!termsCheck"
                     >
                 <label class="form-check-label" for="termsCheck"
                     [ngClass]="{'text-success': termsCheck, 'text-danger': !termsCheck}">
-                  I declare all details filled by me are as per the government records
+                  I declare all details filled by me are true.
                 </label>
               </div>
             </div>
 
             <button type="submit"
-              [ngClass]="{'submit-btn': termsCheck, 'disabled': !termsCheck, 'submit-btn-disabled': !termsCheck}"
-             class="btn ">
-             Submit
+              [hidden]="!termsCheck"
+              class="btn submit-btn">
+              Submit
             </button>
-          </form>
+    </form>
 </div>
+
+<!-- <div class="container-fluid alertbox">
+  <div class="alert alert-success text-center mt-5 mx-auto" role="alert" [hidden]="!showhide">
+    <h4 class="alert-heading">Form Submitted!</h4>
+    <p>Please wait for the call from our team</p>
+  </div>
+</div> -->
+        <!-- [ngClass]="{'submit-btn': termsCheck, 'disabled': !termsCheck, 'submit-btn-disabled': !termsCheck}" -->

@@ -61,3 +61,21 @@ form{
     transform: scale(1.2, 1.1);
     box-shadow: 0.5px 0.5px 3px #FA9600;
 }
+
+.alertbox{
+    background: none;
+    justify-content: center;
+    position: fixed;
+    top: 2%;
+}
+.alertbox .alert{
+    width: 20rem;
+}
+
+.image-preview{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 7rem;
+    height: 10rem;
+}

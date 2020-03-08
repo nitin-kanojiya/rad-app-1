@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HandymanService } from '../handyman.service';
 import { OurServicesService } from 'src/app/our-services.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'app-handyman-list',
@@ -11,9 +12,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class HandymanListComponent implements OnInit {
 
-    serviceName = "";
+    serviceName : string = "";
     ourservices=[];
-    serviceData;
+    // serviceData;
     handymanList=[];
 
     urlopen='url(\'';
@@ -23,29 +24,57 @@ export class HandymanListComponent implements OnInit {
         public handymanservice: HandymanService,
         public ourservicesservice: OurServicesService,
         public route: ActivatedRoute,
-        public router: Router
-        ) { }
+        public router: Router,
+        ratingConfig: NgbRatingConfig
+        ) { 
+            // ratingConfig.max= 5;
+        }
 
     ngOnInit() {
-        this.ourservices= this.ourservicesservice.getServices();
-        this.setData(this.handymanservice.getDataForList());
+        this.ourservicesservice.getServices()
+                .subscribe(data=>{
+                    this.ourservices= data;
+                });
+        this.setData(this.handymanservice.getDataForListPage());
     }
 
-    setData(idDataForList){
-        this.ourservices.forEach(element=>{
-            if(element.id === idDataForList){
-                this.serviceData=element;
-            }
-        })
-        // alert(this.serviceData.name);
-        this.serviceName=this.serviceData.name;
-            if ('list' in this.serviceData) {
-                this.handymanList=this.serviceData.list;
-            }
+    setData(serviceIdForListPage){
+        this.ourservicesservice.getServices()
+                .subscribe(data=>{
+                    data.forEach(element=>{
+                        if(element.id === serviceIdForListPage){
+                            this.serviceName = element.name.toLowerCase();
+                            this.setHandymanList();
+                        }
+                    })
+                });
     }
-    gotoDetails(dataForDetails){
-        this.handymanservice.setDataForDetail(dataForDetails);
+    
+    setHandymanList(){
+        this.ourservicesservice.getHandyman()
+                .subscribe(data=>{
+                    data.forEach(element=>{
+                        if(((this.serviceName).toLowerCase()).localeCompare(element.serviceName.toLowerCase()) === 0){
+                            this.handymanList.push(element);
+                        }
+                    })
+                })
+    }
+
+    gotoDetailsPage(IdHandymanForDetails){
+        this.handymanservice.setDataForDetailPage(IdHandymanForDetails);
         this.router.navigate(['/details'],{relativeTo: this.route});
     }
+
+    // onRate($event : {
+    //     oldValue:number, 
+    //     newValue:number, 
+    //     starRating:StarRatingComponent}
+    //     ) {
+    //         alert(`Old Value: ${$event.oldValue},
+    //                New Value: ${$event.newValue}, 
+    //                Checked Color: ${$event.starRating.checkedcolor}, 
+    //                Unchecked Color: ${$event.starRating.uncheckedcolor}`);
+    //   }
 
 }

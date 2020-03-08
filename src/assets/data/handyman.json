@@ -1,0 +1,237 @@
+[
+    {
+      "id": "1",
+      "name": "ranjan pant",
+      "age": 21,
+      "isVerified": true,
+      "serviceName": "labour",
+      "rating": 3,
+      "img_url": "/assets/img/labour/labour (1).jpg"
+    },
+    {
+      "id": "2",
+      "name": "ravi kaler",
+      "age": 20,
+      "isVerified": true,
+      "serviceName": "labour",
+      "rating": 3,
+      "img_url": "/assets/img/labour/labour (2).jpg"
+    },
+    {
+      "id": "3",
+      "name": "rohit kamboj",
+      "age": 22,
+      "isVerified": true,
+      "serviceName": "labour",
+      "rating": 3,
+      "img_url": "/assets/img/labour/labour (3).jpg"
+    },
+    {
+      "id": "4",
+      "name": "shahid khan",
+      "age": 20,
+      "isVerified": true,
+      "serviceName": "labour",
+      "rating": 3,
+      "img_url": "/assets/img/labour/labour (4).jpg"
+    },
+    {
+      "id": "5",
+      "name": "Mukesh suri",
+      "age": 21,
+      "isVerified": true,
+      "serviceName": "carpenter",
+      "rating": 3,
+      "img_url": "/assets/img/carpenter/carpenter(1).jpg"
+    },
+    {
+      "id": "6",
+      "name": "raj Ambani",
+      "age": 20,
+      "isVerified": true,
+      "serviceName": "carpenter",
+      "rating": 3,
+      "img_url": "/assets/img/carpenter/carpenter(2).jpg"
+    },
+    {
+      "id": "7",
+      "name": "Pandit ramfal",
+      "age": 22,
+      "isVerified": true,
+      "serviceName": "carpenter",
+      "rating": 3,
+      "img_url": "/assets/img/carpenter/carpenter(3).jpg"
+    },
+    {
+      "id": "8",
+      "name": "Mohd Abdul",
+      "age": 20,
+      "isVerified": true,
+      "serviceName": "carpenter",
+      "rating": 3,
+      "img_url": "/assets/img/carpenter/carpenter(4).jpg"
+    },
+    {
+      "id": "9",
+      "name": "Aftab ahmed",
+      "age": 21,
+      "isVerified": true,
+      "serviceName": "electrician",
+      "rating": 3,
+      "img_url": "/assets/img/electrician/electrician (1).jpg"
+    },
+    {
+      "id": "10",
+      "name": "Veer singh",
+      "age": 20,
+      "isVerified": true,
+      "serviceName": "electrician",
+      "rating": 3,
+      "img_url": "/assets/img/electrician/electrician (2).jpg"
+    },
+    {
+      "id": "11",
+      "name": "bhole lal",
+      "age": 22,
+      "isVerified": true,
+      "serviceName": "electrician",
+      "rating": 3,
+      "img_url": "/assets/img/electrician/electrician (3).jpg"
+    },
+    {
+      "id": "12",
+      "name": "rizwi shah",
+      "age": 20,
+      "isVerified": true,
+      "serviceName": "electrician",
+      "rating": 3,
+      "img_url": "/assets/img/electrician/electrician (4).jpg"
+    },
+    {
+      "id": "13",
+      "name": "ranjan pant",
+      "age": 21,
+      "isVerified": true,
+      "serviceName": "plumber",
+      "rating": 3,
+      "img_url": "/assets/img/plumber/plumber (1).jpg"
+    },
+    {
+      "id": "14",
+      "name": "ravi kaler",
+      "age": 20,
+      "isVerified": true,
+      "serviceName": "plumber",
+      "rating": 3,
+      "img_url": "/assets/img/plumber/plumber (2).jpg"
+    },
+    {
+      "id": "15",
+      "name": "rohit kamboj",
+      "age": 22,
+      "isVerified": true,
+      "serviceName": "plumber",
+      "rating": 3,
+      "img_url": "/assets/img/plumber/plumber (3).jpg"
+    },
+    {
+      "id": "16",
+      "name": "shahid khan",
+      "isVerified": true,
+      "age": 20,
+      "serviceName": "plumber",
+      "rating": 3,
+      "img_url": "/assets/img/plumber/plumber (4).jpg"
+    }
+    ,
+    {
+      "id": "17",
+      "name": "Pandit ramfal",
+      "age": 22,
+      "serviceName": "carpenter",
+      "isVerified": false,
+      "rating": 3,
+      "img_url": "/assets/img/carpenter/carpenter(3).jpg"
+    },
+    {
+      "id": "18",
+      "name": "Mohd Abdul",
+      "age": 20,
+      "serviceName": "carpenter",
+      "isVerified": false,
+      "rating": 3,
+      "img_url": "/assets/img/carpenter/carpenter(4).jpg"
+    },
+    {
+      "id": "19",
+      "name": "Aftab ahmed",
+      "age": 21,
+      "serviceName": "electrician",
+      "isVerified": false,
+      "rating": 3,
+      "img_url": "/assets/img/electrician/electrician (1).jpg"
+    },
+    {
+      "id": "20",
+      "name": "Veer singh",
+      "age": 20,
+      "serviceName": "electrician",
+      "isVerified": false,
+      "rating": 3,
+      "img_url": "/assets/img/electrician/electrician (2).jpg"
+    },
+    {
+      "id": "21",
+      "name": "bhole lal",
+      "age": 22,
+      "serviceName": "electrician",
+      "isVerified": false,
+      "rating": 3,
+      "img_url": "/assets/img/electrician/electrician (3).jpg"
+    },
+    {
+      "id": "22",
+      "name": "rizwi shah",
+      "age": 20,
+      "serviceName": "electrician",
+      "isVerified": false,
+      "rating": 3,
+      "img_url": "/assets/img/electrician/electrician (4).jpg"
+    },
+    {
+      "id": "23",
+      "name": "ranjan pant",
+      "age": 21,
+      "serviceName": "plumber",
+      "isVerified": false,
+      "rating": 3,
+      "img_url": "/assets/img/plumber/plumber (1).jpg"
+    },
+    {
+      "id": "24",
+      "name": "ravi kaler",
+      "age": 20,
+      "serviceName": "plumber",
+      "isVerified": false,
+      "rating": 3,
+      "img_url": "/assets/img/plumber/plumber (2).jpg"
+    },
+    {
+      "id": "25",
+      "name": "rohit kamboj",
+      "age": 22,
+      "isVerified": false,
+      "serviceName": "plumber",
+      "rating": 3,
+      "img_url": "/assets/img/plumber/plumber (3).jpg"
+    },
+    {
+      "id": "26",
+      "name": "shahid khan",
+      "age": 20,
+      "serviceName": "plumber",
+      "isVerified": false,
+      "rating": 3,
+      "img_url": "/assets/img/plumber/plumber (4).jpg"
+    }
+]

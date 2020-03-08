@@ -26,7 +26,7 @@ header {
   width: 100%;
   overflow: hidden;
 }
-header video {
+header img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -52,7 +52,7 @@ header .overlay {
   height: 100%;
   width: 100%;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.8;
   z-index: 1;
 }
 /*  ***********
@@ -70,4 +70,55 @@ margin: 4rem 0 0 0;
 a, a:hover{
   color: #2861CF;
   cursor: pointer;
+}
+
+/* 
+******************* */
+
+.services-section-content{
+  margin-top: 2rem;
+  color: #9BA5BA;
+}
+.services-section-icon{
+  font-size: 2rem;
+}
+.services-section-content-col div.card{
+  border: 0.1px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.services-section-content-col:hover div.card{
+  border: 0.5px solid #9BA5BA;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 5px #9BA5BA;
+
+}
+.services-section-content-col div.card div .card-text{
+  display: none;
+  transform: translateY(100px);
+}
+.services-section-content-col div.card:hover div .card-text{
+  display: block;
+  transform: translateY(-30px);
+  animation: translateDescAnim 1s 1;
+  margin-bottom: 0;
+}
+@keyframes translateDescAnim{
+  from{
+      transform: translateY(100px);
+  }
+  to{
+      transform: translateY(-30px);
+  }
+}
+
+.services-section-content-col div.card:hover div span i{
+  transform: translate(-70px, 0px);
+}
+.services-section-content-col div.card:hover div span{
+  color: #FA9600;
+}
+.services-section-content-col div.card:hover div .card-title{
+  color: #22262D;
+  transform: translate(50px,-38px);
 }

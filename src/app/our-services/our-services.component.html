@@ -1,37 +1,30 @@
 <!-- Video -->
 <header>
     <div class="overlay"></div>
-    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="/assets/video/handyman.mp4" type="video/mp4">
-    </video>
+    <img src="/assets/img/services_head.jpg" alt="">
     <div class="container h-100">
       <div class="d-flex h-100 text-center align-items-center">
         <div class="w-100 text-white">
-          <h1 class="display-3"></h1>
-          <p class="lead mb-0"></p>
+          
+          <div class="section-head">
+            <h2 class="mx-auto primary-dark-orange">OUR SERVICES</h2>
+          </div>  
+          <p class="mt-5 mx-auto mb-0" style="width: 80%;">
+            <input type="text" class="form-control"
+            [(ngModel)]="searchText" 
+            autocomplete="off" 
+            placeholder= "Search Service.."
+            aria-label= "Search Service..">  
+          </p>
         </div>
       </div>
     </div>
 </header>
 <!--END Video -->
     
-<!-- Head and Search  -->
-<div class="head-search container my-5 ">
-    <div class="section-head">
-        <h2 class="mx-auto primary-dark-orange">OUR SERVICES</h2>
-    </div>
-    <div class="row input-group mt-5 mx-auto" style="width: 80%;">
-        <input type="text" class="form-control"
-          [(ngModel)]="searchText" 
-          autocomplete="off" 
-          placeholder= "Search Service.."
-          aria-label= "Search Service..">
-      </div>
-</div>
-<!-- END Head and Search  -->
-
 <!-- Services Showcases -->
-<div class="services-section container-fluid p-0">
+
+<!-- <div class="services-section container-fluid p-0">
     <div class="row no-gutters my-md-2" *ngFor="let service of ourservices | filter:searchText; let i=index"  >
         <div class="col-md-6 text-white showcase-img"
             [ngClass]="{'order-2': i%2==0 }" 
@@ -44,9 +37,36 @@
             <p class="mb-0"> 
                 {{service.desc}}
                 <br>
-                <a (click)="gotoList(service.id)">Explore servicemen</a>
+                <a (click)="gotoListPage(service.id)">Explore servicemen</a>
             </p>
         </div>
     </div>
-</div>
+
+</div> -->
+
 <!-- END Services Showcases -->
+
+
+<!-- OUR Services Section -->
+<div id="our-services" class="services-section container">
+  
+  <div class="row section-content services-section-content">
+      <div class="col-lg-3 col-md-4 col-sm-6 services-section-content-col mb-5" *ngFor="let item of ourservices | filter:searchText">
+          <div class="card" >
+              <div class="card-body text-center" 
+                  (click)="gotoListPage(item.id)" 
+                  [routerLink]="['/services']">
+      
+                  <span class="services-section-icon">
+                      <i class="{{item.icon}}"></i>
+                  </span>
+                  <h5 class="card-title">{{item.name}}</h5>
+                  <p class="card-text">{{item.desc}}</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+</div>
+
+<!-- END Our Services Section -->

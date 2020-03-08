@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm, FormsModule } from '@angular/forms';
-
+import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
+import { OurServicesService } from '../our-services.service';
+import { HandymanService } from '../handyman/handyman.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { HandymanModel } from '../handyman/handyman.model';
+// import { mimeType } from "./mime-type.validator";
 
 @Component({
   selector: 'app-register',
@@ -9,43 +13,124 @@ import { NgForm, FormsModule } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
-  
-  details={
-    "fullname": "",
-    "mobilenumber": "",
-    "aadharnumber": "",
-    "servicename": "",
-    "distance": "",
-    "dob": "",
-    "experience": "",
-    "currCity": "",
-    "currState": ""
-  };
+  termsCheck=true;
+  showhide=false;
 
-  termsCheck=false;
+  ourservices=[];
+  registerForm: FormGroup;
+  imagePreview;
+
+  constructor(
+    public ourservicesservice: OurServicesService,
+    public handymanservices: HandymanService,
+    public route: ActivatedRoute,
+    public router: Router
+  ) { }
 
   ngOnInit() {
+    this.registerForm = new FormGroup({
+      'name' : new FormControl(null , {
+        validators: [Validators.required]
+      }),
+      'dob' : new FormControl(null , {
+        validators: [Validators.required]
+      }),
+      'contactNumber' : new FormControl(null , {
+        validators: [Validators.required]
+      }),
+      'aadharNumber' : new FormControl(null , {
+        validators: [Validators.required]
+      }),
+      'serviceName' : new FormControl(null , {
+        validators: [Validators.required]
+      }),
+      'serviceExperience' : new FormControl(null , {
+        validators: [Validators.required]
+      }),
+      'city' : new FormControl(null , {
+        validators: [Validators.required]
+      }),
+      'state' : new FormControl(null , {
+        validators: [Validators.required]
+      }),
+      'previewImg' : new FormControl(null , {
+        validators: [Validators.required]
+        // ,asyncValidators: [mimeType]
+      })
+    });
+    this.ourservicesservice.getServices()
+        .subscribe(data=>{
+          this.ourservices = data;
+        })
+  }
+  
+  newHandymanDetails : HandymanModel={
+    "id": "",
+
+    "name": "",
+    "dob": new Date(),
+    
+    "img_url": "",
+    
+    "contactNumber": "",
+    "aadharNumber": "",
+    "serviceName": "",
+    "serviceExperience": 0,
+    "city": "",
+    "state": "",
+
+    "isVerified": false,
+    "rating": 0
+  };
+
+
+  showAlert(){
+    this.showhide=true;
+    setTimeout(()=>{
+      this.showhide=false;
+    },6000);
   }
 
-  onSubmitForm(registerForm: NgForm){
-    if(registerForm.invalid){
+  onSubmitForm(){
+    if(this.registerForm.invalid){
+      console.log("invalid");
+      console.log(this.registerForm.value);
       return;
     }
-    console.log(this.details);
+    console.log("Valid");
+    console.log(this.registerForm.value);
+    this.newHandymanDetails.name=this.registerForm.value.name;
+    this.newHandymanDetails.contactNumber=this.registerForm.value.contactNumber;
+    this.newHandymanDetails.aadharNumber=this.registerForm.value.aadharNumber;
+    this.newHandymanDetails.serviceName=this.registerForm.value.serviceName;
+    this.newHandymanDetails.dob=this.registerForm.value.dob;
+    this.newHandymanDetails.serviceExperience=this.registerForm.value.serviceExperience;
+    this.newHandymanDetails.city=this.registerForm.value.city;
+    this.newHandymanDetails.state=this.registerForm.value.state;
+
+    this.newHandyman(this.newHandymanDetails);
     
-    this.details.fullname=registerForm.value.fullname;
-    this.details.mobilenumber=registerForm.value.mobilenumber;
-    this.details.aadharnumber=registerForm.value.aadharnumber;
-    this.details.servicename=registerForm.value.servicename;
-    this.details.distance=registerForm.value.distance;
-    this.details.dob=registerForm.value.dob;
-    this.details.experience=registerForm.value.experience;
-    this.details.currCity=registerForm.value.currCity;
-    this.details.currState=registerForm.value.currState;
-
-    console.log(this.details);
-
+    // this.registerForm.reset();
+    this.termsCheck=false;
+    this.showAlert();
   }
 
+  newHandyman(newHandymanDetails){
+    this.ourservicesservice.createHandyman(newHandymanDetails);
+  }
+
+  onImagePicked(event : Event){
+    const file = (event.target as HTMLInputElement).files[0];
+    this.registerForm.patchValue({
+      'previewImg' : file
+    });
+    this.registerForm.get('previewImg').updateValueAndValidity();
+    const reader = new FileReader();
+    reader.onload = () =>{
+      this.imagePreview = reader.result;
+    };    
+    reader.readAsDataURL(file);
+    console.log(this.imagePreview);
+        
+  }
 }

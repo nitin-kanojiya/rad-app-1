@@ -5,25 +5,25 @@ import { Injectable } from '@angular/core';
 })
 export class HandymanService {
 
-  private idDataForList;
-  private idDataForDetails;
+  private serviceIdForListPage;
+  private idDataForDetailsPage;
 
   constructor() { }
   
 
-  getdataForDetails(){
-    return this.idDataForDetails;
+  getdataForDetailsPage(){
+    return this.idDataForDetailsPage;
   }
-  setDataForDetail(dataForDetails){
-    this.idDataForDetails = dataForDetails;
-  }
-
-  getDataForList(){
-    return this.idDataForList;
+  setDataForDetailPage(IdofHandyMan){
+    console.log("CLick = " + IdofHandyMan);
+    this.idDataForDetailsPage = IdofHandyMan;
   }
 
-  setDataForList(dataForList){
-    this.idDataForList= dataForList;
+  getDataForListPage(){
+    return this.serviceIdForListPage;
+  }
+  setDataForListPage(IdofService){
+    this.serviceIdForListPage = IdofService;
   }
   
 }

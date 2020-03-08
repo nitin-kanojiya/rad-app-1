@@ -21,10 +21,13 @@ export class OurServicesComponent implements OnInit {
 
   ourservices=[];
   ngOnInit() {
-    this.ourservices=this.ourservicesservice.getServices();
+    this.ourservicesservice.getServices()
+        .subscribe(data=>{
+          this.ourservices=data;
+        });
   }
-  gotoList(dataForList){
-    this.handymanservices.setDataForList(dataForList);
+  gotoListPage(IdofService){
+    this.handymanservices.setDataForListPage(IdofService);
     this.router.navigate([`/list`],{relativeTo: this.route});
   }
 

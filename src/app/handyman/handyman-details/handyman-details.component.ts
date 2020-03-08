@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HandymanService } from '../handyman.service';
 import { OurServicesService } from 'src/app/our-services.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { element } from 'protractor';
 
 @Component({
     selector: 'app-handyman-details',
@@ -11,10 +12,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class HandymanDetailsComponent implements OnInit {
 
-    ourservices=[];
     dataId;
     serviceData;
-    handymanList=[];
+    selectedRating = 0;
+    ourservices=[];
+    relatedHandymanList=[];
     dataHandyman;
 
     constructor(
@@ -25,34 +27,42 @@ export class HandymanDetailsComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        this.ourservices= this.ourservicesservice.getServices();
-        this.setListData(this.handymanservice.getDataForList());
-        this.setData(this.handymanservice.getdataForDetails());
+        this.selectedRating = 0;
+        this.ourservices=[];
+        this.relatedHandymanList=[];
+    
+        // console.log("on init ");
+        this.relatedHandymanList=[];
+        this.ourservicesservice.getHandyman()
+                .subscribe(data=>{
+                    data.forEach(element=>{
+                        if(element.id === this.handymanservice.getdataForDetailsPage()){
+                            this.dataHandyman = element;
+                            this.setRelatedHandymanList(element.serviceName);
+                        }
+                    })
+                });
      }
-    setData(dataId) {
-        this.dataId=dataId;
-        this.handymanList.forEach(element => {
-            if((this.dataId)===(element.id)){
-                this.dataHandyman=element;
-            }
-        });
-    }
-    setListData(idDataForList){
-        this.ourservices.forEach(element=>{
-            if(element.id === idDataForList){
-                this.serviceData=element;
-            }
-        })
-        // alert(this.serviceData.name);
-        // this.serviceName=this.serviceData.name;
-            if ('list' in this.serviceData) {
-                this.handymanList=this.serviceData.list;
-            }
-    }
-    gotoDetails(dataForDetails){
-        this.handymanservice.setDataForDetail(dataForDetails);
-        this.router.navigate(['/details'],{relativeTo: this.route});
+
+     setRelatedHandymanList(serviceName) {
+        this.ourservicesservice.getHandyman()
+            .subscribe(data=>{
+                data.forEach(element=>{
+                    if((element.serviceName.toLowerCase()).localeCompare(serviceName)===0){
+                        this.relatedHandymanList.push(element);
+                    }
+                })
+            })
     }
 
+    gotoDetails(dataForDetails){
+        // console.log("CLick = " + dataForDetails);
+        this.handymanservice.setDataForDetailPage(dataForDetails);
+        this.ngOnInit();
+    }
+    
+    ratingChanged(){
+        
+    }
 
 }

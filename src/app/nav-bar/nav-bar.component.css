@@ -3,14 +3,17 @@
 *************************** */
 mat-toolbar{
     padding: 3rem 2rem 3rem 2rem;
+    overflow: hidden;
 }
 .space-filler{
     flex: 1 1 auto;
 }
 .img-logo{
     margin-left: 2rem;
-    padding: 0.5rem;
-    width: 7.5rem;
+    margin-top: 1.3rem;
+    /* padding: 0.5rem; */
+    /* width: 7.5rem; */
+    width: 10rem;
 }
  ul{
     margin: 0;

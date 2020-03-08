@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HandymanListComponent } from './handyman/handyman-list/handyman-list.component';
 import { HandymanDetailsComponent } from './handyman/handyman-details/handyman-details.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 const routes: Routes = [
@@ -34,8 +35,11 @@ const routes: Routes = [
   {
     path: 'details', component: HandymanDetailsComponent
   },
+  { 
+    path: 'admin' , component: AdminComponent
+  },
   {
-    path: '**', component: PageNotFoundComponent
+    path: '**', redirectTo: '/home'
   }
 ];
 

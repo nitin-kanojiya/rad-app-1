@@ -3,11 +3,15 @@
     <div class="row">
         <div class="home-head-section-data col-sm-7 col-lg-7">
             <!-- <h3 class="company-name">Radiating Planet</h3> -->
-            <span class="head-section-data-head">Handyman Services</span>
+            <span class="head-section-data-head">Handyman Service</span>
+            <p class="lead">
+                "Skill and Experienced professionals at your pocket price."              
+            </p>
             <p>
-                Book your service at your door step with our locals and verified sericemen.
-                Positive attitude, behavioral worker.
-                Skill and experienced at your pocket price.                 
+                Book your service at your door-step with our local and verified servicemen. 
+            </p>
+            <p>
+                Behavioral workers with a positive attitude.
             </p>
             <div class="head-contact">
 
@@ -19,12 +23,12 @@
                         Contact Us
                     </button>
                     <span class="btn">
-                        <a href="">
+                        <a href="https://www.facebook.com/radiatingplanet">
                             <i class="fab fa-facebook-square"></i>
                         </a>
                     </span>                    
                     <span class="btn">
-                        <a href="">
+                        <a href="https://www.instagram.com/radiating.planet">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </span>
@@ -38,8 +42,9 @@
 <!-- END Home Head Section -->
 
 
+
 <!-- why us section -->
-<div id="why-us-section" class="why-us-section text-light primary-bg-dark container-fluid">
+<div id="why-us-section" class="why-us-section  container-fluid">
     <div class="section-head">
         <h2 class="mx-auto">WHY US</h2>
     </div>
@@ -83,7 +88,7 @@
 
 
 <!-- OUR Services Section -->
-<div id="our-services" class="services-section container">
+<div id="our-services" class="services-section container mb-md-5">
 
     <div class="section-head">
         <h2 class="mx-auto">OUR SERVICES</h2>
@@ -91,8 +96,8 @@
     <div class="row section-subhead">
         <div class="col-md-6">
             <p class="text-center mx-auto">
-                We provide various services and expertise person who has the 
-                perfectionism in their field of work at affordable rates.            
+                We provide various services and experienced personnel who are well 
+                versed in their field of work at affordable rates.            
             </p>
         </div>
     </div>
@@ -101,14 +106,14 @@
         <div class="col-lg-3 col-md-4 col-sm-6 services-section-content-col mb-5" *ngFor="let item of services ">
             <div class="card" >
                 <div class="card-body text-center" 
-                    (click)="gotoList(item.id)" 
+                    (click)="gotoListPage(item.id)" 
                     [routerLink]="['/services']">
         
                     <span class="services-section-icon">
                         <i class="{{item.icon}}"></i>
                     </span>
                     <h5 class="card-title">{{item.name}}</h5>
-                    <p class="card-text">{{item.desc}}</p>
+                    <!-- <p class="card-text">{{item.desc}}</p> -->
                 </div>
             </div>
         </div>
@@ -132,7 +137,7 @@
 <!-- END Our Services Section -->
 
 <!-- Handyman section -->
-<div id="handyman-section" class="handyman-section container">
+<div id="handyman-section" class="handyman-section container ">
     <div class="section-head">
         <h2 class="mx-auto">HANDYMAN FOR YOU</h2>
     </div>
@@ -161,7 +166,7 @@
         </div>
     </div>
 
-    <div class="handyman-section-values" [ngSwitch]="handymanCase.value" >
+    <div class="handyman-section-values " [ngSwitch]="handymanCase.value" >
         <div 
             class="container mt-3" *ngSwitchCase="'labour'">
             <div class="row text-center section-subhead">
@@ -171,7 +176,7 @@
             <div
                 class="row card-container mt-3 mt-lg-2 justify-content-center">
                 <div
-                (click)="findIdForList()"
+                (click)="findIdForListPage()"
                 class="card col-sm-3 handyman-section-values-img primary-light-gray"
                 [ngStyle]="{'background-image': 'url(\''+labour.img_url+'\')' }"
                     *ngFor="let labour of labours">
@@ -190,7 +195,7 @@
                 <div
                 (click)="findIdForList()" 
                 class="card col-sm-3 handyman-section-values-img primary-light-gray"
-                [ngStyle]="{'background-image': electrician.img_url}"
+                [ngStyle]="{'background-image': 'url(\''+electrician.img_url+'\')'}"
                     *ngFor="let electrician of electricians">
                     <div class="handyman-section-values-content">
                         {{electrician.name}}
@@ -207,7 +212,7 @@
                 <div
                 (click)="findIdForList()"
                 class="card col-sm-3 handyman-section-values-img primary-light-gray"
-                [ngStyle]="{'background-image': carpenter.img_url}"
+                [ngStyle]="{'background-image': 'url(\''+carpenter.img_url+'\')'}"
                     *ngFor="let carpenter of carpenters">
                     <div class="handyman-section-values-content">
                         {{carpenter.name}}
@@ -224,7 +229,7 @@
                 <div
                 (click)="findIdForList()"
                 class="card col-sm-3 handyman-section-values-img primary-light-gray"
-                [ngStyle]="{'background-image': plumber.img_url}"
+                [ngStyle]="{'background-image': 'url(\''+plumber.img_url+'\')'}"
                     *ngFor="let plumber of plumbers">
                     <div class="handyman-section-values-content">
                         {{plumber.name}}
@@ -241,7 +246,22 @@
 
 
 <!-- book-service section -->
-<div id="book-service-section" class="container-fluid book-service-section primary-bg-dark">
+<div id="call-us-section" class="container-fluid call-us-section primary-bg-dark">
+    <div class="row">
+        <h4 class="mx-auto text-center text-light">Got any doubt? Call Us Now:</h4>
+    </div>
+    <div class="row call-us-section-subhead mt-3">
+        <div class="text-center mx-auto col-md-6">
+            <div class="number primary-light-blue">
+                <i class="fas fa-phone-volume"></i> &nbsp;
+                +91-79008-34071
+            </div>        
+        </div>
+    </div>
+</div>
+
+
+<!-- <div id="book-service-section" class="container-fluid book-service-section primary-bg-dark">
     <div class="row book-service-section-head">
         <p class="mx-auto text-center">Book your service</p>
     </div>
@@ -254,32 +274,50 @@
     <div class="book-service-section-form  text-light">
         <div class="row mt-5 mx-auto text-center">
             <div class="col-lg-9">
-
+              <form (submit)="onSubmitForm(registerForm)" #bookForm="ngForm">
                 <div class="row mb-2 justify-content-center">
                     <div class=" col-md-4">
-                        <input class="form-control mx-auto" id="" placeholder="Full name" type="text">
+                        <input 
+                        ngModel
+                        name="fullName"
+                        #fullName="ngModel"
+                        class="form-control mx-auto" placeholder="Full name" type="text">
                     </div>
                     <div class=" col-md-4 mt-3 mt-md-0">
-                        <input class="form-control mx-auto" id="" placeholder="Contact Number" type="text">
+                        <input class="form-control mx-auto" 
+                        ngModel
+                        name="contactNumber"
+                        #contactNumber="ngModel"
+                        placeholder="Contact Number" type="text">
                     </div>
                 </div>
                 
                 <div class="row my-3 justify-content-center">
                     <div class=" col-md-4 ">
-                        <input class="form-control mx-auto" id="" placeholder="Your Email" type="text">
+                        <input 
+                        ngModel
+                        name="email"
+                        #email="ngModel"
+                        class="form-control mx-auto" placeholder="Your Email" type="text">
                     </div>
                     <div class=" col-md-4 mt-3 mt-md-0">
-                        <input class="form-control mx-auto" id="" placeholder="Service Type" type="text">
+                        <input
+                        ngModel
+                        name="serviceType"
+                        #serviceType="ngModel"
+                        class="form-control mx-auto" placeholder="Service Type" type="text">
                     </div>
                 </div>
                 <div class="row mt-3 mt-md-3">
                     <div class="text-center col-12">
-                        <button class="btn ">SUBMIT</button>
+                        <button type="submit" class="btn ">SUBMIT</button>
                     </div>
-                </div>            
-            </div>
+                </div> 
+
+              </form>
+            </div> -->
             <!-- Call Us part -->
-            <div class="col-lg-3 my-2 pr-5 mt-3 mt-lg-0">
+            <!-- <div class="col-lg-3 my-2 pr-5 mt-3 mt-lg-0">
                 <p class="lead ">Got any doubt? Call Us Now:</p>
                 <div class="number primary-light-blue">
                     <i class="fas fa-phone-volume"></i> &nbsp;
@@ -288,7 +326,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- END book-service section -->
 
 <!-- Map section -->

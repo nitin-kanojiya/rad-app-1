@@ -1,0 +1,280 @@
+<div class="container-fluid form-container bg-dark"
+        [style.display]="showLogin()">
+    <form (ngSubmit)="onSubmitLoginForm(loginForm)" #loginForm="ngForm" class="bg-dark p-5 text-white">
+        <div class="form-group">
+            <label for="inputUname">Email address</label>
+            <input 
+            name="uname"
+            ngModel
+            #uname="ngModel"
+            type="email" 
+            class="form-control" 
+            id="inputUname" 
+            placeholder="Enter Username">
+        </div>
+        <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input 
+            name="password"
+            ngModel
+            #password="ngModel"
+            type="password" 
+            class="form-control" 
+            id="inputPassword"
+            placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+
+<div class="container-fluid admin-section"
+    [ngStyle]="{'display': showAdmin()}">
+    <div class="handyman-section-cases card-container justify-content-center">
+        <div class="card bg-primary" (click)="showSwitchCase.value = 'all'">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+            <span>All</span>
+        </div>
+        <div class="card bg-success" (click)="showSwitchCase.value = 'verified'">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+            <span>Verified</span>
+        </div>
+        <div class="card bg-danger" (click)="showSwitchCase.value = 'notverified'">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+            <span>Not Verified</span>
+        </div>
+    </div>
+    <p class="mt-5 mx-auto mb-0" style="width: 80%;">
+        <input type="text" class="form-control"
+        name="searchText"
+        [(ngModel)]="searchText" 
+        autocomplete="off" 
+        placeholder= "Search Service.."
+        aria-label= "Search Service.."
+        >  
+      </p>
+    
+    <div class="handyman-section-values" [ngSwitch]="showSwitchCase.value" >
+        
+        <div 
+            class="container mt-3" *ngSwitchCase="'all'">
+            
+            <div
+                class="row mt-3 mt-lg-2"
+                [ngClass]="{'border-success': handyman.isVerified, 'border-danger': !handyman.isVerified}"
+                *ngFor="let handyman of allHandymanList | filter:searchText">
+                    <div 
+                    class="col-lg-3 profile-img"
+                    [ngStyle]="{'background-image': urlopen+handyman.img_url+urlclose }"
+                            >
+                    </div>
+                    <div class="col-lg-8 profile-content">
+                        <table class="row table text-capitalize table-borderless">
+                            <tbody>
+                              <tr>
+                                <td>Name</td>
+                                <td>{{handyman.name}}</td>
+                              </tr>
+                              <tr>
+                                <td>D.O.B</td>
+                                <td>{{handyman.dob}}</td>
+                              </tr>
+                              <tr>
+                                <td>Contact Number</td>
+                                <td>{{handyman.contactNumber}}</td>
+                              </tr>
+                              <tr>
+                                <td>Aadhar Number</td>
+                                <td>{{handyman.aadharNumber}}</td>
+                              </tr>
+                              <tr>
+                                <td>City</td>
+                                <td>{{handyman.city}}</td>
+                              </tr>
+                              <tr>
+                                <td>State</td>
+                                <td>{{handyman.state}}</td>
+                              </tr>
+                              <tr>
+                                <td>Service name</td>
+                                <td>{{handyman.serviceName}}</td>
+                              </tr>
+                              <tr>
+                                <td>Experience</td>
+                                <td>{{handyman.serviceExperience}}</td>
+                              </tr>
+                              <tr>
+                                <td>Rating</td>
+                                <td>{{handyman.rating}}</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <button *ngIf="handyman.isVerified" class="btn text-white bg-danger"
+                                (click)="unverifyHandyman(handyman.id)"
+                                >
+                                Unverify
+                            </button>
+                            <button *ngIf="!handyman.isVerified" class="btn text-white bg-success"
+                                (click)="verifyHandyman(handyman.id)"
+                                >
+                                Verify
+                            </button>
+                        </div>
+    
+                    </div>
+
+                        
+                </div>
+            </div>
+
+
+            <div 
+            class="container mt-3" *ngSwitchCase="'verified'">
+            
+            <div
+                class="row mt-3 mt-lg-2"
+                [ngClass]="{'border-success': handyman.isVerified, 'border-danger': !handyman.isVerified}"
+                *ngFor="let handyman of verifiedHandymanList | filter:searchText">
+                    <div 
+                    class="col-lg-3 profile-img"
+                    [ngStyle]="{'background-image': urlopen+handyman.img_url+urlclose }"
+                            >
+                    </div>
+                    <div class="col-lg-8 profile-content">
+                        <table class="row table text-capitalize table-borderless">
+                            <tbody>
+                              <tr>
+                                <td>Name</td>
+                                <td>{{handyman.name}}</td>
+                              </tr>
+                              <tr>
+                                <td>D.O.B</td>
+                                <td>{{handyman.dob}}</td>
+                              </tr>
+                              <tr>
+                                <td>Contact Number</td>
+                                <td>{{handyman.contactNumber}}</td>
+                              </tr>
+                              <tr>
+                                <td>Aadhar Number</td>
+                                <td>{{handyman.aadharNumber}}</td>
+                              </tr>
+                              <tr>
+                                <td>City</td>
+                                <td>{{handyman.city}}</td>
+                              </tr>
+                              <tr>
+                                <td>State</td>
+                                <td>{{handyman.state}}</td>
+                              </tr>
+                              <tr>
+                                <td>Service name</td>
+                                <td>{{handyman.serviceName}}</td>
+                              </tr>
+                              <tr>
+                                <td>Experience</td>
+                                <td>{{handyman.serviceExperience}}</td>
+                              </tr>
+                              <tr>
+                                <td>Rating</td>
+                                <td>{{handyman.rating}}</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <button *ngIf="handyman.isVerified" class="btn text-white bg-danger"
+                                (click)="toggleForm(handyman.id, updateForm)"
+                                >
+                                Unverify
+                            </button>
+                            <button *ngIf="!handyman.isVerified" class="btn text-white bg-success"
+                                (click)="toggleForm(handyman.id, updateForm)"
+                                >
+                                Verify
+                            </button>
+                        </div>
+    
+                    </div>
+
+                        
+                </div>
+            </div>
+
+            <div 
+            class="container mt-3" *ngSwitchCase="'notverified'">
+            
+            <div
+                class="row mt-3 mt-lg-2"
+                [ngClass]="{'border-success': handyman.isVerified, 'border-danger': !handyman.isVerified}"
+                *ngFor="let handyman of notVerifiedHandymanList | filter:searchText">
+                    <div 
+                    class="col-lg-3 profile-img"
+                    [ngStyle]="{'background-image': urlopen+handyman.img_url+urlclose }"
+                            >
+                    </div>
+                    <div class="col-lg-8 profile-content">
+                        <table class="row table text-capitalize table-borderless">
+                            <tbody>
+                              <tr>
+                                <td>Name</td>
+                                <td>{{handyman.name}}</td>
+                              </tr>
+                              <tr>
+                                <td>D.O.B</td>
+                                <td>{{handyman.dob}}</td>
+                              </tr>
+                              <tr>
+                                <td>Contact Number</td>
+                                <td>{{handyman.contactNumber}}</td>
+                              </tr>
+                              <tr>
+                                <td>Aadhar Number</td>
+                                <td>{{handyman.aadharNumber}}</td>
+                              </tr>
+                              <tr>
+                                <td>City</td>
+                                <td>{{handyman.city}}</td>
+                              </tr>
+                              <tr>
+                                <td>State</td>
+                                <td>{{handyman.state}}</td>
+                              </tr>
+                              <tr>
+                                <td>Service name</td>
+                                <td>{{handyman.serviceName}}</td>
+                              </tr>
+                              <tr>
+                                <td>Experience</td>
+                                <td>{{handyman.serviceExperience}}</td>
+                              </tr>
+                              <tr>
+                                <td>Rating</td>
+                                <td>{{handyman.rating}}</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <button *ngIf="handyman.isVerified" class="btn text-white bg-danger"
+                                (click)="toggleForm(handyman.id, updateForm)"
+                                >
+                                Unverify
+                            </button>
+                            <button *ngIf="!handyman.isVerified" class="btn text-white bg-success"
+                                (click)="toggleForm(handyman.id, updateForm)"
+                                >
+                                Verify
+                            </button>
+                        </div>
+    
+                    </div>
+
+                        
+                </div>
+            </div>
+
+
+    </div>
+
+</div>

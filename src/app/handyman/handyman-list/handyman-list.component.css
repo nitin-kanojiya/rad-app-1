@@ -91,3 +91,15 @@
     box-shadow: 2px 3px 5px #9BA5BA;
     transform: scale(1.2, 1.2);
 }
+
+
+/*******************
+    Star Rating
+********************/
+ngb-rating .star {
+    font-size: 1.5rem;
+    color: #b0c4de;
+}
+ngb-rating .filled {
+    color: #FA9600;
+}

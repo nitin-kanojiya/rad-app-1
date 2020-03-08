@@ -2,7 +2,7 @@
 <div class="container-fluid">
 
     <div class="section-head mb-2">
-        <h2 class="mx-auto primary-dark-orange">{{serviceName}} Service</h2>
+        <h2 class="mx-auto text-capitalize primary-dark-orange">{{serviceName}} Service</h2>
     </div>
 
     <div *ngIf="handymanList.length==0; then emptyListBlock else nonEmptyListBlock"></div>
@@ -25,9 +25,9 @@
     
     <ng-template #nonEmptyListBlock>
         <div class="row">
-            <div class=" col-lg-3 col-sm-6 my-0 my-sm-3" *ngFor="let handyman of handymanList">
+            <div class=" col-lg-3 text-capitalize col-sm-6 my-0 my-sm-3" *ngFor="let handyman of handymanList">
                 <div
-                    (click)="gotoDetails(handyman.id)"
+                    (click)="gotoDetailsPage(handyman.id)"
                     class="handyman-content justify-content-center py-5 px-0 p-lg-5">
     
                     <div class="row justify-content-center">
@@ -39,22 +39,23 @@
                         Click for more details
                     </div>
                     <div class="row mt-0 justify-content-center">
+
+                        <ngb-rating max=5 readonly="true" [rate]="2.3">
+                            <ng-template let-fill="fill" let-index="index">
+                                <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                            </ng-template>
+                        </ngb-rating>
+
+                    </div>
+                    <div class="row mt-0 justify-content-center">
                         <h5 class="text-center primary-light-blue text-capitalize">{{handyman.name}}</h5>
                     </div>
                     <div class="row handyman-content-age mx-auto">
                         <div class="col-6 mt-0">
-                            age
+                            Age
                         </div>
                         <div class="col-6 mt-0">
                             {{handyman.age}}years
-                        </div>
-                    </div>
-                    <div class="row handyman-content-age mx-auto">
-                        <div class="col-6 mt-0">
-                            experience -
-                        </div>
-                        <div class="col-6 mt-0">
-                            31years
                         </div>
                     </div>
                 </div>
