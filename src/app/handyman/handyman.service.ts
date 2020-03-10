@@ -15,7 +15,6 @@ export class HandymanService {
     return this.idDataForDetailsPage;
   }
   setDataForDetailPage(IdofHandyMan){
-    console.log("CLick = " + IdofHandyMan);
     this.idDataForDetailsPage = IdofHandyMan;
   }
 

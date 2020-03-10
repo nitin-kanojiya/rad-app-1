@@ -55,10 +55,12 @@
     Content
 ****************** */
 .profile-img{
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
     width: 10rem;
     height: 10rem;
     border-radius: 0.5rem;
+    background-repeat: no-repeat;
 }
 .profile-content > .row {
     place-content: center;

@@ -35,7 +35,7 @@ export class HandymanDetailsComponent implements OnInit {
         this.relatedHandymanList=[];
         this.ourservicesservice.getHandyman()
                 .subscribe(data=>{
-                    data.forEach(element=>{
+                    data.handymans.forEach(element=>{
                         if(element.id === this.handymanservice.getdataForDetailsPage()){
                             this.dataHandyman = element;
                             this.setRelatedHandymanList(element.serviceName);
@@ -47,7 +47,7 @@ export class HandymanDetailsComponent implements OnInit {
      setRelatedHandymanList(serviceName) {
         this.ourservicesservice.getHandyman()
             .subscribe(data=>{
-                data.forEach(element=>{
+                data.handymans.forEach(element=>{
                     if((element.serviceName.toLowerCase()).localeCompare(serviceName)===0){
                         this.relatedHandymanList.push(element);
                     }
@@ -62,7 +62,14 @@ export class HandymanDetailsComponent implements OnInit {
     }
     
     ratingChanged(){
-        
+        console.log(this.dataHandyman);
+        setTimeout(() => {
+            let newRating = ((this.dataHandyman.rating * this.dataHandyman.ratingNumber) + this.selectedRating)/(this.dataHandyman.ratingNumber + 1);
+            this.dataHandyman.ratingNumber+=1;
+            this.dataHandyman.rating = newRating;
+            console.log(this.dataHandyman);
+            this.ourservicesservice.updateHandyman(this.dataHandyman);
+        }, 2000);
     }
 
 }

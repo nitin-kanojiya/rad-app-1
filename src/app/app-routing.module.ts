@@ -37,10 +37,11 @@ const routes: Routes = [
   },
   { 
     path: 'admin' , component: AdminComponent
-  },
-  {
-    path: '**', redirectTo: '/home'
   }
+  // ,
+  // {
+  //   path: '**', redirectTo: '/home'
+  // }
 ];
 
 @NgModule({

@@ -10,21 +10,22 @@ export interface HandymanModel{
     // experience: string,
     // currCity: string,
     // currState: string
-    id: string,
+    _id: string,
 
     name: string,
-    dob: Date,
+    dob: string,
 
     img_url: string,
     
     contactNumber: string,
     aadharNumber: string,
     serviceName: string,
-    serviceExperience: Number,
+    serviceExperience: number,
     city: string,
     state: string,
 
     isVerified: boolean,
-    rating: Number,
+    rating: number,
+    ratingNumber: number
     
 }

@@ -65,10 +65,10 @@ export class RegisterComponent implements OnInit {
   }
   
   newHandymanDetails : HandymanModel={
-    "id": "",
+    "_id": "0",
 
     "name": "",
-    "dob": new Date(),
+    "dob": "",
     
     "img_url": "",
     
@@ -80,7 +80,8 @@ export class RegisterComponent implements OnInit {
     "state": "",
 
     "isVerified": false,
-    "rating": 0
+    "rating": 0,
+    "ratingNumber": 0
   };
 
 
@@ -107,7 +108,10 @@ export class RegisterComponent implements OnInit {
     this.newHandymanDetails.serviceExperience=this.registerForm.value.serviceExperience;
     this.newHandymanDetails.city=this.registerForm.value.city;
     this.newHandymanDetails.state=this.registerForm.value.state;
+    this.newHandymanDetails.img_url=this.registerForm.value.previewImg;
 
+    console.log(this.newHandymanDetails.dob);
+    
     this.newHandyman(this.newHandymanDetails);
     
     // this.registerForm.reset();
@@ -115,8 +119,9 @@ export class RegisterComponent implements OnInit {
     this.showAlert();
   }
 
-  newHandyman(newHandymanDetails){
-    this.ourservicesservice.createHandyman(newHandymanDetails);
+  newHandyman(Details){
+    this.ourservicesservice.createHandyman(Details);
+    
   }
 
   onImagePicked(event : Event){
@@ -130,7 +135,6 @@ export class RegisterComponent implements OnInit {
       this.imagePreview = reader.result;
     };    
     reader.readAsDataURL(file);
-    console.log(this.imagePreview);
-        
+    // console.log(this.imagePreview);
   }
 }

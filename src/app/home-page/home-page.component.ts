@@ -29,6 +29,9 @@ export class HomePageComponent implements OnInit {
   
   ngOnInit() {
     this.setServices();
+    // const handys= (this.ourservicesservice.getHandyman());
+    // console.log(handys);
+    
     this.setHandymanLists();
   }
 
@@ -43,20 +46,32 @@ export class HomePageComponent implements OnInit {
     this.ourservicesservice.getHandyman()
     .subscribe( data =>{
       // console.log(data);
-      data.forEach(element=>{
-        if( ((element.serviceName).toLowerCase()).localeCompare("labour")===0 ){
+      data.handymans.forEach(element=>{
+        if( ((element.serviceName).toLowerCase()).localeCompare("labour")===0
+            &&
+            element.isVerified 
+            ){
           if(this.labours.length<3)
             this.labours.push(element);
         }
-        if( ((element.serviceName).toLowerCase()).localeCompare("carpenter")===0 ){
+        if( ((element.serviceName).toLowerCase()).localeCompare("carpenter")===0 
+            &&
+            element.isVerified 
+            ){
           if(this.carpenters.length<3)
             this.carpenters.push(element);
         }
-        if( ((element.serviceName).toLowerCase()).localeCompare("plumber")===0 ){
+        if( ((element.serviceName).toLowerCase()).localeCompare("plumber")===0 
+            &&
+            element.isVerified 
+            ){
           if(this.plumbers.length<3)
             this.plumbers.push(element);
         }
-        if( ((element.serviceName).toLowerCase()).localeCompare("electrician")===0 ){
+        if( ((element.serviceName).toLowerCase()).localeCompare("electrician")===0 
+            &&
+            element.isVerified 
+            ){
           if(this.electricians.length<3)
             this.electricians.push(element);
         }      

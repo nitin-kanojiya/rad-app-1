@@ -1,0 +1,59 @@
+[
+    {
+      "id" : "1",
+      "name": "Labour",
+      "img_url": "/assets/img/services/labour.jpg",
+      "icon": "fas fa-paint-roller",
+      "desc": "Some work which we can't do, Here we hired a person for taking care of your task. They are dedicated, they never leave you with disoppointment."
+    },
+    { 
+      "id" : "2",
+      "name": "Carpenter",
+      "img_url": "/assets/img/services/carpenter.jpg",
+      "icon": "fas fa-hammer",
+      "desc": "They can work on your furniture, stairs, windows, doors and many others and repais and build your wooden items. Give them a chance to make you happy with thier service."
+    },
+    { 
+      "id" : "3",
+      "name": "Electrician",
+      "img_url": "/assets/img/services/electrician.jpg",
+      "icon": "fas fa-plug",
+      "desc": "If you are looking for an electrician in your area, give us a chance to serve you a better one."
+    },
+    {
+      "id" : "4",
+      "name": "Plumber",
+      "img_url": "/assets/img/services/plumber.jpg",
+      "icon": "fas fa-toilet",
+      "desc": "You must have faced plumbing issue at your home, and offices and found no one to fix. We provide plumber at home and office whenever in need at quick response and fixing guarantee. "
+    },
+    { 
+      "id" : "5",
+      "name": "Heavy Lifting",
+      "img_url": "/assets/img/services/heavy-lifting.jpg",
+      "icon": "fas fa-weight-hanging",
+      "desc": "Many tasks are heavy, Movement and strain are good for your body, but if the strain is too great, it can cause problems. So need not worry about lifting Heavy things on your shoulder, give us a chance to take care of your valuable equipment's."
+    },
+    { 
+      "id" : "6",
+      "name": "Metal Work",
+      "img_url": "/assets/img/services/metal-works.jpg",
+      "icon": "fas fa-hand-rock",
+      "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, repellat."
+    },
+    { 
+      "id" : "7",
+      "name": "AC/Refrigerator",
+      "img_url": "/assets/img/services/ac-repair.jpg",
+      "icon": "fas fa-wind",
+      "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, repellat."
+
+    },
+    {
+      "id" : "8",
+      "name": "Painter",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-paint-roller",
+      "desc": "Are you looking locals interior house painters? Book our painting professionals at Affordable, pocket pricing"
+    }
+  ]

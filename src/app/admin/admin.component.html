@@ -108,19 +108,31 @@
                                 <td>Rating</td>
                                 <td>{{handyman.rating}}</td>
                               </tr>
+                              <tr>
+                                <td>Number of ratings</td>
+                                <td>{{handyman.ratingNumber}}</td>
+                              </tr>
                             </tbody>
                         </table>
                         <div class="row">
-                            <button *ngIf="handyman.isVerified" class="btn text-white bg-danger"
-                                (click)="unverifyHandyman(handyman.id)"
-                                >
-                                Unverify
+                          <div class="col-1"></div>
+                          <button class="btn btn-primary col-4"
+                              (click)="deleteHandyman(handyman._id)">
+                                DELETE
                             </button>
-                            <button *ngIf="!handyman.isVerified" class="btn text-white bg-success"
-                                (click)="verifyHandyman(handyman.id)"
+                            <div class="col-1"></div>
+                            
+                            <button *ngIf="handyman.isVerified" class="btn text-white bg-danger col-4"
+                                (click)="unverifyHandyman(handyman._id)"
                                 >
-                                Verify
+                                UNVERIFY
                             </button>
+                            <button *ngIf="!handyman.isVerified" class="btn text-white bg-success col-4"
+                                (click)="verifyHandyman(handyman._id)"
+                                >
+                                VERIFY
+                            </button>
+                            <div class="col-1"></div>
                         </div>
     
                     </div>
@@ -184,16 +196,24 @@
                             </tbody>
                         </table>
                         <div class="row">
-                            <button *ngIf="handyman.isVerified" class="btn text-white bg-danger"
-                                (click)="toggleForm(handyman.id, updateForm)"
-                                >
-                                Unverify
+                          <div class="col-1"></div>
+                          <button class="btn btn-primary col-4"
+                              (click)="deleteHandyman(handyman._id)">
+                                DELETE
                             </button>
-                            <button *ngIf="!handyman.isVerified" class="btn text-white bg-success"
-                                (click)="toggleForm(handyman.id, updateForm)"
+                            <div class="col-1"></div>
+                            
+                            <button *ngIf="handyman.isVerified" class="btn text-white bg-danger col-4"
+                                (click)="unverifyHandyman(handyman._id)"
                                 >
-                                Verify
+                                UNVERIFY
                             </button>
+                            <button *ngIf="!handyman.isVerified" class="btn text-white bg-success col-4"
+                                (click)="verifyHandyman(handyman._id)"
+                                >
+                                VERIFY
+                            </button>
+                            <div class="col-1"></div>
                         </div>
     
                     </div>
@@ -256,16 +276,24 @@
                             </tbody>
                         </table>
                         <div class="row">
-                            <button *ngIf="handyman.isVerified" class="btn text-white bg-danger"
-                                (click)="toggleForm(handyman.id, updateForm)"
-                                >
-                                Unverify
+                          <div class="col-1"></div>
+                          <button class="btn btn-primary col-4"
+                              (click)="deleteHandyman(handyman._id)">
+                                DELETE
                             </button>
-                            <button *ngIf="!handyman.isVerified" class="btn text-white bg-success"
-                                (click)="toggleForm(handyman.id, updateForm)"
+                            <div class="col-1"></div>
+                            
+                            <button *ngIf="handyman.isVerified" class="btn text-white bg-danger col-4"
+                                (click)="unverifyHandyman(handyman._id)"
                                 >
-                                Verify
+                                UNVERIFY
                             </button>
+                            <button *ngIf="!handyman.isVerified" class="btn text-white bg-success col-4"
+                                (click)="verifyHandyman(handyman._id)"
+                                >
+                                VERIFY
+                            </button>
+                            <div class="col-1"></div>
                         </div>
     
                     </div>

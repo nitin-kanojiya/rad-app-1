@@ -1,0 +1,200 @@
+[
+    {
+      "id" : "1",
+      "name": "Labour",
+      "img_url": "/assets/img/services/labour.jpg",
+      "icon": "fas fa-sign-language",
+      "desc": "Some work which we can't do, Here we hired a person for taking care of your task. They are dedicated, they never leave you with disoppointment."
+    },
+    { 
+      "id" : "2",
+      "name": "Carpenter",
+      "img_url": "/assets/img/services/carpenter.jpg",
+      "icon": "fas fa-hammer",
+      "desc": "They can work on your furniture, stairs, windows, doors and many others and repais and build your wooden items. Give them a chance to make you happy with thier service."
+    },
+    { 
+      "id" : "3",
+      "name": "Electrician",
+      "img_url": "/assets/img/services/electrician.jpg",
+      "icon": "fas fa-plug",
+      "desc": "If you are looking for an electrician in your area, give us a chance to serve you a better one."
+    },
+    {
+      "id" : "4",
+      "name": "Plumber",
+      "img_url": "/assets/img/services/plumber.jpg",
+      "icon": "fas fa-toilet",
+      "desc": "You must have faced plumbing issue at your home, and offices and found no one to fix. We provide plumber at home and office whenever in need at quick response and fixing guarantee. "
+    },
+    { 
+      "id" : "5",
+      "name": "Heavy Lifting",
+      "img_url": "/assets/img/services/heavy-lifting.jpg",
+      "icon": "fas fa-weight-hanging",
+      "desc": "Many tasks are heavy, Movement and strain are good for your body, but if the strain is too great, it can cause problems. So need not worry about lifting Heavy things on your shoulder, give us a chance to take care of your valuable equipment's."
+    },
+    { 
+      "id" : "6",
+      "name": "Metal Work",
+      "img_url": "/assets/img/services/metal-works.jpg",
+      "icon": "fas fa-hand-rock",
+      "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, repellat."
+    },
+    { 
+      "id" : "7",
+      "name": "AC/Refrigerator",
+      "img_url": "/assets/img/services/ac-repair.jpg",
+      "icon": "fas fa-wind",
+      "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, repellat."
+
+    },
+    {
+      "id" : "8",
+      "name": "Painter",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-paint-roller",
+      "desc": "Are you looking locals interior house painters? Book our painting professionals at Affordable, pocket pricing"
+    },
+    {
+      "id" : "9",
+      "name": "Accountant",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-file-alt",
+      "desc": "We have qualified professionals for all your financial needs."
+    },
+    {
+      "id" : "10",
+      "name": "Tax Accountant",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-file-invoice-dollar",
+      "desc": "We will advise you about your future financial moves and help you to fill out your tax forms and ITR"
+    },
+    {
+      "id" : "11",
+      "name": "Architect",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-drafting-compass",
+      "desc": "Our Professionals are the one that provide a clear guide to create, plan, and design buildings for several purposes."
+    },
+    {
+      "id" : "12",
+      "name": "Interior Designer",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-expand",
+      "desc": "Confused about the interior design of your home? We provide consult about Design and decor your home with the idea of an interior designer."
+    },
+    {
+      "id" : "13",
+      "name": "Home Tutor",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-edit",
+      "desc": "To evaluate students’ learning progress you can hire a home tutor for your children here."
+    },
+    {
+      "id" : "14",
+      "name": "Photographer",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-camera",
+      "desc": "Photographers create memories and make special moments unforgettable, for capturing your most precious moments and even other photography for like a business purpose and marketing purpose etc.  you can hire them from our site. "
+    },
+    {
+      "id" : "15",
+      "name": "Cleaner",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-broom",
+      "desc": "Our cleaning professionals are those in charge of sanitizing and creating a healthy environment for you to live and work in."
+    },
+    {
+      "id" : "16",
+      "name": "Motor Mechanic",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-user-cog",
+      "desc": "We provide affordable motor vehicle repair at your place. We are just a call away. "
+    },
+    {
+      "id" : "17",
+      "name": "Yoga Teacher",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fab fa-joomla",
+      "desc": "We all know the benefits of yoga every day, but how to learn it. ask them to schedule your class timing for yoga. "
+    },
+    {
+      "id" : "18",
+      "name": "Event Planner",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-indent",
+      "desc": "Plane your events with the professional even planner nearby you at an affordable price."
+    },
+    {
+      "id" : "19",
+      "name": "Web Developer",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-laptop-code",
+      "desc": "For any kind off web developing and design you can connect with the right person here."
+    },
+    {
+      "id" : "20",
+      "name": "Lawyer",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-gavel",
+      "desc": "Hiring a lawyer is a not a hard task now as we are here."
+    },
+    {
+      "id" : "21",
+      "name": "Security Guard",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "far fa-eye",
+      "desc": "Here are well trained and experienced guard we provide for the safety and security of your area of living and work."
+    },
+    {
+      "id" : "22",
+      "name": "Pest control",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-bug",
+      "desc": "Pest Control service at affordable prices, satisfaction guaranteed."
+    },
+    {
+      "id" : "23",
+      "name": "Taxi Driver",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-bus-alt",
+      "desc": "Hiring a person for driving your vehicle,"
+    },
+    {
+      "id" : "24",
+      "name": "Delivery Man",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-dolly",
+      "desc": "What if you are busy and here are an urgency of a food or other thing which could not be late. We provide delivery men who take and deliver the thing at lowest cost "
+    },
+    {
+      "id" : "25",
+      "name": "Housekeeping",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-glasses",
+      "desc": "Housekeeping services at reliable rates."
+    },
+    {
+      "id" : "26",
+      "name": "Maid Service",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-female",
+      "desc": "Some time it is very hard to find a maid at local area, we built the platform."
+    },
+    {
+      "id" : "27",
+      "name": "Packer & Movers",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-dolly-flatbed",
+      "desc": "While leaving a station to other station, many things you left behind or we are here to take care of your valuable things."
+    },
+    {
+      "id" : "28",
+      "name": "Smart Device Installation",
+      "img_url": "/assets/img/services/painter.jpg",
+      "icon": "fas fa-biohazard",
+      "desc": "Smart device installation is a need for today’s life."
+    }
+    
+  ]

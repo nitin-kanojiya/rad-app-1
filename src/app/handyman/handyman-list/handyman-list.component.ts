@@ -53,8 +53,11 @@ export class HandymanListComponent implements OnInit {
     setHandymanList(){
         this.ourservicesservice.getHandyman()
                 .subscribe(data=>{
-                    data.forEach(element=>{
-                        if(((this.serviceName).toLowerCase()).localeCompare(element.serviceName.toLowerCase()) === 0){
+                    data.handymans.forEach(element=>{
+                        if(((this.serviceName).toLowerCase()).localeCompare(element.serviceName.toLowerCase()) === 0
+                            &&
+                            element.isVerified                 
+                            ){
                             this.handymanList.push(element);
                         }
                     })

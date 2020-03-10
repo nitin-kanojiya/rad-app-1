@@ -8,11 +8,25 @@ const handymanSchema = mongoose.Schema({
     // aadharnumber: { type: String, required: true },
     // servicename: { type: String, required: true },
     // distance: { type: String, required: true },
-    // dob: { type: Date, required: true },
     // experience: { type: String, required: true },
     // currCity: { type: String, required: true },
     // currState: { type: String, required: true }
-    name: String
+    name: { type: String, required: true },
+    dob: { type: String, required: true },
+
+    img_url: { type: String, required: true },
+    
+    contactNumber: { type: String, required: true },
+    aadharNumber: { type: String, required: true },
+    serviceName: { type: String, required: true },
+    serviceExperience: { type: Number, required: true },
+    city: { type: String, required: true },
+    state: { type: String, required: true },
+
+    isVerified: { type: Boolean, required: true },
+    rating: { type: Number, required: true },
+    ratingNumber: { type: Number, required: true }
+
 });
 
 module.exports = mongoose.model('Handyman', handymanSchema, 'handyman');
