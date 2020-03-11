@@ -16,6 +16,7 @@ export class HandymanService {
   }
   setDataForDetailPage(IdofHandyMan){
     this.idDataForDetailsPage = IdofHandyMan;
+    console.log(this.idDataForDetailsPage);    
   }
 
   getDataForListPage(){

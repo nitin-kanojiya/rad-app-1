@@ -1,40 +1,28 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map } from "rxjs/operators";
 
 import { OurServiceModel } from "./our-services/ourservices.model";
 import { HandymanModel } from './handyman/handyman.model';
-@Injectable({providedIn: 'root'})
+import { environment } from 'src/environments/environment';
 
+const BACKEND_URL = environment.apiUrl;
+
+@Injectable({providedIn: 'root'})
 export class OurServicesService {
   
-  constructor(private http: HttpClient) { }
-  
-  demo(selectedRating: number) {
-      console.log("Method not implemented.= "+ selectedRating);
-  }
-    
-    public handymans: HandymanModel[] = [];
-    public ourservices: OurServiceModel[] = [];
+  constructor(private http: HttpClient) { }    
+  public handymans: HandymanModel[] = [];
+
 
   getServices(){
-      // return this.services;
-      return this.http.get<OurServiceModel[]>('/assets/data/ourservice.json');
+      return this.http.get<OurServiceModel[]>
+      ('/assets/data/ourservice.json');
   }
     
   getHandyman(){
     return this.http
-          .get<{message: string, handymans: any }>("http://localhost:3000/api/handymans");
-
-        // .pipe(
-        //   map(handymanData => {
-        //     console.log(handymanData);
-        //     return handymanData.handymans;
-        //   })
-        // )
-
-    // return this.http.get<HandymanModel[]>('/assets/data/handyman.json');
+          .get<{message: string, handymans: any }>
+          ( BACKEND_URL + "/handymans");
   }
 
   createHandyman(HandymanDetails: HandymanModel){
@@ -50,7 +38,7 @@ export class OurServicesService {
 
     this.http
         .post<{message: string, handyman : HandymanModel}>(
-          "http://localhost:3000/api/handymans",
+          BACKEND_URL + "/handymans",
           handymanData
         )
         .subscribe(responseData=>{
@@ -108,7 +96,9 @@ export class OurServicesService {
       };
     }
     this.http
-      .put("http://localhost:3000/api/handymans/" + newHandymanDetails._id, handymanData)
+      .put(
+         BACKEND_URL + "/handymans/"
+        + newHandymanDetails._id, handymanData)
       .subscribe(response => {
         console.log(response);
         
@@ -140,7 +130,8 @@ export class OurServicesService {
     console.log(handymanId);
     
     this.http
-      .delete("http://localhost:3000/api/handymans/" + handymanId)
+      .delete
+      ( BACKEND_URL + "/handymans/" + handymanId)
       .subscribe((response) => {
         console.log(response);
         

@@ -27,7 +27,7 @@
         <div class="row">
             <div class=" col-lg-3 text-capitalize col-sm-6 my-0 my-sm-3" *ngFor="let handyman of handymanList">
                 <div
-                    (click)="gotoDetailsPage(handyman.id)"
+                    (click)="gotoDetailsPage(handyman._id)"
                     class="handyman-content justify-content-center py-5 px-0 p-lg-5">
     
                     <div class="row justify-content-center">
@@ -55,7 +55,7 @@
                             Age
                         </div>
                         <div class="col-6 mt-0">
-                            {{handyman.age}}years
+                            {{calcAge(handyman.dob)}}years
                         </div>
                     </div>
                 </div>

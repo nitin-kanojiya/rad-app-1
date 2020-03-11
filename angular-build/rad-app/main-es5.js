@@ -1,3 +1,11 @@
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -51,7 +59,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<!-- About us  -->\n<div class=\"container my-5 \">\n    <div class=\"section-head mb-5\">\n        <h2 class=\"mx-auto primary-dark-orange\">ABOUT US</h2>\n    </div>\n\n    <div class=\"row justify-content-center\">\n        <div class=\"col-md-4 mr-md-2 mb-3 mb-md-0 primary-dark-blue\">\n            <h5 class=\"text-justify p-2\">\n                We are an organization that will always go an extra mile to put a smile on \n                the faces of our customers. The services providers associated with us also \n                share the same feeling of leaving behind happy faces and satisfied customers \n                every single time. \n            </h5>\n        </div>\n        <div class=\"col-md-6 ml-1 p-5 p-md-2\">\n            <!-- <div class=\"row mb-3\">\n                <h6 class=\"primary-light-gray\">WHAT HAVE WE ACHIEVED?</h6>\n                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cupiditate dolorum mollitia aliquid accusamus possimus obcaecati nihil quia, vitae, exercitationem laborum animi est error nam, facere repellendus tempore illum velit.</P>\n            </div> -->\n            <div class=\"row mb-3\">\n                <h6 class=\"primary-light-gray\">OUR MISSION</h6>\n                <p>\n                    Our mission is to keep in touch with the need of society and connect them to the person who are willing to do work.\n                </p>\n                <p>\n                    We provide a platform to local qualified and experienced professionals who are nearby us but we can't find them in need. Who have the ability of performing duties at their best way. \n                </p>\n            </div>\n            <div class=\"row\">\n                <h6 class=\"primary-light-gray\">OUR VISION</h6>\n                <p>\n                    We are offering people to create their future with us, we are the organization that will work for the benefit of the people who are keen to work but do not find the platform for performing their tasks.\n                </p>\n            </div>\n        </div>\n    </div>\n</div>\n<!-- END About us  -->\n\n<!-- Our team  -->\n<div class=\"our-team container my-5 \">\n    <div class=\"section-head mb-5\">\n        <h3 class=\"mx-auto primary-dark-blue\">OUR GOLDEN TEAM</h3>\n        <p class=\"lead text-center\">We treat people as the best resources</p>\n    </div>\n\n    <div class=\"row justify-content-center\">\n\n        <div class=\"col-md-3 justify-content-center\">\n            <div class=\"row justify-content-center\">\n                <div class=\"team-img text-center\" style=\"background-image: url('../../assets/img/team/nitin.jpg');\"></div>\n            </div>\n            <div class=\"row mt-2 justify-content-center\">\n                <h5 class=\"text-center primary-dark-blue\">Nitin Kanojiya</h5>\n            </div>\n            <div class=\"row mt-0 primary-dark-orange justify-content-center\">\n                <h4>Founder and Director</h4>\n            </div>\n        </div>\n\n        <div class=\"col-md-3 justify-content-center\">\n            <div class=\"row justify-content-center\">\n                <div class=\"team-img text-center\" style=\"background-image: url('../../assets/img/team/nitin2.jpg');\"></div>\n            </div>\n            <div class=\"row mt-2 justify-content-center\">\n                <h5 class=\"text-center primary-dark-blue\">Name Name</h5>\n            </div>\n            <div class=\"row mt-0 primary-dark-orange justify-content-center\">\n                <h4>Software Lead</h4>\n            </div>\n        </div>\n        <div class=\"col-md-3 justify-content-center\">\n            <div class=\"row justify-content-center\">\n                <div class=\"team-img text-center\" style=\"background-image: url('../../assets/img/team/nitin3.jpg');\"></div>\n            </div>\n            <div class=\"row mt-2 justify-content-center\">\n                <h5 class=\"text-center primary-dark-blue\">Name Name</h5>\n            </div>\n            <div class=\"row mt-0 primary-dark-orange justify-content-center\">\n                <h4>Production Manager</h4>\n            </div>\n        </div>\n\n\n    </div>\n</div>\n";
+    __webpack_exports__["default"] = "<!-- About us  -->\n<div class=\"container my-5 \">\n    <div class=\"section-head mb-5\">\n        <h2 class=\"mx-auto primary-dark-orange\">ABOUT US</h2>\n    </div>\n\n    <div class=\"row justify-content-center\">\n        <div class=\"col-md-4 mr-md-2 mb-3 mb-md-0 primary-dark-blue\">\n            <h5 class=\"text-justify p-2\">\n                We are an organization that will always go an extra mile to put a smile on \n                the faces of our customers. The services providers associated with us also \n                share the same feeling of leaving behind happy faces and satisfied customers \n                every single time. \n            </h5>\n        </div>\n        <div class=\"col-md-6 ml-1 p-5 p-md-2\">\n            <!-- <div class=\"row mb-3\">\n                <h6 class=\"primary-light-gray\">WHAT HAVE WE ACHIEVED?</h6>\n                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cupiditate dolorum mollitia aliquid accusamus possimus obcaecati nihil quia, vitae, exercitationem laborum animi est error nam, facere repellendus tempore illum velit.</P>\n            </div> -->\n            <div class=\"row mb-3\">\n                <h6 class=\"primary-light-gray\">OUR MISSION</h6>\n                <p>\n                    Our mission is to keep in touch with the need of society and connect them to the person who are willing to do work.\n                </p>\n                <p>\n                    We provide a platform to local qualified and experienced professionals who are nearby us but we can't find them in need. Who have the ability of performing duties at their best way. \n                </p>\n            </div>\n            <div class=\"row\">\n                <h6 class=\"primary-light-gray\">OUR VISION</h6>\n                <p>\n                    We are offering people to create their future with us, we are the organization that will work for the benefit of the people who are keen to work but do not find the platform for performing their tasks.\n                </p>\n            </div>\n        </div>\n    </div>\n</div>\n<!-- END About us  -->\n\n<!-- Our team  -->\n<div class=\"our-team container my-5 \">\n    <div class=\"section-head mb-5\">\n        <h3 class=\"mx-auto primary-dark-blue\">OUR GOLDEN TEAM</h3>\n        <p class=\"lead text-center\">We treat people as the best resources</p>\n    </div>\n\n    <div class=\"row justify-content-center\">\n\n        <div class=\"col-md-3 justify-content-center\">\n            <div class=\"row justify-content-center\">\n                <div class=\"team-img text-center\" style=\"background-image: url('../../assets/img/team/harish.jpg');\"></div>\n            </div>\n            <div class=\"row mt-2 justify-content-center\">\n                <h5 class=\"text-center primary-dark-blue\">Harish Nautiyal</h5>\n            </div>\n            <div class=\"row mt-0 primary-dark-orange text-center justify-content-center\">\n                <h4>Founder and Director</h4>\n            </div>\n        </div>\n\n        <div class=\"col-md-3 justify-content-center\">\n            <div class=\"row justify-content-center\">\n                <div class=\"team-img text-center\" style=\"background-image: url('../../assets/img/team/nitin3.jpg');\"></div>\n            </div>\n            <div class=\"row mt-2 justify-content-center\">\n                <h5 class=\"text-center primary-dark-blue\">Nitin Kanojiya</h5>\n            </div>\n            <div class=\"row mt-0 primary-dark-orange justify-content-center\">\n                <h4>Product Designer</h4>\n            </div>\n        </div>\n        <div class=\"col-md-3 justify-content-center\">\n            <div class=\"row justify-content-center\">\n                <div class=\"team-img text-center\" style=\"background-image: url('../../assets/img/team/mudit.jpg');\"></div>\n            </div>\n            <div class=\"row mt-2 justify-content-center\">\n                <h5 class=\"text-center primary-dark-blue\">Mudit Mittal</h5>\n            </div>\n            <div class=\"row mt-0 primary-dark-orange text-center justify-content-center\">\n                <h4>FullStack Product Developer</h4>\n            </div>\n        </div>\n\n\n    </div>\n</div>\n";
     /***/
   },
 
@@ -71,7 +79,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container-fluid form-container bg-dark\"\n        [style.display]=\"showLogin()\">\n    <form (ngSubmit)=\"onSubmitLoginForm(loginForm)\" #loginForm=\"ngForm\" class=\"bg-dark p-5 text-white\">\n        <div class=\"form-group\">\n            <label for=\"inputUname\">Email address</label>\n            <input \n            name=\"uname\"\n            ngModel\n            #uname=\"ngModel\"\n            type=\"email\" \n            class=\"form-control\" \n            id=\"inputUname\" \n            placeholder=\"Enter Username\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"inputPassword\">Password</label>\n            <input \n            name=\"password\"\n            ngModel\n            #password=\"ngModel\"\n            type=\"password\" \n            class=\"form-control\" \n            id=\"inputPassword\"\n            placeholder=\"Password\">\n        </div>\n        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n    </form>\n</div>\n\n\n\n<div class=\"container-fluid admin-section\"\n    [ngStyle]=\"{'display': showAdmin()}\">\n    <div class=\"handyman-section-cases card-container justify-content-center\">\n        <div class=\"card bg-primary\" (click)=\"showSwitchCase.value = 'all'\">\n            <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\n            <span>All</span>\n        </div>\n        <div class=\"card bg-success\" (click)=\"showSwitchCase.value = 'verified'\">\n            <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\n            <span>Verified</span>\n        </div>\n        <div class=\"card bg-danger\" (click)=\"showSwitchCase.value = 'notverified'\">\n            <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\n            <span>Not Verified</span>\n        </div>\n    </div>\n    <p class=\"mt-5 mx-auto mb-0\" style=\"width: 80%;\">\n        <input type=\"text\" class=\"form-control\"\n        name=\"searchText\"\n        [(ngModel)]=\"searchText\" \n        autocomplete=\"off\" \n        placeholder= \"Search Service..\"\n        aria-label= \"Search Service..\"\n        >  \n      </p>\n    \n    <div class=\"handyman-section-values\" [ngSwitch]=\"showSwitchCase.value\" >\n        \n        <div \n            class=\"container mt-3\" *ngSwitchCase=\"'all'\">\n            \n            <div\n                class=\"row mt-3 mt-lg-2\"\n                [ngClass]=\"{'border-success': handyman.isVerified, 'border-danger': !handyman.isVerified}\"\n                *ngFor=\"let handyman of allHandymanList | filter:searchText\">\n                    <div \n                    class=\"col-lg-3 profile-img\"\n                    [ngStyle]=\"{'background-image': urlopen+handyman.img_url+urlclose }\"\n                            >\n                    </div>\n                    <div class=\"col-lg-8 profile-content\">\n                        <table class=\"row table text-capitalize table-borderless\">\n                            <tbody>\n                              <tr>\n                                <td>Name</td>\n                                <td>{{handyman.name}}</td>\n                              </tr>\n                              <tr>\n                                <td>D.O.B</td>\n                                <td>{{handyman.dob}}</td>\n                              </tr>\n                              <tr>\n                                <td>Contact Number</td>\n                                <td>{{handyman.contactNumber}}</td>\n                              </tr>\n                              <tr>\n                                <td>Aadhar Number</td>\n                                <td>{{handyman.aadharNumber}}</td>\n                              </tr>\n                              <tr>\n                                <td>City</td>\n                                <td>{{handyman.city}}</td>\n                              </tr>\n                              <tr>\n                                <td>State</td>\n                                <td>{{handyman.state}}</td>\n                              </tr>\n                              <tr>\n                                <td>Service name</td>\n                                <td>{{handyman.serviceName}}</td>\n                              </tr>\n                              <tr>\n                                <td>Experience</td>\n                                <td>{{handyman.serviceExperience}}</td>\n                              </tr>\n                              <tr>\n                                <td>Rating</td>\n                                <td>{{handyman.rating}}</td>\n                              </tr>\n                            </tbody>\n                        </table>\n                        <div class=\"row\">\n                            <button *ngIf=\"handyman.isVerified\" class=\"btn text-white bg-danger\"\n                                (click)=\"unverifyHandyman(handyman.id)\"\n                                >\n                                Unverify\n                            </button>\n                            <button *ngIf=\"!handyman.isVerified\" class=\"btn text-white bg-success\"\n                                (click)=\"verifyHandyman(handyman.id)\"\n                                >\n                                Verify\n                            </button>\n                        </div>\n    \n                    </div>\n\n                        \n                </div>\n            </div>\n\n\n            <div \n            class=\"container mt-3\" *ngSwitchCase=\"'verified'\">\n            \n            <div\n                class=\"row mt-3 mt-lg-2\"\n                [ngClass]=\"{'border-success': handyman.isVerified, 'border-danger': !handyman.isVerified}\"\n                *ngFor=\"let handyman of verifiedHandymanList | filter:searchText\">\n                    <div \n                    class=\"col-lg-3 profile-img\"\n                    [ngStyle]=\"{'background-image': urlopen+handyman.img_url+urlclose }\"\n                            >\n                    </div>\n                    <div class=\"col-lg-8 profile-content\">\n                        <table class=\"row table text-capitalize table-borderless\">\n                            <tbody>\n                              <tr>\n                                <td>Name</td>\n                                <td>{{handyman.name}}</td>\n                              </tr>\n                              <tr>\n                                <td>D.O.B</td>\n                                <td>{{handyman.dob}}</td>\n                              </tr>\n                              <tr>\n                                <td>Contact Number</td>\n                                <td>{{handyman.contactNumber}}</td>\n                              </tr>\n                              <tr>\n                                <td>Aadhar Number</td>\n                                <td>{{handyman.aadharNumber}}</td>\n                              </tr>\n                              <tr>\n                                <td>City</td>\n                                <td>{{handyman.city}}</td>\n                              </tr>\n                              <tr>\n                                <td>State</td>\n                                <td>{{handyman.state}}</td>\n                              </tr>\n                              <tr>\n                                <td>Service name</td>\n                                <td>{{handyman.serviceName}}</td>\n                              </tr>\n                              <tr>\n                                <td>Experience</td>\n                                <td>{{handyman.serviceExperience}}</td>\n                              </tr>\n                              <tr>\n                                <td>Rating</td>\n                                <td>{{handyman.rating}}</td>\n                              </tr>\n                            </tbody>\n                        </table>\n                        <div class=\"row\">\n                            <button *ngIf=\"handyman.isVerified\" class=\"btn text-white bg-danger\"\n                                (click)=\"toggleForm(handyman.id, updateForm)\"\n                                >\n                                Unverify\n                            </button>\n                            <button *ngIf=\"!handyman.isVerified\" class=\"btn text-white bg-success\"\n                                (click)=\"toggleForm(handyman.id, updateForm)\"\n                                >\n                                Verify\n                            </button>\n                        </div>\n    \n                    </div>\n\n                        \n                </div>\n            </div>\n\n            <div \n            class=\"container mt-3\" *ngSwitchCase=\"'notverified'\">\n            \n            <div\n                class=\"row mt-3 mt-lg-2\"\n                [ngClass]=\"{'border-success': handyman.isVerified, 'border-danger': !handyman.isVerified}\"\n                *ngFor=\"let handyman of notVerifiedHandymanList | filter:searchText\">\n                    <div \n                    class=\"col-lg-3 profile-img\"\n                    [ngStyle]=\"{'background-image': urlopen+handyman.img_url+urlclose }\"\n                            >\n                    </div>\n                    <div class=\"col-lg-8 profile-content\">\n                        <table class=\"row table text-capitalize table-borderless\">\n                            <tbody>\n                              <tr>\n                                <td>Name</td>\n                                <td>{{handyman.name}}</td>\n                              </tr>\n                              <tr>\n                                <td>D.O.B</td>\n                                <td>{{handyman.dob}}</td>\n                              </tr>\n                              <tr>\n                                <td>Contact Number</td>\n                                <td>{{handyman.contactNumber}}</td>\n                              </tr>\n                              <tr>\n                                <td>Aadhar Number</td>\n                                <td>{{handyman.aadharNumber}}</td>\n                              </tr>\n                              <tr>\n                                <td>City</td>\n                                <td>{{handyman.city}}</td>\n                              </tr>\n                              <tr>\n                                <td>State</td>\n                                <td>{{handyman.state}}</td>\n                              </tr>\n                              <tr>\n                                <td>Service name</td>\n                                <td>{{handyman.serviceName}}</td>\n                              </tr>\n                              <tr>\n                                <td>Experience</td>\n                                <td>{{handyman.serviceExperience}}</td>\n                              </tr>\n                              <tr>\n                                <td>Rating</td>\n                                <td>{{handyman.rating}}</td>\n                              </tr>\n                            </tbody>\n                        </table>\n                        <div class=\"row\">\n                            <button *ngIf=\"handyman.isVerified\" class=\"btn text-white bg-danger\"\n                                (click)=\"toggleForm(handyman.id, updateForm)\"\n                                >\n                                Unverify\n                            </button>\n                            <button *ngIf=\"!handyman.isVerified\" class=\"btn text-white bg-success\"\n                                (click)=\"toggleForm(handyman.id, updateForm)\"\n                                >\n                                Verify\n                            </button>\n                        </div>\n    \n                    </div>\n\n                        \n                </div>\n            </div>\n\n\n    </div>\n\n</div>";
+    __webpack_exports__["default"] = "<div class=\"container-fluid form-container bg-dark\"\n        [style.display]=\"showLogin()\">\n    <form (ngSubmit)=\"onSubmitLoginForm(loginForm)\" #loginForm=\"ngForm\" class=\"bg-dark p-5 text-white\">\n        <div class=\"form-group\">\n            <label for=\"inputUname\">Email address</label>\n            <input \n            name=\"uname\"\n            ngModel\n            #uname=\"ngModel\"\n            type=\"email\" \n            class=\"form-control\" \n            id=\"inputUname\" \n            placeholder=\"Enter Username\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"inputPassword\">Password</label>\n            <input \n            name=\"password\"\n            ngModel\n            #password=\"ngModel\"\n            type=\"password\" \n            class=\"form-control\" \n            id=\"inputPassword\"\n            placeholder=\"Password\">\n        </div>\n        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n    </form>\n</div>\n\n\n\n<div class=\"container-fluid admin-section\"\n    [ngStyle]=\"{'display': showAdmin()}\">\n    <div class=\"handyman-section-cases card-container justify-content-center\">\n        <div class=\"card bg-primary\" (click)=\"showSwitchCase.value = 'all'\">\n            <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\n            <span>All</span>\n        </div>\n        <div class=\"card bg-success\" (click)=\"showSwitchCase.value = 'verified'\">\n            <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\n            <span>Verified</span>\n        </div>\n        <div class=\"card bg-danger\" (click)=\"showSwitchCase.value = 'notverified'\">\n            <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\n            <span>Not Verified</span>\n        </div>\n    </div>\n    <p class=\"mt-5 mx-auto mb-0\" style=\"width: 80%;\">\n        <input type=\"text\" class=\"form-control\"\n        name=\"searchText\"\n        [(ngModel)]=\"searchText\" \n        autocomplete=\"off\" \n        placeholder= \"Search Service..\"\n        aria-label= \"Search Service..\"\n        >  \n      </p>\n    \n    <div class=\"handyman-section-values\" [ngSwitch]=\"showSwitchCase.value\" >\n        \n        <div \n            class=\"container mt-3\" *ngSwitchCase=\"'all'\">\n            \n            <div\n                class=\"row mt-3 mt-lg-2\"\n                [ngClass]=\"{'border-success': handyman.isVerified, 'border-danger': !handyman.isVerified}\"\n                *ngFor=\"let handyman of allHandymanList | filter:searchText\">\n                    <div \n                    class=\"col-lg-3 profile-img\"\n                    [ngStyle]=\"{'background-image': urlopen+handyman.img_url+urlclose }\"\n                            >\n                    </div>\n                    <div class=\"col-lg-8 profile-content\">\n                        <table class=\"row table text-capitalize table-borderless\">\n                            <tbody>\n                              <tr>\n                                <td>Name</td>\n                                <td>{{handyman.name}}</td>\n                              </tr>\n                              <tr>\n                                <td>D.O.B</td>\n                                <td>{{handyman.dob}}</td>\n                              </tr>\n                              <tr>\n                                <td>Contact Number</td>\n                                <td>{{handyman.contactNumber}}</td>\n                              </tr>\n                              <tr>\n                                <td>Aadhar Number</td>\n                                <td>{{handyman.aadharNumber}}</td>\n                              </tr>\n                              <tr>\n                                <td>City</td>\n                                <td>{{handyman.city}}</td>\n                              </tr>\n                              <tr>\n                                <td>State</td>\n                                <td>{{handyman.state}}</td>\n                              </tr>\n                              <tr>\n                                <td>Service name</td>\n                                <td>{{handyman.serviceName}}</td>\n                              </tr>\n                              <tr>\n                                <td>Experience</td>\n                                <td>{{handyman.serviceExperience}}</td>\n                              </tr>\n                              <tr>\n                                <td>Rating</td>\n                                <td>{{handyman.rating}}</td>\n                              </tr>\n                              <tr>\n                                <td>Number of ratings</td>\n                                <td>{{handyman.ratingNumber}}</td>\n                              </tr>\n                            </tbody>\n                        </table>\n                        <div class=\"row\">\n                          <div class=\"col-1\"></div>\n                          <button class=\"btn btn-primary col-4\"\n                              (click)=\"deleteHandyman(handyman._id)\">\n                                DELETE\n                            </button>\n                            <div class=\"col-1\"></div>\n                            \n                            <button *ngIf=\"handyman.isVerified\" class=\"btn text-white bg-danger col-4\"\n                                (click)=\"unverifyHandyman(handyman._id)\"\n                                >\n                                UNVERIFY\n                            </button>\n                            <button *ngIf=\"!handyman.isVerified\" class=\"btn text-white bg-success col-4\"\n                                (click)=\"verifyHandyman(handyman._id)\"\n                                >\n                                VERIFY\n                            </button>\n                            <div class=\"col-1\"></div>\n                        </div>\n    \n                    </div>\n\n                        \n                </div>\n            </div>\n\n\n            <div \n            class=\"container mt-3\" *ngSwitchCase=\"'verified'\">\n            \n            <div\n                class=\"row mt-3 mt-lg-2\"\n                [ngClass]=\"{'border-success': handyman.isVerified, 'border-danger': !handyman.isVerified}\"\n                *ngFor=\"let handyman of verifiedHandymanList | filter:searchText\">\n                    <div \n                    class=\"col-lg-3 profile-img\"\n                    [ngStyle]=\"{'background-image': urlopen+handyman.img_url+urlclose }\"\n                            >\n                    </div>\n                    <div class=\"col-lg-8 profile-content\">\n                        <table class=\"row table text-capitalize table-borderless\">\n                            <tbody>\n                              <tr>\n                                <td>Name</td>\n                                <td>{{handyman.name}}</td>\n                              </tr>\n                              <tr>\n                                <td>D.O.B</td>\n                                <td>{{handyman.dob}}</td>\n                              </tr>\n                              <tr>\n                                <td>Contact Number</td>\n                                <td>{{handyman.contactNumber}}</td>\n                              </tr>\n                              <tr>\n                                <td>Aadhar Number</td>\n                                <td>{{handyman.aadharNumber}}</td>\n                              </tr>\n                              <tr>\n                                <td>City</td>\n                                <td>{{handyman.city}}</td>\n                              </tr>\n                              <tr>\n                                <td>State</td>\n                                <td>{{handyman.state}}</td>\n                              </tr>\n                              <tr>\n                                <td>Service name</td>\n                                <td>{{handyman.serviceName}}</td>\n                              </tr>\n                              <tr>\n                                <td>Experience</td>\n                                <td>{{handyman.serviceExperience}}</td>\n                              </tr>\n                              <tr>\n                                <td>Rating</td>\n                                <td>{{handyman.rating}}</td>\n                              </tr>\n                            </tbody>\n                        </table>\n                        <div class=\"row\">\n                          <div class=\"col-1\"></div>\n                          <button class=\"btn btn-primary col-4\"\n                              (click)=\"deleteHandyman(handyman._id)\">\n                                DELETE\n                            </button>\n                            <div class=\"col-1\"></div>\n                            \n                            <button *ngIf=\"handyman.isVerified\" class=\"btn text-white bg-danger col-4\"\n                                (click)=\"unverifyHandyman(handyman._id)\"\n                                >\n                                UNVERIFY\n                            </button>\n                            <button *ngIf=\"!handyman.isVerified\" class=\"btn text-white bg-success col-4\"\n                                (click)=\"verifyHandyman(handyman._id)\"\n                                >\n                                VERIFY\n                            </button>\n                            <div class=\"col-1\"></div>\n                        </div>\n    \n                    </div>\n\n                        \n                </div>\n            </div>\n\n            <div \n            class=\"container mt-3\" *ngSwitchCase=\"'notverified'\">\n            \n            <div\n                class=\"row mt-3 mt-lg-2\"\n                [ngClass]=\"{'border-success': handyman.isVerified, 'border-danger': !handyman.isVerified}\"\n                *ngFor=\"let handyman of notVerifiedHandymanList | filter:searchText\">\n                    <div \n                    class=\"col-lg-3 profile-img\"\n                    [ngStyle]=\"{'background-image': urlopen+handyman.img_url+urlclose }\"\n                            >\n                    </div>\n                    <div class=\"col-lg-8 profile-content\">\n                        <table class=\"row table text-capitalize table-borderless\">\n                            <tbody>\n                              <tr>\n                                <td>Name</td>\n                                <td>{{handyman.name}}</td>\n                              </tr>\n                              <tr>\n                                <td>D.O.B</td>\n                                <td>{{handyman.dob}}</td>\n                              </tr>\n                              <tr>\n                                <td>Contact Number</td>\n                                <td>{{handyman.contactNumber}}</td>\n                              </tr>\n                              <tr>\n                                <td>Aadhar Number</td>\n                                <td>{{handyman.aadharNumber}}</td>\n                              </tr>\n                              <tr>\n                                <td>City</td>\n                                <td>{{handyman.city}}</td>\n                              </tr>\n                              <tr>\n                                <td>State</td>\n                                <td>{{handyman.state}}</td>\n                              </tr>\n                              <tr>\n                                <td>Service name</td>\n                                <td>{{handyman.serviceName}}</td>\n                              </tr>\n                              <tr>\n                                <td>Experience</td>\n                                <td>{{handyman.serviceExperience}}</td>\n                              </tr>\n                              <tr>\n                                <td>Rating</td>\n                                <td>{{handyman.rating}}</td>\n                              </tr>\n                            </tbody>\n                        </table>\n                        <div class=\"row\">\n                          <div class=\"col-1\"></div>\n                          <button class=\"btn btn-primary col-4\"\n                              (click)=\"deleteHandyman(handyman._id)\">\n                                DELETE\n                            </button>\n                            <div class=\"col-1\"></div>\n                            \n                            <button *ngIf=\"handyman.isVerified\" class=\"btn text-white bg-danger col-4\"\n                                (click)=\"unverifyHandyman(handyman._id)\"\n                                >\n                                UNVERIFY\n                            </button>\n                            <button *ngIf=\"!handyman.isVerified\" class=\"btn text-white bg-success col-4\"\n                                (click)=\"verifyHandyman(handyman._id)\"\n                                >\n                                VERIFY\n                            </button>\n                            <div class=\"col-1\"></div>\n                        </div>\n    \n                    </div>\n\n                        \n                </div>\n            </div>\n\n\n    </div>\n\n</div>";
     /***/
   },
 
@@ -91,7 +99,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<app-nav-bar></app-nav-bar>\n\n<router-outlet></router-outlet>\n\n<!-- <app-our-services></app-our-services> -->\n<!-- <app-home-page></app-home-page> -->\n<!-- <app-handyman-details></app-handyman-details> -->\n\n\n\n<app-footer></app-footer>";
+    __webpack_exports__["default"] = "<app-nav-bar></app-nav-bar>\n\n<!-- <app-admin></app-admin> -->\n<router-outlet></router-outlet>\n\n<!-- <app-our-services></app-our-services> -->\n<!-- <app-home-page></app-home-page> -->\n<!-- <app-handyman-details></app-handyman-details> -->\n\n\n\n<app-footer></app-footer>";
     /***/
   },
 
@@ -151,7 +159,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container\">\r\n\r\n    <h1 class=\"my-4\">\r\n      <small class=\"text-capitalize\">{{dataHandyman.name}}</small>\r\n    </h1>\r\n  \r\n    <div class=\"row\">\r\n  \r\n      <div class=\"col-md-8\">\r\n        <img class=\"img-fluid\"\r\n        [src]=\"dataHandyman.img_url\"\r\n        alt=\"\">\r\n      </div>\r\n  \r\n      <div class=\"col-md-4\">\r\n        <!-- <star-rating\r\n          value=\"{{dataHandyman.rating}}\"\r\n          totalstars=\"5\"\r\n          checkedcolor=\"#fa9600\" \r\n          uncheckedcolor=\"#ccc\"\r\n          size=\"24px\" \r\n          readonly=\"true\"\r\n          (rate)=\"onRate($event)\">\r\n        </star-rating> -->\r\n        <ngb-rating [(rate)]=\"selectedRating\" max=5 (click)=\"ratingChanged()\" >\r\n            <ng-template let-fill=\"fill\" let-index=\"index\">\r\n                <span class=\"star\" [class.filled]=\"fill === 100\">&#9733;</span>\r\n            </ng-template>\r\n        </ngb-rating>\r\n\r\n        <table class=\"my-3 table text-capitalize table-borderless\">\r\n          <tbody>\r\n            <tr>\r\n              <td>Name</td>\r\n              <td>{{dataHandyman.name}}</td>\r\n            </tr>\r\n            <tr>\r\n              <td>D.O.B</td>\r\n              <td>{{dataHandyman.dob}}</td>\r\n            </tr>\r\n            <tr>\r\n              <td>Service</td>\r\n              <td>{{dataHandyman.serviceName}}</td>\r\n            </tr>\r\n            <tr>\r\n              <td>Experience</td>\r\n              <td>{{dataHandyman.serviceExperience}}</td>\r\n            </tr>\r\n            <tr>\r\n              <td>Contact Number</td>\r\n              <td>{{dataHandyman.contactNumber}}</td>\r\n            </tr>\r\n            <tr>\r\n              <td>City</td>\r\n              <td>{{dataHandyman.city}}</td>\r\n            </tr>\r\n            <tr>\r\n              <td>State</td>\r\n              <td>{{dataHandyman.state}}</td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n  \r\n    </div>\r\n  \r\n    <h3 class=\"mt-5 mb-3\">Related Handyman</h3>\r\n  \r\n    <div class=\"row\">\r\n  \r\n      <div class=\"col-md-3 col-sm-6 mb-4\" *ngFor=\"let handyman of relatedHandymanList\">\r\n        <a \r\n          (click)=\"gotoDetails(handyman.id)\"\r\n          style=\"cursor: pointer;\">\r\n          \r\n          <div class=\"related-img\" \r\n            [ngStyle]=\"{ 'background-image': 'url(\\''+handyman.img_url+'\\')' }\"></div>\r\n            <h6 class=\"text-capitalize\">\r\n              {{handyman.name}}\r\n            </h6>\r\n        </a>\r\n            \r\n      </div>\r\n\r\n    </div>\r\n  </div>\r\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\r\n\r\n    <h1 class=\"my-4\">\r\n      <small class=\"text-capitalize\">{{dataHandyman.name}}</small>\r\n    </h1>\r\n  \r\n    <div class=\"row\">\r\n  \r\n      <div class=\"col-md-8\">\r\n        <img class=\"img-fluid profile-img\"\r\n        [src]=\"dataHandyman.img_url\"\r\n        alt=\"\">\r\n      </div>\r\n  \r\n      <div class=\"col-md-4\">\r\n        <!-- <star-rating\r\n          value=\"{{dataHandyman.rating}}\"\r\n          totalstars=\"5\"\r\n          checkedcolor=\"#fa9600\" \r\n          uncheckedcolor=\"#ccc\"\r\n          size=\"24px\" \r\n          readonly=\"true\"\r\n          (rate)=\"onRate($event)\">\r\n        </star-rating> -->\r\n        <ngb-rating [(rate)]=\"selectedRating\" max=5 (click)=\"ratingChanged()\" >\r\n            <ng-template let-fill=\"fill\" let-index=\"index\">\r\n                <span class=\"star\" [class.filled]=\"fill === 100\">&#9733;</span>\r\n            </ng-template>\r\n        </ngb-rating>\r\n\r\n        <table class=\"my-3 table text-capitalize table-borderless\">\r\n          <tbody>\r\n            <tr>\r\n              <td>Name</td>\r\n              <td>{{dataHandyman.name}}</td>\r\n            </tr>\r\n            <tr>\r\n              <td>D.O.B</td>\r\n              <td>{{dataHandyman.dob}}</td>\r\n            </tr>\r\n            <tr>\r\n              <td>Service</td>\r\n              <td>{{dataHandyman.serviceName}}</td>\r\n            </tr>\r\n            <tr>\r\n              <td>Experience</td>\r\n              <td>{{dataHandyman.serviceExperience}} years</td>\r\n            </tr>\r\n            <tr>\r\n              <td>Contact Number</td>\r\n              <td>{{dataHandyman.contactNumber}}</td>\r\n            </tr>\r\n            <tr>\r\n              <td>City</td>\r\n              <td>{{dataHandyman.city}}</td>\r\n            </tr>\r\n            <tr>\r\n              <td>State</td>\r\n              <td>{{dataHandyman.state}}</td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n  \r\n    </div>\r\n  \r\n    <h3 *ngIf=\"relatedHandymanList.length > 0\" class=\"mt-5 mb-3\">Related Handyman</h3>\r\n  \r\n    <div class=\"row\">\r\n  \r\n      <div class=\"col-md-3 col-sm-6 mb-4\" *ngFor=\"let handyman of relatedHandymanList\">\r\n        <a \r\n          (click)=\"gotoDetails(handyman.id)\"\r\n          style=\"cursor: pointer;\">\r\n          \r\n          <div class=\"related-img\" \r\n            [ngStyle]=\"{ 'background-image': 'url(\\''+handyman.img_url+'\\')' }\"></div>\r\n            <h6 class=\"text-capitalize\">\r\n              {{handyman.name}}\r\n            </h6>\r\n        </a>\r\n            \r\n      </div>\r\n\r\n    </div>\r\n  </div>\r\n";
     /***/
   },
 
@@ -171,7 +179,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\r\n<div class=\"container-fluid\">\r\n\r\n    <div class=\"section-head mb-2\">\r\n        <h2 class=\"mx-auto text-capitalize primary-dark-orange\">{{serviceName}} Service</h2>\r\n    </div>\r\n\r\n    <div *ngIf=\"handymanList.length==0; then emptyListBlock else nonEmptyListBlock\"></div>\r\n    <ng-template #emptyListBlock>\r\n            <div class=\"row mx-auto text-center mt-5 mb-3\">\r\n                <p class=\"primary-light-blue\">\r\n                    We donot have enough members for this service but we are under registering programme.\r\n                    Please Come back later.  \r\n                </p>\r\n            </div>\r\n            <div class=\"row mx-auto my-2\">\r\n                If you want to work for us, then Register.\r\n            </div>\r\n            <div class=\"row mx-auto mb-5\">\r\n                <button class=\"register-btn btn ml-2\" [routerLink]=\"['/register']\">\r\n                    Work for Us\r\n                </button>\r\n            </div>\r\n    </ng-template>\r\n    \r\n    <ng-template #nonEmptyListBlock>\r\n        <div class=\"row\">\r\n            <div class=\" col-lg-3 text-capitalize col-sm-6 my-0 my-sm-3\" *ngFor=\"let handyman of handymanList\">\r\n                <div\r\n                    (click)=\"gotoDetailsPage(handyman.id)\"\r\n                    class=\"handyman-content justify-content-center py-5 px-0 p-lg-5\">\r\n    \r\n                    <div class=\"row justify-content-center\">\r\n                        <div class=\"handyman-img text-center\"\r\n                        [ngStyle]=\"{'background-image': urlopen+handyman.img_url+urlclose}\">\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"moredetails text-center\">\r\n                        Click for more details\r\n                    </div>\r\n                    <div class=\"row mt-0 justify-content-center\">\r\n\r\n                        <ngb-rating max=5 readonly=\"true\" [rate]=\"2.3\">\r\n                            <ng-template let-fill=\"fill\" let-index=\"index\">\r\n                                <span class=\"star\" [class.filled]=\"fill === 100\">&#9733;</span>\r\n                            </ng-template>\r\n                        </ngb-rating>\r\n\r\n                    </div>\r\n                    <div class=\"row mt-0 justify-content-center\">\r\n                        <h5 class=\"text-center primary-light-blue text-capitalize\">{{handyman.name}}</h5>\r\n                    </div>\r\n                    <div class=\"row handyman-content-age mx-auto\">\r\n                        <div class=\"col-6 mt-0\">\r\n                            Age\r\n                        </div>\r\n                        <div class=\"col-6 mt-0\">\r\n                            {{handyman.age}}years\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n    \r\n            </div>\r\n        </div>\r\n    </ng-template>\r\n    \r\n\r\n\r\n</div>";
+    __webpack_exports__["default"] = "\r\n<div class=\"container-fluid\">\r\n\r\n    <div class=\"section-head mb-2\">\r\n        <h2 class=\"mx-auto text-capitalize primary-dark-orange\">{{serviceName}} Service</h2>\r\n    </div>\r\n\r\n    <div *ngIf=\"handymanList.length==0; then emptyListBlock else nonEmptyListBlock\"></div>\r\n    <ng-template #emptyListBlock>\r\n            <div class=\"row mx-auto text-center mt-5 mb-3\">\r\n                <p class=\"primary-light-blue\">\r\n                    We donot have enough members for this service but we are under registering programme.\r\n                    Please Come back later.  \r\n                </p>\r\n            </div>\r\n            <div class=\"row mx-auto my-2\">\r\n                If you want to work for us, then Register.\r\n            </div>\r\n            <div class=\"row mx-auto mb-5\">\r\n                <button class=\"register-btn btn ml-2\" [routerLink]=\"['/register']\">\r\n                    Work for Us\r\n                </button>\r\n            </div>\r\n    </ng-template>\r\n    \r\n    <ng-template #nonEmptyListBlock>\r\n        <div class=\"row\">\r\n            <div class=\" col-lg-3 text-capitalize col-sm-6 my-0 my-sm-3\" *ngFor=\"let handyman of handymanList\">\r\n                <div\r\n                    (click)=\"gotoDetailsPage(handyman._id)\"\r\n                    class=\"handyman-content justify-content-center py-5 px-0 p-lg-5\">\r\n    \r\n                    <div class=\"row justify-content-center\">\r\n                        <div class=\"handyman-img text-center\"\r\n                        [ngStyle]=\"{'background-image': urlopen+handyman.img_url+urlclose}\">\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"moredetails text-center\">\r\n                        Click for more details\r\n                    </div>\r\n                    <div class=\"row mt-0 justify-content-center\">\r\n\r\n                        <ngb-rating max=5 readonly=\"true\" [rate]=\"handyman.rating\">\r\n                            <ng-template let-fill=\"fill\" let-index=\"index\">\r\n                                <span class=\"star\" [class.filled]=\"fill === 100\">&#9733;</span>\r\n                            </ng-template>\r\n                        </ngb-rating>\r\n\r\n                    </div>\r\n                    <div class=\"row mt-0 justify-content-center\">\r\n                        <h5 class=\"text-center primary-light-blue text-capitalize\">{{handyman.name}}</h5>\r\n                    </div>\r\n                    <div class=\"row handyman-content-age mx-auto\">\r\n                        <div class=\"col-6 mt-0\">\r\n                            Age\r\n                        </div>\r\n                        <div class=\"col-6 mt-0\">\r\n                            {{calcAge(handyman.dob)}}years\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n    \r\n            </div>\r\n        </div>\r\n    </ng-template>\r\n    \r\n\r\n\r\n</div>";
     /***/
   },
 
@@ -271,7 +279,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"container-fluid\">\n    <form\n      (submit)=\"onSubmitForm(registerForm)\" \n      class=\"mx-auto\" \n      [formGroup]=\"registerForm\"\n      >\n\n        <div class=\"section-head\">\n            <h2 class=\"mx-auto text-center primary-dark-orange\">REGISTER YOURSELF</h2>\n            <p class=\"mx-auto lead primary-light-gray\">Work as a handyman</p>\n        </div>\n            <div class=\"form-row\">\n              <div class=\"form-group col-md-6\">\n                <label for=\"name\">Full Name</label>\n                <input \n                name=\"name\"\n                formControlName=\"name\"\n                type=\"text\" class=\"form-control\" \n                id=\"name\" placeholder=\"As in Aadhar Card\">\n              </div>\n\n              <div class=\"form-group col-md-6\">\n                <label for=\"contactNumber\">Mobile Number</label>\n                <input \n                name=\"contactNumber\"\n                formControlName=\"contactNumber\"\n                type=\"tel\" \n                class=\"form-control\" \n                id=\"contactNumber\" \n                maxlength=\"10\" \n                minlength=\"10\" \n                placeholder=\"10 digits\">\n              </div>\n            </div>\n\n  \n            <div class=\"form-row\">\n              <div class=\"form-group col-md-6\">\n                <label for=\"aadhar\">Aadhar Card number</label>\n                <input \n                name=\"aadharNumber\"\n                formControlName=\"aadharNumber\"\n                type=\"tel\" \n                class=\"form-control\" \n                id=\"aadhar\" \n                minlength=\"12\" \n                maxlength=\"12\" \n                placeholder=\"0000-0000-0000\">\n              </div>\n              <div class=\"form-group col-md-6\">\n                <label for=\"dob\">Date Of Birth</label>\n                <input \n                name=\"dob\"\n                formControlName=\"dob\"\n                type=\"date\" \n                class=\"form-control\" \n                id=\"dob\" \n                placeholder=\"\">\n              </div>\n\n              <!-- <div class=\"form-group col-md-6\">\n                <label for=\"distance\">Maximum Distance</label>\n                <input \n                name=\"distance\"\n                required\n                ngModel\n                #distance=\"ngModel\"\n                type=\"number\" class=\"form-control\" id=\"distance\" placeholder=\"Distance in km\">\n              </div> -->\n            </div>\n\n            <div class=\"form-row\">\n              <div class=\"form-group col-md-6\">\n                <label for=\"servicename\">Your Service Name</label>\n                <!-- <input \n\n                type=\"text\" class=\"form-control\"  placeholder=\"eg. Electrician\"> -->\n                <select\n                  name=\"serviceName\"\n                  formControlName=\"serviceName\"\n                  id=\"servicename\"\n                  class=\"form-control\">\n                    <option selected>\n                      Choose one\n                    </option>\n                    <option *ngFor=\"let option of ourservices\">\n                      {{option.name}}\n                    </option>\n                </select>\n\n              </div>\n\n              <div class=\"form-group col-md-6\">\n                <label for=\"experience\">Service Experience</label>\n                <input \n                name=\"serviceExperience\"\n                formControlName=\"serviceExperience\"\n                type=\"number\" \n                class=\"form-control\" \n                id=\"experience\" \n                placeholder=\"In years\">\n              </div>\n            </div>\n\n  \n            <!-- <div class=\"form-group\">\n              <label for=\"currAddress\">Current Address</label>\n              <input type=\"text\" class=\"form-control\" id=\"currAddress\" placeholder=\"House Number, Street, Locality\">\n            </div> -->\n            <div class=\"form-row\">\n              <div class=\"form-group col-md-6\">\n                  <label for=\"city\">City</label>\n                  <input \n                  name=\"city\"\n                  formControlName=\"city\"\n                  type=\"text\" class=\"form-control\" id=\"city\" placeholder=\"eg.Dehradun\">\n              </div>\n              <div class=\"form-group col-md-6\">\n                  <label for=\"state\">State</label>\n                  <input \n                  name=\"state\"\n                  formControlName=\"state\"\n                  type=\"text\" class=\"form-control\" id=\"state\" placeholder=\"eg.Uttarakhand\">\n              </div>\n            </div>\n\n            <!-- <div class=\"form-row\">\n                <div class=\"form-group col-md-4\">\n                    <label for=\"currCity\">City</label>\n                    <input type=\"text\" class=\"form-control\" id=\"currCity\" placeholder=\"eg.Dehradun\">\n                </div>\n                <div class=\"form-group col-md-4\">\n                    <label for=\"currState\">State</label>\n                    <input type=\"text\" class=\"form-control\" id=\"currState\" placeholder=\"eg.Uttarakhand\">\n                </div>\n                <div class=\"form-group col-md-3\">\n                    <label for=\"currZip\">Zip</label>\n                    <input type=\"text\" class=\"form-control\" id=\"currZip\" placeholder=\"000000\">\n                </div>\n            </div> -->\n  \n            <!-- <div class=\"form-group\">\n                <label for=\"permPoliceStation\">Police Station</label>\n                <input type=\"text\" class=\"form-control\" id=\"permPoliceStation\">\n            </div>\n\n  \n            <div class=\"form-group\">\n                <label for=\"permAddress\">Permanent Address</label>\n                <input type=\"text\" class=\"form-control\" id=\"permAddress\" placeholder=\"House Number, Street, Locality\">\n            </div>\n            <div class=\"form-row\">\n                <div class=\"form-group col-md-4\">\n                    <label for=\"permCity\">City</label>\n                    <input type=\"text\" class=\"form-control\" id=\"permCity\" placeholder=\"eg.Dehradun\">\n                </div>\n                <div class=\"form-group col-md-4\">\n                    <label for=\"permState\">State</label>\n                    <input type=\"text\" class=\"form-control\" id=\"permState\" placeholder=\"eg.Uttarakhand\">\n                </div>\n                <div class=\"form-group col-md-3\">\n                    <label for=\"permZip\">Zip</label>\n                    <input type=\"text\" class=\"form-control\" id=\"permZip\" placeholder=\"000000\">\n                </div>\n            </div>\n  \n            <div class=\"form-group\">\n              <label for=\"permPoliceStation\">Police Station</label>\n              <input type=\"text\" class=\"form-control\" id=\"permPoliceStation\">\n            </div> -->\n\n            <div class=\"form-row\">\n              <div class=\"form-group col-md-6\">\n                  <label for=\"pick\">Upload Image</label>\n                  <input \n                  (change) = \"onImagePicked($event)\"\n                  type=\"file\" \n                  class=\"form-control\" \n                  id=\"profile-image\">\n              </div>\n              <div \n                *ngIf=\"imagePreview !== '' && imagePreview && registerForm.get('previewImg').valid\"\n                class=\"form-group col-md-6 image-preview\"\n                [ngStyle]=\"{'background-image': 'url(\\''+imagePreview+'\\')' }\"\n                >\n                <!-- <img [src]=\"imagePreview\" alt=\"\"> -->\n              </div>\n            </div>\n\n            \n            <div class=\"form-group\">\n              <div class=\"form-check\">\n                <input\n                class=\"form-check-input\"\n                type=\"checkbox\"\n                id=\"termsCheck\" \n                [checked]=\"termsCheck\"\n                (change)=\"termsCheck=!termsCheck\"\n                    >\n                <label class=\"form-check-label\" for=\"termsCheck\"\n                    [ngClass]=\"{'text-success': termsCheck, 'text-danger': !termsCheck}\">\n                  I declare all details filled by me are true.\n                </label>\n              </div>\n            </div>\n\n            <button type=\"submit\"\n              [hidden]=\"!termsCheck\"\n              class=\"btn submit-btn\">\n              Submit\n            </button>\n    </form>\n</div>\n\n<!-- <div class=\"container-fluid alertbox\">\n  <div class=\"alert alert-success text-center mt-5 mx-auto\" role=\"alert\" [hidden]=\"!showhide\">\n    <h4 class=\"alert-heading\">Form Submitted!</h4>\n    <p>Please wait for the call from our team</p>\n  </div>\n</div> -->\n        <!-- [ngClass]=\"{'submit-btn': termsCheck, 'disabled': !termsCheck, 'submit-btn-disabled': !termsCheck}\" -->";
+    __webpack_exports__["default"] = "<div class=\"container-fluid\">\n    <form\n      (submit)=\"onSubmitForm(registerForm)\" \n      class=\"mx-auto\" \n      [formGroup]=\"registerForm\"\n      >\n\n        <div class=\"section-head\">\n            <h2 class=\"mx-auto text-center primary-dark-orange\">REGISTER YOURSELF</h2>\n            <p class=\"mx-auto lead primary-light-gray\">Work as a handyman</p>\n        </div>\n            <div class=\"form-row\">\n              <div class=\"form-group col-md-6\">\n                <label for=\"name\">Full Name</label>\n                <input \n                name=\"name\"\n                formControlName=\"name\"\n                type=\"text\" class=\"form-control\" \n                id=\"name\" placeholder=\"As in Aadhar Card\">\n              </div>\n\n              <div class=\"form-group col-md-6\">\n                <label for=\"contactNumber\">Mobile Number</label>\n                <input \n                name=\"contactNumber\"\n                formControlName=\"contactNumber\"\n                type=\"tel\" \n                class=\"form-control\" \n                id=\"contactNumber\" \n                maxlength=\"10\" \n                minlength=\"10\" \n                placeholder=\"10 digits\">\n              </div>\n            </div>\n\n  \n            <div class=\"form-row\">\n              <div class=\"form-group col-md-6\">\n                <label for=\"aadhar\">Aadhar Card number</label>\n                <input \n                name=\"aadharNumber\"\n                formControlName=\"aadharNumber\"\n                type=\"tel\" \n                class=\"form-control\" \n                id=\"aadhar\" \n                minlength=\"12\" \n                maxlength=\"12\" \n                placeholder=\"0000-0000-0000\">\n              </div>\n              <div class=\"form-group col-md-6\">\n                <label for=\"dob\">Date Of Birth</label>\n                <input \n                name=\"dob\"\n                formControlName=\"dob\"\n                type=\"date\" \n                class=\"form-control\" \n                id=\"dob\" \n                placeholder=\"\">\n              </div>\n\n              <!-- <div class=\"form-group col-md-6\">\n                <label for=\"distance\">Maximum Distance</label>\n                <input \n                name=\"distance\"\n                required\n                ngModel\n                #distance=\"ngModel\"\n                type=\"number\" class=\"form-control\" id=\"distance\" placeholder=\"Distance in km\">\n              </div> -->\n            </div>\n\n            <div class=\"form-row\">\n              <div class=\"form-group col-md-6\">\n                <label for=\"servicename\">Your Service Name</label>\n                <!-- <input \n\n                type=\"text\" class=\"form-control\"  placeholder=\"eg. Electrician\"> -->\n                <select\n                  name=\"serviceName\"\n                  formControlName=\"serviceName\"\n                  id=\"servicename\"\n                  class=\"form-control\">\n                    <option selected>\n                      Choose one\n                    </option>\n                    <option *ngFor=\"let option of ourservices\">\n                      {{option.name}}\n                    </option>\n                </select>\n\n              </div>\n\n              <div class=\"form-group col-md-6\">\n                <label for=\"experience\">Service Experience</label>\n                <input \n                name=\"serviceExperience\"\n                formControlName=\"serviceExperience\"\n                type=\"number\" \n                class=\"form-control\" \n                id=\"experience\" \n                placeholder=\"In years\">\n              </div>\n            </div>\n\n  \n            <!-- <div class=\"form-group\">\n              <label for=\"currAddress\">Current Address</label>\n              <input type=\"text\" class=\"form-control\" id=\"currAddress\" placeholder=\"House Number, Street, Locality\">\n            </div> -->\n            <div class=\"form-row\">\n              <div class=\"form-group col-md-6\">\n                  <label for=\"city\">City</label>\n                  <input \n                  name=\"city\"\n                  formControlName=\"city\"\n                  type=\"text\" class=\"form-control\" id=\"city\" placeholder=\"eg.Dehradun\">\n              </div>\n              <div class=\"form-group col-md-6\">\n                  <label for=\"state\">State</label>\n                  <input \n                  name=\"state\"\n                  formControlName=\"state\"\n                  type=\"text\" class=\"form-control\" id=\"state\" placeholder=\"eg.Uttarakhand\">\n              </div>\n            </div>\n\n            <!-- <div class=\"form-row\">\n                <div class=\"form-group col-md-4\">\n                    <label for=\"currCity\">City</label>\n                    <input type=\"text\" class=\"form-control\" id=\"currCity\" placeholder=\"eg.Dehradun\">\n                </div>\n                <div class=\"form-group col-md-4\">\n                    <label for=\"currState\">State</label>\n                    <input type=\"text\" class=\"form-control\" id=\"currState\" placeholder=\"eg.Uttarakhand\">\n                </div>\n                <div class=\"form-group col-md-3\">\n                    <label for=\"currZip\">Zip</label>\n                    <input type=\"text\" class=\"form-control\" id=\"currZip\" placeholder=\"000000\">\n                </div>\n            </div> -->\n  \n            <!-- <div class=\"form-group\">\n                <label for=\"permPoliceStation\">Police Station</label>\n                <input type=\"text\" class=\"form-control\" id=\"permPoliceStation\">\n            </div>\n\n  \n            <div class=\"form-group\">\n                <label for=\"permAddress\">Permanent Address</label>\n                <input type=\"text\" class=\"form-control\" id=\"permAddress\" placeholder=\"House Number, Street, Locality\">\n            </div>\n            <div class=\"form-row\">\n                <div class=\"form-group col-md-4\">\n                    <label for=\"permCity\">City</label>\n                    <input type=\"text\" class=\"form-control\" id=\"permCity\" placeholder=\"eg.Dehradun\">\n                </div>\n                <div class=\"form-group col-md-4\">\n                    <label for=\"permState\">State</label>\n                    <input type=\"text\" class=\"form-control\" id=\"permState\" placeholder=\"eg.Uttarakhand\">\n                </div>\n                <div class=\"form-group col-md-3\">\n                    <label for=\"permZip\">Zip</label>\n                    <input type=\"text\" class=\"form-control\" id=\"permZip\" placeholder=\"000000\">\n                </div>\n            </div>\n  \n            <div class=\"form-group\">\n              <label for=\"permPoliceStation\">Police Station</label>\n              <input type=\"text\" class=\"form-control\" id=\"permPoliceStation\">\n            </div> -->\n\n            <div class=\"form-row\">\n              <div class=\"form-group col-md-6\">\n                  <label for=\"pick\">Upload Image</label>\n                  <input \n                  (change) = \"onImagePicked($event)\"\n                  type=\"file\" \n                  class=\"form-control\" \n                  id=\"profile-image\">\n              </div>\n              <div \n                *ngIf=\"imagePreview !== '' && imagePreview && registerForm.get('previewImg').valid\"\n                class=\"form-group col-md-6 image-preview\"\n                [ngStyle]=\"{'background-image': 'url(\\''+imagePreview+'\\')' }\"\n                >\n                <!-- <img [src]=\"imagePreview\" alt=\"\"> -->\n              </div>\n            </div>\n\n            \n            <div class=\"form-group\">\n              <div class=\"form-check\">\n                <input\n                class=\"form-check-input\"\n                type=\"checkbox\"\n                id=\"termsCheck\" \n                [checked]=\"termsCheck\"\n                (change)=\"termsCheck=!termsCheck\"\n                    >\n                <label class=\"form-check-label\" for=\"termsCheck\"\n                    [ngClass]=\"{'text-success': termsCheck, 'text-danger': !termsCheck}\">\n                  I declare all details filled by me are true.\n                </label>\n              </div>\n            </div>\n\n            <button type=\"submit\"\n              [hidden]=\"!termsCheck\"\n              class=\"btn submit-btn\">\n              Submit\n            </button>\n    </form>\n</div>\n\n<div class=\"container-fluid alertbox\">\n  <div class=\"alert alert-success text-center mt-5 mx-auto\" role=\"alert\" [hidden]=\"!showhide\">\n    <h4 class=\"alert-heading\">Form Submitted!</h4>\n    <p>Please wait for the call from our team</p>\n  </div>\n</div>\n        <!-- [ngClass]=\"{'submit-btn': termsCheck, 'disabled': !termsCheck, 'submit-btn-disabled': !termsCheck}\" -->";
     /***/
   },
 
@@ -963,7 +971,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "/* *************************\r\n    Tiles\r\n**************************/\r\n.card svg.material-icons path {\r\n    fill: #fff;\r\n}\r\n.handyman-section-cases.card-container{\r\n    display: -webkit-box;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    margin-top: 16px;\r\n}\r\n.handyman-section-cases .card{\r\n    color: #FFFFFF;\r\n    border-radius: 2rem;\r\n    height: 40px;\r\n    width: 200px;\r\n    margin: 0 8px 16px;\r\n    padding: 16px;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n            flex-direction: row;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-transition: all 0.2s ease-in-out;\r\n    transition: all 0.2s ease-in-out;\r\n    line-height: 24px;\r\n    cursor: pointer;\r\n}\r\n.handyman-section-cases .card:hover{\r\n    -webkit-transform: scale(1.1, 1.2);\r\n            transform: scale(1.1, 1.2);\r\n    box-shadow: 3px 3px 5px #9BA5BA;\r\n}\r\n.handyman-section-values > .container > .row {\r\n    border-radius: 4px;\r\n    border: 1px solid;\r\n    height: -webkit-fit-content;\r\n    height: -moz-fit-content;\r\n    height: fit-content;\r\n    width: 100%;\r\n    margin: 0 4px 8px;\r\n    padding: 16px;\r\n    /* display: flex;\r\n    flex-direction: column; */\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-transition: all 0.2s ease-in-out;\r\n    transition: all 0.2s ease-in-out;\r\n    line-height: 24px;   \r\n}\r\n.border-sucess{\r\n    border-color: green;\r\n}\r\n.border-danger{\r\n    border-color: red;\r\n}\r\n/* ******************\r\n    Content\r\n****************** */\r\n.profile-img{\r\n    background-size: cover;\r\n    width: 10rem;\r\n    height: 10rem;\r\n    border-radius: 0.5rem;\r\n}\r\n.profile-content > .row {\r\n    place-content: center;\r\n}\r\n@media only screen and (min-width: 990px){\r\n    .profile-img{\r\n        width: 20rem;\r\n        height: 13rem;\r\n    }    \r\n}\r\n/* ********************\r\n    Form\r\n********************* */\r\n.form-container{\r\n    position: absolute;\r\n    height: 100%;\r\n    z-index: 10;\r\n    background: none;\r\n}\r\n.form-update{\r\n    padding: 1rem;\r\n}\r\n@media only screen and (min-width:576px){\r\n    .form-container{\r\n        padding: 5rem;\r\n    }\r\n    .form-update{\r\n        padding: 5rem;\r\n    }\r\n        \r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRtaW4vYWRtaW4uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7MEJBRTBCO0FBQzFCO0lBQ0ksVUFBVTtBQUNkO0FBRUE7SUFDSSxvQkFBYTtJQUFiLGFBQWE7SUFDYixlQUFlO0lBQ2Ysd0JBQXVCO1lBQXZCLHVCQUF1QjtJQUN2QixnQkFBZ0I7QUFDcEI7QUFFQTtJQUNJLGNBQWM7SUFDZCxtQkFBbUI7SUFDbkIsWUFBWTtJQUNaLFlBQVk7SUFDWixrQkFBa0I7SUFDbEIsYUFBYTtJQUNiLG9CQUFhO0lBQWIsYUFBYTtJQUNiLDhCQUFtQjtJQUFuQiw2QkFBbUI7WUFBbkIsbUJBQW1CO0lBQ25CLHdCQUF1QjtZQUF2Qix1QkFBdUI7SUFDdkIseUJBQW1CO1lBQW5CLG1CQUFtQjtJQUNuQix3Q0FBZ0M7SUFBaEMsZ0NBQWdDO0lBQ2hDLGlCQUFpQjtJQUNqQixlQUFlO0FBQ25CO0FBQ0E7SUFDSSxrQ0FBMEI7WUFBMUIsMEJBQTBCO0lBQzFCLCtCQUErQjtBQUNuQztBQUNBO0lBQ0ksa0JBQWtCO0lBQ2xCLGlCQUFpQjtJQUNqQiwyQkFBbUI7SUFBbkIsd0JBQW1CO0lBQW5CLG1CQUFtQjtJQUNuQixXQUFXO0lBQ1gsaUJBQWlCO0lBQ2pCLGFBQWE7SUFDYjs2QkFDeUI7SUFDekIsd0JBQXVCO1lBQXZCLHVCQUF1QjtJQUN2Qix5QkFBbUI7WUFBbkIsbUJBQW1CO0lBQ25CLHdDQUFnQztJQUFoQyxnQ0FBZ0M7SUFDaEMsaUJBQWlCO0FBQ3JCO0FBQ0E7SUFDSSxtQkFBbUI7QUFDdkI7QUFDQTtJQUNJLGlCQUFpQjtBQUNyQjtBQUNBOztvQkFFb0I7QUFDcEI7SUFDSSxzQkFBc0I7SUFDdEIsWUFBWTtJQUNaLGFBQWE7SUFDYixxQkFBcUI7QUFDekI7QUFDQTtJQUNJLHFCQUFxQjtBQUN6QjtBQUNBO0lBQ0k7UUFDSSxZQUFZO1FBQ1osYUFBYTtJQUNqQjtBQUNKO0FBQ0E7O3VCQUV1QjtBQUN2QjtJQUNJLGtCQUFrQjtJQUNsQixZQUFZO0lBQ1osV0FBVztJQUNYLGdCQUFnQjtBQUNwQjtBQUNBO0lBQ0ksYUFBYTtBQUNqQjtBQUNBO0lBQ0k7UUFDSSxhQUFhO0lBQ2pCO0lBQ0E7UUFDSSxhQUFhO0lBQ2pCOztBQUVKIiwiZmlsZSI6InNyYy9hcHAvYWRtaW4vYWRtaW4uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qICoqKioqKioqKioqKioqKioqKioqKioqKipcclxuICAgIFRpbGVzXHJcbioqKioqKioqKioqKioqKioqKioqKioqKioqL1xyXG4uY2FyZCBzdmcubWF0ZXJpYWwtaWNvbnMgcGF0aCB7XHJcbiAgICBmaWxsOiAjZmZmO1xyXG59XHJcbiAgXHJcbi5oYW5keW1hbi1zZWN0aW9uLWNhc2VzLmNhcmQtY29udGFpbmVye1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtd3JhcDogd3JhcDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgbWFyZ2luLXRvcDogMTZweDtcclxufVxyXG4gIFxyXG4uaGFuZHltYW4tc2VjdGlvbi1jYXNlcyAuY2FyZHtcclxuICAgIGNvbG9yOiAjRkZGRkZGO1xyXG4gICAgYm9yZGVyLXJhZGl1czogMnJlbTtcclxuICAgIGhlaWdodDogNDBweDtcclxuICAgIHdpZHRoOiAyMDBweDtcclxuICAgIG1hcmdpbjogMCA4cHggMTZweDtcclxuICAgIHBhZGRpbmc6IDE2cHg7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IHJvdztcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2UtaW4tb3V0O1xyXG4gICAgbGluZS1oZWlnaHQ6IDI0cHg7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbn1cclxuLmhhbmR5bWFuLXNlY3Rpb24tY2FzZXMgLmNhcmQ6aG92ZXJ7XHJcbiAgICB0cmFuc2Zvcm06IHNjYWxlKDEuMSwgMS4yKTtcclxuICAgIGJveC1zaGFkb3c6IDNweCAzcHggNXB4ICM5QkE1QkE7XHJcbn1cclxuLmhhbmR5bWFuLXNlY3Rpb24tdmFsdWVzID4gLmNvbnRhaW5lciA+IC5yb3cge1xyXG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQ7XHJcbiAgICBoZWlnaHQ6IGZpdC1jb250ZW50O1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBtYXJnaW46IDAgNHB4IDhweDtcclxuICAgIHBhZGRpbmc6IDE2cHg7XHJcbiAgICAvKiBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsgKi9cclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2UtaW4tb3V0O1xyXG4gICAgbGluZS1oZWlnaHQ6IDI0cHg7ICAgXHJcbn1cclxuLmJvcmRlci1zdWNlc3N7XHJcbiAgICBib3JkZXItY29sb3I6IGdyZWVuO1xyXG59XHJcbi5ib3JkZXItZGFuZ2Vye1xyXG4gICAgYm9yZGVyLWNvbG9yOiByZWQ7XHJcbn1cclxuLyogKioqKioqKioqKioqKioqKioqXHJcbiAgICBDb250ZW50XHJcbioqKioqKioqKioqKioqKioqKiAqL1xyXG4ucHJvZmlsZS1pbWd7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG4gICAgd2lkdGg6IDEwcmVtO1xyXG4gICAgaGVpZ2h0OiAxMHJlbTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDAuNXJlbTtcclxufVxyXG4ucHJvZmlsZS1jb250ZW50ID4gLnJvdyB7XHJcbiAgICBwbGFjZS1jb250ZW50OiBjZW50ZXI7XHJcbn1cclxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWluLXdpZHRoOiA5OTBweCl7XHJcbiAgICAucHJvZmlsZS1pbWd7XHJcbiAgICAgICAgd2lkdGg6IDIwcmVtO1xyXG4gICAgICAgIGhlaWdodDogMTNyZW07XHJcbiAgICB9ICAgIFxyXG59XHJcbi8qICoqKioqKioqKioqKioqKioqKioqXHJcbiAgICBGb3JtXHJcbioqKioqKioqKioqKioqKioqKioqKiAqL1xyXG4uZm9ybS1jb250YWluZXJ7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICB6LWluZGV4OiAxMDtcclxuICAgIGJhY2tncm91bmQ6IG5vbmU7XHJcbn1cclxuLmZvcm0tdXBkYXRle1xyXG4gICAgcGFkZGluZzogMXJlbTtcclxufVxyXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6NTc2cHgpe1xyXG4gICAgLmZvcm0tY29udGFpbmVye1xyXG4gICAgICAgIHBhZGRpbmc6IDVyZW07XHJcbiAgICB9XHJcbiAgICAuZm9ybS11cGRhdGV7XHJcbiAgICAgICAgcGFkZGluZzogNXJlbTtcclxuICAgIH1cclxuICAgICAgICBcclxufSJdfQ== */";
+    __webpack_exports__["default"] = "/* *************************\r\n    Tiles\r\n**************************/\r\n.card svg.material-icons path {\r\n    fill: #fff;\r\n}\r\n.handyman-section-cases.card-container{\r\n    display: -webkit-box;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    margin-top: 16px;\r\n}\r\n.handyman-section-cases .card{\r\n    color: #FFFFFF;\r\n    border-radius: 2rem;\r\n    height: 40px;\r\n    width: 200px;\r\n    margin: 0 8px 16px;\r\n    padding: 16px;\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n            flex-direction: row;\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-transition: all 0.2s ease-in-out;\r\n    transition: all 0.2s ease-in-out;\r\n    line-height: 24px;\r\n    cursor: pointer;\r\n}\r\n.handyman-section-cases .card:hover{\r\n    -webkit-transform: scale(1.1, 1.2);\r\n            transform: scale(1.1, 1.2);\r\n    box-shadow: 3px 3px 5px #9BA5BA;\r\n}\r\n.handyman-section-values > .container > .row {\r\n    border-radius: 4px;\r\n    border: 1px solid;\r\n    height: -webkit-fit-content;\r\n    height: -moz-fit-content;\r\n    height: fit-content;\r\n    width: 100%;\r\n    margin: 0 4px 8px;\r\n    padding: 16px;\r\n    /* display: flex;\r\n    flex-direction: column; */\r\n    -webkit-box-pack: center;\r\n            justify-content: center;\r\n    -webkit-box-align: center;\r\n            align-items: center;\r\n    -webkit-transition: all 0.2s ease-in-out;\r\n    transition: all 0.2s ease-in-out;\r\n    line-height: 24px;   \r\n}\r\n.border-sucess{\r\n    border-color: green;\r\n}\r\n.border-danger{\r\n    border-color: red;\r\n}\r\n/* ******************\r\n    Content\r\n****************** */\r\n.profile-img{\r\n    background-size: contain;\r\n    background-position: center;\r\n    width: 10rem;\r\n    height: 10rem;\r\n    border-radius: 0.5rem;\r\n    background-repeat: no-repeat;\r\n}\r\n.profile-content > .row {\r\n    place-content: center;\r\n}\r\n@media only screen and (min-width: 990px){\r\n    .profile-img{\r\n        width: 20rem;\r\n        height: 13rem;\r\n    }    \r\n}\r\n/* ********************\r\n    Form\r\n********************* */\r\n.form-container{\r\n    position: absolute;\r\n    height: 100%;\r\n    z-index: 10;\r\n    background: none;\r\n}\r\n.form-update{\r\n    padding: 1rem;\r\n}\r\n@media only screen and (min-width:576px){\r\n    .form-container{\r\n        padding: 5rem;\r\n    }\r\n    .form-update{\r\n        padding: 5rem;\r\n    }\r\n        \r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRtaW4vYWRtaW4uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7MEJBRTBCO0FBQzFCO0lBQ0ksVUFBVTtBQUNkO0FBRUE7SUFDSSxvQkFBYTtJQUFiLGFBQWE7SUFDYixlQUFlO0lBQ2Ysd0JBQXVCO1lBQXZCLHVCQUF1QjtJQUN2QixnQkFBZ0I7QUFDcEI7QUFFQTtJQUNJLGNBQWM7SUFDZCxtQkFBbUI7SUFDbkIsWUFBWTtJQUNaLFlBQVk7SUFDWixrQkFBa0I7SUFDbEIsYUFBYTtJQUNiLG9CQUFhO0lBQWIsYUFBYTtJQUNiLDhCQUFtQjtJQUFuQiw2QkFBbUI7WUFBbkIsbUJBQW1CO0lBQ25CLHdCQUF1QjtZQUF2Qix1QkFBdUI7SUFDdkIseUJBQW1CO1lBQW5CLG1CQUFtQjtJQUNuQix3Q0FBZ0M7SUFBaEMsZ0NBQWdDO0lBQ2hDLGlCQUFpQjtJQUNqQixlQUFlO0FBQ25CO0FBQ0E7SUFDSSxrQ0FBMEI7WUFBMUIsMEJBQTBCO0lBQzFCLCtCQUErQjtBQUNuQztBQUNBO0lBQ0ksa0JBQWtCO0lBQ2xCLGlCQUFpQjtJQUNqQiwyQkFBbUI7SUFBbkIsd0JBQW1CO0lBQW5CLG1CQUFtQjtJQUNuQixXQUFXO0lBQ1gsaUJBQWlCO0lBQ2pCLGFBQWE7SUFDYjs2QkFDeUI7SUFDekIsd0JBQXVCO1lBQXZCLHVCQUF1QjtJQUN2Qix5QkFBbUI7WUFBbkIsbUJBQW1CO0lBQ25CLHdDQUFnQztJQUFoQyxnQ0FBZ0M7SUFDaEMsaUJBQWlCO0FBQ3JCO0FBQ0E7SUFDSSxtQkFBbUI7QUFDdkI7QUFDQTtJQUNJLGlCQUFpQjtBQUNyQjtBQUNBOztvQkFFb0I7QUFDcEI7SUFDSSx3QkFBd0I7SUFDeEIsMkJBQTJCO0lBQzNCLFlBQVk7SUFDWixhQUFhO0lBQ2IscUJBQXFCO0lBQ3JCLDRCQUE0QjtBQUNoQztBQUNBO0lBQ0kscUJBQXFCO0FBQ3pCO0FBQ0E7SUFDSTtRQUNJLFlBQVk7UUFDWixhQUFhO0lBQ2pCO0FBQ0o7QUFDQTs7dUJBRXVCO0FBQ3ZCO0lBQ0ksa0JBQWtCO0lBQ2xCLFlBQVk7SUFDWixXQUFXO0lBQ1gsZ0JBQWdCO0FBQ3BCO0FBQ0E7SUFDSSxhQUFhO0FBQ2pCO0FBQ0E7SUFDSTtRQUNJLGFBQWE7SUFDakI7SUFDQTtRQUNJLGFBQWE7SUFDakI7O0FBRUoiLCJmaWxlIjoic3JjL2FwcC9hZG1pbi9hZG1pbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogKioqKioqKioqKioqKioqKioqKioqKioqKlxyXG4gICAgVGlsZXNcclxuKioqKioqKioqKioqKioqKioqKioqKioqKiovXHJcbi5jYXJkIHN2Zy5tYXRlcmlhbC1pY29ucyBwYXRoIHtcclxuICAgIGZpbGw6ICNmZmY7XHJcbn1cclxuICBcclxuLmhhbmR5bWFuLXNlY3Rpb24tY2FzZXMuY2FyZC1jb250YWluZXJ7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC13cmFwOiB3cmFwO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBtYXJnaW4tdG9wOiAxNnB4O1xyXG59XHJcbiAgXHJcbi5oYW5keW1hbi1zZWN0aW9uLWNhc2VzIC5jYXJke1xyXG4gICAgY29sb3I6ICNGRkZGRkY7XHJcbiAgICBib3JkZXItcmFkaXVzOiAycmVtO1xyXG4gICAgaGVpZ2h0OiA0MHB4O1xyXG4gICAgd2lkdGg6IDIwMHB4O1xyXG4gICAgbWFyZ2luOiAwIDhweCAxNnB4O1xyXG4gICAgcGFkZGluZzogMTZweDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogcm93O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZS1pbi1vdXQ7XHJcbiAgICBsaW5lLWhlaWdodDogMjRweDtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxufVxyXG4uaGFuZHltYW4tc2VjdGlvbi1jYXNlcyAuY2FyZDpob3ZlcntcclxuICAgIHRyYW5zZm9ybTogc2NhbGUoMS4xLCAxLjIpO1xyXG4gICAgYm94LXNoYWRvdzogM3B4IDNweCA1cHggIzlCQTVCQTtcclxufVxyXG4uaGFuZHltYW4tc2VjdGlvbi12YWx1ZXMgPiAuY29udGFpbmVyID4gLnJvdyB7XHJcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZDtcclxuICAgIGhlaWdodDogZml0LWNvbnRlbnQ7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIG1hcmdpbjogMCA0cHggOHB4O1xyXG4gICAgcGFkZGluZzogMTZweDtcclxuICAgIC8qIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uOyAqL1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZS1pbi1vdXQ7XHJcbiAgICBsaW5lLWhlaWdodDogMjRweDsgICBcclxufVxyXG4uYm9yZGVyLXN1Y2Vzc3tcclxuICAgIGJvcmRlci1jb2xvcjogZ3JlZW47XHJcbn1cclxuLmJvcmRlci1kYW5nZXJ7XHJcbiAgICBib3JkZXItY29sb3I6IHJlZDtcclxufVxyXG4vKiAqKioqKioqKioqKioqKioqKipcclxuICAgIENvbnRlbnRcclxuKioqKioqKioqKioqKioqKioqICovXHJcbi5wcm9maWxlLWltZ3tcclxuICAgIGJhY2tncm91bmQtc2l6ZTogY29udGFpbjtcclxuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICAgIHdpZHRoOiAxMHJlbTtcclxuICAgIGhlaWdodDogMTByZW07XHJcbiAgICBib3JkZXItcmFkaXVzOiAwLjVyZW07XHJcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG59XHJcbi5wcm9maWxlLWNvbnRlbnQgPiAucm93IHtcclxuICAgIHBsYWNlLWNvbnRlbnQ6IGNlbnRlcjtcclxufVxyXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDk5MHB4KXtcclxuICAgIC5wcm9maWxlLWltZ3tcclxuICAgICAgICB3aWR0aDogMjByZW07XHJcbiAgICAgICAgaGVpZ2h0OiAxM3JlbTtcclxuICAgIH0gICAgXHJcbn1cclxuLyogKioqKioqKioqKioqKioqKioqKipcclxuICAgIEZvcm1cclxuKioqKioqKioqKioqKioqKioqKioqICovXHJcbi5mb3JtLWNvbnRhaW5lcntcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICAgIHotaW5kZXg6IDEwO1xyXG4gICAgYmFja2dyb3VuZDogbm9uZTtcclxufVxyXG4uZm9ybS11cGRhdGV7XHJcbiAgICBwYWRkaW5nOiAxcmVtO1xyXG59XHJcbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1pbi13aWR0aDo1NzZweCl7XHJcbiAgICAuZm9ybS1jb250YWluZXJ7XHJcbiAgICAgICAgcGFkZGluZzogNXJlbTtcclxuICAgIH1cclxuICAgIC5mb3JtLXVwZGF0ZXtcclxuICAgICAgICBwYWRkaW5nOiA1cmVtO1xyXG4gICAgfVxyXG4gICAgICAgIFxyXG59Il19 */";
     /***/
   },
 
@@ -1035,9 +1043,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.ourservices = [];
         this.allHandymanList = [];
         this.verifiedHandymanList = [];
-        this.notVerifiedHandymanList = [];
-        this.admin = false;
-        this.login = true;
+        this.notVerifiedHandymanList = []; // admin=false;
+        // login=true;
+
+        this.login = false;
+        this.admin = true;
       }
 
       _createClass(AdminComponent, [{
@@ -1045,6 +1055,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function ngOnInit() {
           var _this = this;
 
+          this.ourservices = [];
+          this.allHandymanList = [];
+          this.verifiedHandymanList = [];
+          this.notVerifiedHandymanList = [];
+          console.log("lol00");
           this.ourservicesservice.getServices().subscribe(function (data) {
             _this.ourservices = data;
           });
@@ -1062,13 +1077,63 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           });
         }
       }, {
+        key: "verifyHandyman",
+        value: function verifyHandyman(idHandyman) {
+          var _this2 = this;
+
+          console.log(idHandyman);
+          this.notVerifiedHandymanList.forEach(function (element) {
+            if (element._id === idHandyman) {
+              console.log(element);
+              console.log(element.isVerified);
+              element.isVerified = true;
+              console.log(element);
+
+              _this2.ourservicesservice.updateHandyman(element);
+
+              _this2.verifiedHandymanList.push(element);
+
+              alert("Verified");
+
+              _this2.ngOnInit(); // return;
+
+            }
+          });
+        }
+      }, {
         key: "unverifyHandyman",
-        value: function unverifyHandyman(idHandyman) {}
+        value: function unverifyHandyman(idHandyman) {
+          var _this3 = this;
+
+          console.log(idHandyman);
+          this.verifiedHandymanList.forEach(function (element) {
+            if (element._id === idHandyman) {
+              console.log(element);
+              console.log(element.isVerified);
+              element.isVerified = false;
+              console.log(element);
+
+              _this3.ourservicesservice.updateHandyman(element);
+
+              _this3.notVerifiedHandymanList.push(element);
+
+              alert("Un-Verified");
+
+              _this3.ngOnInit(); // return;
+
+            }
+          });
+        }
+      }, {
+        key: "deleteHandyman",
+        value: function deleteHandyman(idHandyman) {
+          this.ourservicesservice.deleteHandyman(idHandyman);
+          alert("Deleted");
+          this.ngOnInit();
+        }
       }, {
         key: "onSubmitLoginForm",
         value: function onSubmitLoginForm(loginForm) {
-          console.log(loginForm.value);
-
           if ("".localeCompare(loginForm.value.uname) === 0 && "".localeCompare(loginForm.value.password) === 0) {
             this.login = false;
             this.admin = true;
@@ -1733,7 +1798,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".related-img{\r\n    width: 12rem;\r\n    height: 10rem;\r\n    background-position: center;\r\n    background-size: cover;\r\n}\r\n\r\n/*******************\r\n    Star Rating\r\n********************/\r\n\r\nngb-rating .star {\r\n    font-size: 1.5rem;\r\n    color: #b0c4de;\r\n}\r\n\r\nngb-rating .filled {\r\n    color: #FA9600;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaGFuZHltYW4vaGFuZHltYW4tZGV0YWlscy9oYW5keW1hbi1kZXRhaWxzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxZQUFZO0lBQ1osYUFBYTtJQUNiLDJCQUEyQjtJQUMzQixzQkFBc0I7QUFDMUI7O0FBRUE7O29CQUVvQjs7QUFDcEI7SUFDSSxpQkFBaUI7SUFDakIsY0FBYztBQUNsQjs7QUFDQTtJQUNJLGNBQWM7QUFDbEIiLCJmaWxlIjoic3JjL2FwcC9oYW5keW1hbi9oYW5keW1hbi1kZXRhaWxzL2hhbmR5bWFuLWRldGFpbHMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5yZWxhdGVkLWltZ3tcclxuICAgIHdpZHRoOiAxMnJlbTtcclxuICAgIGhlaWdodDogMTByZW07XHJcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG59XHJcblxyXG4vKioqKioqKioqKioqKioqKioqKlxyXG4gICAgU3RhciBSYXRpbmdcclxuKioqKioqKioqKioqKioqKioqKiovXHJcbm5nYi1yYXRpbmcgLnN0YXIge1xyXG4gICAgZm9udC1zaXplOiAxLjVyZW07XHJcbiAgICBjb2xvcjogI2IwYzRkZTtcclxufVxyXG5uZ2ItcmF0aW5nIC5maWxsZWQge1xyXG4gICAgY29sb3I6ICNGQTk2MDA7XHJcbn1cclxuIl19 */";
+    __webpack_exports__["default"] = "\r\n.related-img{\r\n    width: 12rem;\r\n    height: 10rem;\r\n    background-position: center;\r\n    background-size: cover;\r\n}\r\n\r\n/*******************\r\n    Star Rating\r\n********************/\r\n\r\nngb-rating .star {\r\n    font-size: 1.5rem;\r\n    color: #b0c4de;\r\n}\r\n\r\nngb-rating .filled {\r\n    color: #FA9600;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaGFuZHltYW4vaGFuZHltYW4tZGV0YWlscy9oYW5keW1hbi1kZXRhaWxzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0ksWUFBWTtJQUNaLGFBQWE7SUFDYiwyQkFBMkI7SUFDM0Isc0JBQXNCO0FBQzFCOztBQUVBOztvQkFFb0I7O0FBQ3BCO0lBQ0ksaUJBQWlCO0lBQ2pCLGNBQWM7QUFDbEI7O0FBQ0E7SUFDSSxjQUFjO0FBQ2xCIiwiZmlsZSI6InNyYy9hcHAvaGFuZHltYW4vaGFuZHltYW4tZGV0YWlscy9oYW5keW1hbi1kZXRhaWxzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcclxuLnJlbGF0ZWQtaW1ne1xyXG4gICAgd2lkdGg6IDEycmVtO1xyXG4gICAgaGVpZ2h0OiAxMHJlbTtcclxuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbn1cclxuXHJcbi8qKioqKioqKioqKioqKioqKioqXHJcbiAgICBTdGFyIFJhdGluZ1xyXG4qKioqKioqKioqKioqKioqKioqKi9cclxubmdiLXJhdGluZyAuc3RhciB7XHJcbiAgICBmb250LXNpemU6IDEuNXJlbTtcclxuICAgIGNvbG9yOiAjYjBjNGRlO1xyXG59XHJcbm5nYi1yYXRpbmcgLmZpbGxlZCB7XHJcbiAgICBjb2xvcjogI0ZBOTYwMDtcclxufVxyXG4iXX0= */";
     /***/
   },
 
@@ -1805,19 +1870,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(HandymanDetailsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this2 = this;
+          var _this4 = this;
 
           this.selectedRating = 0;
           this.ourservices = [];
-          this.relatedHandymanList = []; // console.log("on init ");
-
+          this.relatedHandymanList = [];
+          console.log("on init details");
           this.relatedHandymanList = [];
           this.ourservicesservice.getHandyman().subscribe(function (data) {
             data.handymans.forEach(function (element) {
-              if (element.id === _this2.handymanservice.getdataForDetailsPage()) {
-                _this2.dataHandyman = element;
+              if (element._id === _this4.handymanservice.getdataForDetailsPage()) {
+                _this4.dataHandyman = element;
 
-                _this2.setRelatedHandymanList(element.serviceName);
+                _this4.setRelatedHandymanList(element.serviceName);
               }
             });
           });
@@ -1825,12 +1890,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "setRelatedHandymanList",
         value: function setRelatedHandymanList(serviceName) {
-          var _this3 = this;
+          var _this5 = this;
 
           this.ourservicesservice.getHandyman().subscribe(function (data) {
             data.handymans.forEach(function (element) {
               if (element.serviceName.toLowerCase().localeCompare(serviceName) === 0) {
-                _this3.relatedHandymanList.push(element);
+                _this5.relatedHandymanList.push(element);
               }
             });
           });
@@ -1844,7 +1909,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }
       }, {
         key: "ratingChanged",
-        value: function ratingChanged() {}
+        value: function ratingChanged() {
+          var _this6 = this;
+
+          console.log(this.dataHandyman);
+          setTimeout(function () {
+            var newRating = (_this6.dataHandyman.rating * _this6.dataHandyman.ratingNumber + _this6.selectedRating) / (_this6.dataHandyman.ratingNumber + 1);
+            _this6.dataHandyman.ratingNumber += 1;
+            _this6.dataHandyman.rating = newRating;
+            console.log(_this6.dataHandyman);
+
+            _this6.ourservicesservice.updateHandyman(_this6.dataHandyman);
+          }, 2000);
+        }
       }]);
 
       return HandymanDetailsComponent;
@@ -1971,24 +2048,24 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(HandymanListComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this4 = this;
+          var _this7 = this;
 
           this.ourservicesservice.getServices().subscribe(function (data) {
-            _this4.ourservices = data;
+            _this7.ourservices = data;
           });
           this.setData(this.handymanservice.getDataForListPage());
         }
       }, {
         key: "setData",
         value: function setData(serviceIdForListPage) {
-          var _this5 = this;
+          var _this8 = this;
 
           this.ourservicesservice.getServices().subscribe(function (data) {
             data.forEach(function (element) {
               if (element.id === serviceIdForListPage) {
-                _this5.serviceName = element.name.toLowerCase();
+                _this8.serviceName = element.name.toLowerCase();
 
-                _this5.setHandymanList();
+                _this8.setHandymanList();
               }
             });
           });
@@ -1996,12 +2073,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "setHandymanList",
         value: function setHandymanList() {
-          var _this6 = this;
+          var _this9 = this;
 
           this.ourservicesservice.getHandyman().subscribe(function (data) {
             data.handymans.forEach(function (element) {
-              if (_this6.serviceName.toLowerCase().localeCompare(element.serviceName.toLowerCase()) === 0) {
-                _this6.handymanList.push(element);
+              if (_this9.serviceName.toLowerCase().localeCompare(element.serviceName.toLowerCase()) === 0 && element.isVerified) {
+                _this9.handymanList.push(element);
               }
             });
           });
@@ -2009,10 +2086,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "gotoDetailsPage",
         value: function gotoDetailsPage(IdHandymanForDetails) {
+          console.log(IdHandymanForDetails);
           this.handymanservice.setDataForDetailPage(IdHandymanForDetails);
           this.router.navigate(['/details'], {
             relativeTo: this.route
           });
+        }
+      }, {
+        key: "calcAge",
+        value: function calcAge(Dob) {
+          var today = new Date();
+          var birthDate = new Date(Dob);
+          var age = today.getFullYear() - birthDate.getFullYear(); // console.log(age + " " + today.getFullYear() + " " + birthDate.getFullYear());
+          // console.log(today.getMonth()+" "+birthDate.getMonth());
+
+          var m = today.getMonth() - birthDate.getMonth();
+
+          if (m < 0 || m === 0 && today.getDate() < birthDate.getDate()) {
+            age--;
+          }
+
+          return age;
         }
       }]);
 
@@ -2092,8 +2186,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "setDataForDetailPage",
         value: function setDataForDetailPage(IdofHandyMan) {
-          console.log("CLick = " + IdofHandyMan);
           this.idDataForDetailsPage = IdofHandyMan;
+          console.log(this.idDataForDetailsPage);
         }
       }, {
         key: "getDataForListPage",
@@ -2218,35 +2312,35 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "setServices",
         value: function setServices() {
-          var _this7 = this;
+          var _this10 = this;
 
           this.ourservicesservice.getServices().subscribe(function (data) {
             // console.log(data);
-            _this7.services = data.slice(0, 3);
+            _this10.services = data.slice(0, 3);
           });
         }
       }, {
         key: "setHandymanLists",
         value: function setHandymanLists() {
-          var _this8 = this;
+          var _this11 = this;
 
           this.ourservicesservice.getHandyman().subscribe(function (data) {
             // console.log(data);
             data.handymans.forEach(function (element) {
-              if (element.serviceName.toLowerCase().localeCompare("labour") === 0) {
-                if (_this8.labours.length < 3) _this8.labours.push(element);
+              if (element.serviceName.toLowerCase().localeCompare("labour") === 0 && element.isVerified) {
+                if (_this11.labours.length < 3) _this11.labours.push(element);
               }
 
-              if (element.serviceName.toLowerCase().localeCompare("carpenter") === 0) {
-                if (_this8.carpenters.length < 3) _this8.carpenters.push(element);
+              if (element.serviceName.toLowerCase().localeCompare("carpenter") === 0 && element.isVerified) {
+                if (_this11.carpenters.length < 3) _this11.carpenters.push(element);
               }
 
-              if (element.serviceName.toLowerCase().localeCompare("plumber") === 0) {
-                if (_this8.plumbers.length < 3) _this8.plumbers.push(element);
+              if (element.serviceName.toLowerCase().localeCompare("plumber") === 0 && element.isVerified) {
+                if (_this11.plumbers.length < 3) _this11.plumbers.push(element);
               }
 
-              if (element.serviceName.toLowerCase().localeCompare("electrician") === 0) {
-                if (_this8.electricians.length < 3) _this8.electricians.push(element);
+              if (element.serviceName.toLowerCase().localeCompare("electrician") === 0 && element.isVerified) {
+                if (_this11.electricians.length < 3) _this11.electricians.push(element);
               }
             });
           });
@@ -2262,12 +2356,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "findIdForListPage",
         value: function findIdForListPage() {
-          var _this9 = this;
+          var _this12 = this;
 
           this.handymancaseValue = this.handymanCase.value.toLowerCase();
           this.services.forEach(function (element) {
-            if (_this9.handymancaseValue.localeCompare(element.name.toLowerCase()) === 0) {
-              _this9.gotoListPage(element.id);
+            if (_this12.handymancaseValue.localeCompare(element.name.toLowerCase()) === 0) {
+              _this12.gotoListPage(element.id);
             }
           });
         }
@@ -2511,6 +2605,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/common/http */
     "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/environments/environment */
+    "./src/environments/environment.ts");
+
+    var BACKEND_URL = src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl;
 
     var OurServicesService =
     /*#__PURE__*/
@@ -2518,328 +2620,77 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       function OurServicesService(http) {
         _classCallCheck(this, OurServicesService);
 
-        this.http = http; // services=[
-        //   {
-        //     "id": "1",
-        //     "name": "Labour",
-        //     "img_url": "/assets/img/services/labour.jpg",
-        //     "icon": "fas fa-paint-roller",
-        //     "desc": "Some work which we can't do, Here we hired a person for taking care of your task. They are dedicated, they never leave you with disoppointment.",
-        //     "list": [
-        //       {
-        //         "id": "1",
-        //         "name": "ranjan pant",
-        //         "age": 21,
-        //         "img_url": "/assets/img/labour/labour (1).jpg"
-        //       },
-        //       {
-        //         "id": "2",
-        //         "name": "ravi kaler",
-        //         "age": 20,
-        //         "img_url": "/assets/img/labour/labour (2).jpg"
-        //       },
-        //       {
-        //         "id": "3",
-        //         "name": "rohit kamboj",
-        //         "age": 22,
-        //         "img_url": "/assets/img/labour/labour (3).jpg"
-        //       },
-        //       {
-        //         "id": "4",
-        //         "name": "shahid khan",
-        //         "age": 20,
-        //         "img_url": "/assets/img/labour/labour (4).jpg"
-        //       }
-        //     ]
-        //   },
-        //   { 
-        //     "id": "2", 
-        //     "name": "Carpenter",
-        //     "img_url": "/assets/img/services/carpenter.jpg",
-        //     "icon": "fas fa-hammer",
-        //     "desc": "They can work on your furniture, stairs, windows, doors and many others and repais and build your wooden items. Give them a chance to make you happy with thier service.",
-        //     "list": [
-        //       {
-        //         "id": "1",
-        //         "name": "Mukesh suri",
-        //         "age": 21,
-        //         "img_url": "/assets/img/carpenter/carpenter(1).jpg"
-        //       },
-        //       {
-        //         "id": "2",
-        //         "name": "raj Ambani",
-        //         "age": 20,
-        //         "img_url": "/assets/img/carpenter/carpenter(2).jpg"
-        //       },
-        //       {
-        //         "id": "3",
-        //         "name": "Pandit ramfal",
-        //         "age": 22,
-        //         "img_url": "/assets/img/carpenter/carpenter(3).jpg"
-        //       },
-        //       {
-        //         "id": "4",
-        //         "name": "Mohd Abdul",
-        //         "age": 20,
-        //         "img_url": "/assets/img/carpenter/carpenter(4).jpg"
-        //       }
-        //     ]
-        //   },
-        //   { 
-        //     "id": "3", 
-        //     "name": "Electrician",
-        //     "img_url": "/assets/img/services/electrician.jpg",
-        //     "icon": "fas fa-plug",
-        //     "desc": "If you are looking for an electrician in your area, give us a chance to serve you a better one.",
-        //     "list": [
-        //           {
-        //             "id": "1",
-        //             "name": "Aftab ahmed",
-        //             "age": 21,
-        //             "img_url": "/assets/img/electrician/electrician (1).jpg"
-        //           },
-        //           {
-        //             "id": "2",
-        //             "name": "Veer singh",
-        //             "age": 20,
-        //             "img_url": "/assets/img/electrician/electrician (2).jpg"
-        //           },
-        //           {
-        //             "id": "3",
-        //             "name": "bhole lal",
-        //             "age": 22,
-        //             "img_url": "/assets/img/electrician/electrician (3).jpg"
-        //           },
-        //           {
-        //             "id": "4",
-        //             "name": "rizwi shah",
-        //             "age": 20,
-        //             "img_url": "/assets/img/electrician/electrician (4).jpg"
-        //           }
-        //       ]
-        //   },
-        //   {
-        //     "id": "4", 
-        //     "name": "Plumber",
-        //     "img_url": "/assets/img/services/plumber.jpg",
-        //     "icon": "fas fa-toilet",
-        //     "desc": "You must have faced plumbing issue at your home, and offices and found no one to fix. We provide plumber at home and office whenever in need at quick response and fixing guarantee. ",
-        //     "list":[
-        //       {
-        //         "id": "1",
-        //         "name": "ranjan pant",
-        //         "age": 21,
-        //         "img_url": "/assets/img/plumber/plumber (1).jpg"
-        //       },
-        //       {
-        //         "id": "2",
-        //         "name": "ravi kaler",
-        //         "age": 20,
-        //         "img_url": "/assets/img/plumber/plumber (2).jpg"
-        //       },
-        //       {
-        //         "id": "3",
-        //         "name": "rohit kamboj",
-        //         "age": 22,
-        //         "img_url": "/assets/img/plumber/plumber (3).jpg"
-        //       },
-        //       {
-        //         "id": "4",
-        //         "name": "shahid khan",
-        //         "age": 20,
-        //         "img_url": "/assets/img/plumber/plumber (4).jpg"
-        //       }
-        //     ]
-        //   },
-        //   { 
-        //     "id": "5", 
-        //     "name": "Heavy Lifting",
-        //     "img_url": "/assets/img/services/heavy-lifting.jpg",
-        //     "icon": "fas fa-weight-hanging",
-        //     "desc": "Many tasks are heavy, Movement and strain are good for your body, but if the strain is too great, it can cause problems. So need not worry about lifting Heavy things on your shoulder, give us a chance to take care of your valuable equipment's.",
-        //     "list": [
-        //       {
-        //         "id": "1",
-        //         "name": "ranjan pant",
-        //         "age": 21,
-        //         "img_url": "/assets/img/labour/labour (1).jpg"
-        //       },
-        //       {
-        //         "id": "2",
-        //         "name": "ravi kaler",
-        //         "age": 20,
-        //         "img_url": "/assets/img/labour/labour (2).jpg"
-        //       },
-        //       {
-        //         "id": "3",
-        //         "name": "rohit kamboj",
-        //         "age": 22,
-        //         "img_url": "/assets/img/labour/labour (3).jpg"
-        //       },
-        //       {
-        //         "id": "4",
-        //         "name": "shahid khan",
-        //         "age": 20,
-        //         "img_url": "/assets/img/labour/labour (4).jpg"
-        //       }
-        //     ]
-        //   },
-        //   { 
-        //     "id": "6", 
-        //     "name": "Metal Work",
-        //     "img_url": "/assets/img/services/metal-works.jpg",
-        //     "icon": "fas fa-hand-rock",
-        //     "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, repellat.",
-        //     "list": [
-        //       {
-        //         "id": "1",
-        //         "name": "ranjan pant",
-        //         "age": 21,
-        //         "img_url": "/assets/img/labour/labour (1).jpg"
-        //       },
-        //       {
-        //         "id": "2",
-        //         "name": "ravi kaler",
-        //         "age": 20,
-        //         "img_url": "/assets/img/labour/labour (2).jpg"
-        //       },
-        //       {
-        //         "id": "3",
-        //         "name": "rohit kamboj",
-        //         "age": 22,
-        //         "img_url": "/assets/img/labour/labour (3).jpg"
-        //       },
-        //       {
-        //         "id": "4",
-        //         "name": "shahid khan",
-        //         "age": 20,
-        //         "img_url": "/assets/img/labour/labour (4).jpg"
-        //       }
-        //     ]
-        //   },
-        //   { 
-        //     "id": "7", 
-        //     "name": "AC/Refrigerator",
-        //     "img_url": "/assets/img/services/ac-repair.jpg",
-        //     "icon": "fas fa-wind",
-        //     "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, repellat.",
-        //     "list": [
-        //       {
-        //         "id": "1",
-        //         "name": "ranjan pant",
-        //         "age": 21,
-        //         "img_url": "/assets/img/labour/labour (1).jpg"
-        //       },
-        //       {
-        //         "id": "2",
-        //         "name": "ravi kaler",
-        //         "age": 20,
-        //         "img_url": "/assets/img/labour/labour (2).jpg"
-        //       },
-        //       {
-        //         "id": "3",
-        //         "name": "rohit kamboj",
-        //         "age": 22,
-        //         "img_url": "/assets/img/labour/labour (3).jpg"
-        //       },
-        //       {
-        //         "id": "4",
-        //         "name": "shahid khan",
-        //         "age": 20,
-        //         "img_url": "/assets/img/labour/labour (4).jpg"
-        //       }
-        //     ]
-        //   },
-        //   {
-        //       "id": "8",
-        //       "name": "Painter",
-        //       "img_url": "/assets/img/services/painter.jpg",
-        //       "icon": "fas fa-paint-roller",
-        //       "desc": "Are you looking locals interior house painters? Book our painting professionals at Affordable, pocket pricing",
-        //       "list": [
-        //         {
-        //           "id": "1",
-        //           "name": "ranjan pant",
-        //           "age": 21,
-        //           "img_url": "/assets/img/labour/labour (1).jpg"
-        //         },
-        //         {
-        //           "id": "2",
-        //           "name": "ravi kaler",
-        //           "age": 20,
-        //           "img_url": "/assets/img/labour/labour (2).jpg"
-        //         },
-        //         {
-        //           "id": "3",
-        //           "name": "rohit kamboj",
-        //           "age": 22,
-        //           "img_url": "/assets/img/labour/labour (3).jpg"
-        //         },
-        //         {
-        //           "id": "4",
-        //           "name": "shahid khan",
-        //           "age": 20,
-        //           "img_url": "/assets/img/labour/labour (4).jpg"
-        //         }
-        //       ]  
-        //   }
-        // ];
-        // getServices() {
-
+        this.http = http;
         this.handymans = [];
-        this.ourservices = [];
       }
 
       _createClass(OurServicesService, [{
         key: "getServices",
         value: function getServices() {
-          // return this.services;
           return this.http.get('/assets/data/ourservice.json');
         }
       }, {
         key: "getHandyman",
         value: function getHandyman() {
-          return this.http.get("http://localhost:3000/api/handymans"); // .pipe(
-          //   map(handymanData => {
-          //     console.log(handymanData);
-          //     return handymanData.handymans;
-          //   })
-          // )
-          // return this.http.get<HandymanModel[]>('/assets/data/handyman.json');
+          return this.http.get(BACKEND_URL + "/handymans");
         }
       }, {
         key: "createHandyman",
-        value: function createHandyman(newHandymanDetails) {
-          var _this10 = this;
+        value: function createHandyman(HandymanDetails) {
+          var _this13 = this;
 
-          // this.localHandyman= newHandymanDetails;
-          // console.log("in service = " + this.localHandyman);
-          // console.log(this.localHandyman);
-          // for (const key in this.localHandyman) {
-          //   if (this.localHandyman.hasOwnProperty(key)) {
-          //     const element = this.localHandyman[key];
-          //     console.log(key+ " => "+ element);        
-          //   }
-          // }
           var handymanData = new FormData();
 
-          for (var key in newHandymanDetails) {
-            if (newHandymanDetails.hasOwnProperty(key) && key != "id") {
+          for (var key in HandymanDetails) {
+            if (HandymanDetails.hasOwnProperty(key) && key != "_id") {
               // console.log(key +"=>" + newHandymanDetails[key]);
-              handymanData.append(key, newHandymanDetails[key]);
-            }
-
-            if (key == "id") {// console.info("id not added");          
+              handymanData.append(key, HandymanDetails[key]);
             }
           }
 
-          this.http.post("http://localhost:3000/api/handymans", handymanData).subscribe(function (responseData) {
+          this.http.post(BACKEND_URL + "/handymans", handymanData).subscribe(function (responseData) {
             console.log(responseData.message);
             var handyman = {
-              id: responseData.handyman.id,
+              _id: responseData.handyman._id,
+              name: HandymanDetails.name,
+              dob: HandymanDetails.dob,
+              img_url: responseData.handyman.img_url,
+              contactNumber: HandymanDetails.contactNumber,
+              aadharNumber: HandymanDetails.aadharNumber,
+              serviceName: HandymanDetails.serviceName,
+              serviceExperience: HandymanDetails.serviceExperience,
+              city: HandymanDetails.city,
+              state: HandymanDetails.state,
+              isVerified: HandymanDetails.isVerified,
+              rating: HandymanDetails.rating,
+              ratingNumber: HandymanDetails.ratingNumber
+            };
+
+            _this13.handymans.push(handyman);
+          });
+        }
+      }, {
+        key: "updateHandyman",
+        value: function updateHandyman(newHandymanDetails) {
+          var _this14 = this;
+
+          var handymanData;
+
+          if (typeof newHandymanDetails.img_url === "object") {
+            handymanData = new FormData();
+
+            for (var key in newHandymanDetails) {
+              if (newHandymanDetails.hasOwnProperty(key) && key !== "_id") {
+                // console.log(key +"=>" + newHandymanDetails[key]);
+                handymanData.append(key, newHandymanDetails[key]);
+              }
+            }
+          } else {
+            handymanData = {
+              _id: newHandymanDetails._id,
               name: newHandymanDetails.name,
               dob: newHandymanDetails.dob,
-              img_url: responseData.handyman.img_url,
+              img_url: newHandymanDetails.img_url,
               contactNumber: newHandymanDetails.contactNumber,
               aadharNumber: newHandymanDetails.aadharNumber,
               serviceName: newHandymanDetails.serviceName,
@@ -2847,10 +2698,52 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               city: newHandymanDetails.city,
               state: newHandymanDetails.state,
               isVerified: newHandymanDetails.isVerified,
-              rating: newHandymanDetails.rating
+              rating: newHandymanDetails.rating,
+              ratingNumber: newHandymanDetails.ratingNumber
             };
+          }
 
-            _this10.handymans.push(handyman);
+          this.http.put(BACKEND_URL + "/handymans/" + newHandymanDetails._id, handymanData).subscribe(function (response) {
+            console.log(response);
+
+            var updatedHandymans = _toConsumableArray(_this14.handymans);
+
+            var oldHandymanIndex = updatedHandymans.findIndex(function (h) {
+              return h._id === newHandymanDetails._id;
+            });
+            var handyman = {
+              _id: newHandymanDetails._id,
+              name: newHandymanDetails.name,
+              dob: newHandymanDetails.dob,
+              img_url: newHandymanDetails.img_url,
+              contactNumber: newHandymanDetails.contactNumber,
+              aadharNumber: newHandymanDetails.aadharNumber,
+              serviceName: newHandymanDetails.serviceName,
+              serviceExperience: newHandymanDetails.serviceExperience,
+              city: newHandymanDetails.city,
+              state: newHandymanDetails.state,
+              isVerified: newHandymanDetails.isVerified,
+              rating: newHandymanDetails.rating,
+              ratingNumber: newHandymanDetails.ratingNumber
+            };
+            updatedHandymans[oldHandymanIndex] = handyman;
+            _this14.handymans = updatedHandymans;
+          });
+        }
+      }, {
+        key: "deleteHandyman",
+        value: function deleteHandyman(handymanId) {
+          var _this15 = this;
+
+          console.log(handymanId);
+          this.http.delete(BACKEND_URL + "/handymans/" + handymanId).subscribe(function (response) {
+            console.log(response);
+
+            var updatedHandymans = _this15.handymans.filter(function (handyman) {
+              return handyman._id !== handymanId;
+            });
+
+            _this15.handymans = updatedHandymans;
           });
         }
       }]);
@@ -2956,10 +2849,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(OurServicesComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this11 = this;
+          var _this16 = this;
 
           this.ourservicesservice.getServices().subscribe(function (data) {
-            _this11.ourservices = data;
+            _this16.ourservices = data;
           });
         }
       }, {
@@ -3169,7 +3062,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.showhide = false;
         this.ourservices = [];
         this.newHandymanDetails = {
-          "id": "0",
+          "_id": "0",
           "name": "",
           "dob": "",
           "img_url": "",
@@ -3180,14 +3073,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           "city": "",
           "state": "",
           "isVerified": false,
-          "rating": 0
+          "rating": 0,
+          "ratingNumber": 0
         };
       }
 
       _createClass(RegisterComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this12 = this;
+          var _this17 = this;
 
           this.registerForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
             'name': new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, {
@@ -3220,17 +3114,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             })
           });
           this.ourservicesservice.getServices().subscribe(function (data) {
-            _this12.ourservices = data;
+            _this17.ourservices = data;
           });
         }
       }, {
         key: "showAlert",
         value: function showAlert() {
-          var _this13 = this;
+          var _this18 = this;
 
           this.showhide = true;
           setTimeout(function () {
-            _this13.showhide = false;
+            _this18.showhide = false;
           }, 6000);
         }
       }, {
@@ -3253,10 +3147,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           this.newHandymanDetails.city = this.registerForm.value.city;
           this.newHandymanDetails.state = this.registerForm.value.state;
           this.newHandymanDetails.img_url = this.registerForm.value.previewImg;
-          this.newHandyman(this.newHandymanDetails); // this.registerForm.reset();
-
+          console.log(this.newHandymanDetails.dob);
           this.termsCheck = false;
           this.showAlert();
+          this.registerForm.reset();
+          this.newHandyman(this.newHandymanDetails);
         }
       }, {
         key: "newHandyman",
@@ -3266,7 +3161,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onImagePicked",
         value: function onImagePicked(event) {
-          var _this14 = this;
+          var _this19 = this;
 
           var file = event.target.files[0];
           this.registerForm.patchValue({
@@ -3276,7 +3171,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var reader = new FileReader();
 
           reader.onload = function () {
-            _this14.imagePreview = reader.result;
+            _this19.imagePreview = reader.result;
           };
 
           reader.readAsDataURL(file); // console.log(this.imagePreview);
@@ -3340,7 +3235,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
     var environment = {
-      production: false
+      production: false,
+      apiUrl: "http://localhost:3000/api"
     };
     /*
      * For easier debugging in development mode, you can import the following file

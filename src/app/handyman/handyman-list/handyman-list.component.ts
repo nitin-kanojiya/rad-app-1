@@ -65,19 +65,23 @@ export class HandymanListComponent implements OnInit {
     }
 
     gotoDetailsPage(IdHandymanForDetails){
+        console.log(IdHandymanForDetails);
         this.handymanservice.setDataForDetailPage(IdHandymanForDetails);
         this.router.navigate(['/details'],{relativeTo: this.route});
     }
 
-    // onRate($event : {
-    //     oldValue:number, 
-    //     newValue:number, 
-    //     starRating:StarRatingComponent}
-    //     ) {
-    //         alert(`Old Value: ${$event.oldValue},
-    //                New Value: ${$event.newValue}, 
-    //                Checked Color: ${$event.starRating.checkedcolor}, 
-    //                Unchecked Color: ${$event.starRating.uncheckedcolor}`);
-    //   }
+    calcAge(Dob){
+        let today = new Date();
+        let birthDate = new Date(Dob);
+        let age = today.getFullYear() - birthDate.getFullYear();
+        // console.log(age + " " + today.getFullYear() + " " + birthDate.getFullYear());
+        // console.log(today.getMonth()+" "+birthDate.getMonth());
+        let m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
+    }
+
 
 }

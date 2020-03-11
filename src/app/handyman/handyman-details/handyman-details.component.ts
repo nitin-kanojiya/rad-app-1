@@ -31,12 +31,12 @@ export class HandymanDetailsComponent implements OnInit {
         this.ourservices=[];
         this.relatedHandymanList=[];
     
-        // console.log("on init ");
+        console.log("on init details");
         this.relatedHandymanList=[];
         this.ourservicesservice.getHandyman()
                 .subscribe(data=>{
                     data.handymans.forEach(element=>{
-                        if(element.id === this.handymanservice.getdataForDetailsPage()){
+                        if(element._id === this.handymanservice.getdataForDetailsPage()){
                             this.dataHandyman = element;
                             this.setRelatedHandymanList(element.serviceName);
                         }

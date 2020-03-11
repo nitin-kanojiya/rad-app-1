@@ -112,11 +112,11 @@ export class RegisterComponent implements OnInit {
 
     console.log(this.newHandymanDetails.dob);
     
-    this.newHandyman(this.newHandymanDetails);
-    
-    // this.registerForm.reset();
     this.termsCheck=false;
     this.showAlert();
+    
+    this.registerForm.reset();
+    this.newHandyman(this.newHandymanDetails);
   }
 
   newHandyman(Details){
