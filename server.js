@@ -20,7 +20,7 @@
 //     });
 
 const app = require("./backend/app");
-const debug = require("debug")("node-angular");
+const debug = require("debug")("rad-app");
 const http = require("http");
 
 const normalizePort = val => {
