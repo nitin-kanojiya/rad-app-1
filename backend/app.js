@@ -18,10 +18,10 @@ mongoose
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use("/images", express.static(path.join(__dirname, "images")));
+app.use("/images", express.static(path.join("backend/images")));
 
 
-app.use("/", express.static(path.join(__dirname, "angular")));
+app.use("/", express.static(path.join(__dirname,"/..","angular-build","rad-app")));
 
 // app.use((req, res, next) => {
 //     res.setHeader("Access-Control-Allow-Origin", "*");
@@ -40,7 +40,7 @@ app.use("/", express.static(path.join(__dirname, "angular")));
 app.use("/api/handymans", handymansRoutes);
 
 app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, "angular", "index.html"));
+  res.sendFile(path.join(__dirname,"/..","angular-build","rad-app","index.html"));
 });
 
 module.exports = app;
