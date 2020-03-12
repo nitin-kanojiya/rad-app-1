@@ -25,6 +25,29 @@ export class OurServicesService {
           ( BACKEND_URL + "/handymans");
   }
 
+  createCustomer(name: string, contactNumber: string, handymanId: string) : boolean{
+    let Inserted : boolean = false;
+    let done=0;
+    const customer = new FormData();
+    customer.append("name", name);
+    customer.append("contactNumber", contactNumber);
+    customer.append("handymanId", handymanId);
+    this.http
+        .post<{message: string, inserted: boolean}>(
+          BACKEND_URL + "/customers",
+          customer
+        )
+        .subscribe(responseData=>{
+          console.log(responseData.message);
+          console.log(responseData.inserted);
+          Inserted= responseData.inserted;
+          done=1;
+        });
+    if(done==1){
+      return Inserted;
+    }
+  }
+        
   createHandyman(HandymanDetails: HandymanModel){
     const handymanData = new FormData();
     for (const key in HandymanDetails) {
