@@ -78,12 +78,12 @@ export class HandymanListComponent implements OnInit {
           entered = true;
         }
         
-        if(entered){
-            if(this.ourservicesservice.createCustomer(customerName,customerContact,IdHandymanForDetails)){
-                this.handymanservice.setDataForDetailPage(IdHandymanForDetails);
-                this.router.navigate(['/details'],{relativeTo: this.route});
-            }
-        }
+        // if(entered){
+        //     if(this.ourservicesservice.createCustomer(customerName,customerContact,IdHandymanForDetails)){
+        //         this.router.navigate(['/details'],{relativeTo: this.route});
+        //     }
+        // }
+        this.handymanservice.setDataForDetailPage(IdHandymanForDetails);
 
     }
 
