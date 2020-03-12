@@ -47,6 +47,7 @@
                         </ngb-rating>
 
                     </div>
+
                     <div class="row mt-0 justify-content-center">
                         <h5 class="text-center primary-light-blue text-capitalize">{{handyman.name}}</h5>
                     </div>
@@ -55,9 +56,21 @@
                             Age
                         </div>
                         <div class="col-6 mt-0">
-                            {{calcAge(handyman.dob)}}years
+                            {{calcAge(handyman.dob)}}yrs
                         </div>
                     </div>
+                    <div class="row handyman-content-age mx-auto">
+                            {{handyman.city}}
+                    </div>
+                    <div class="row handyman-content-age mx-auto">
+                        <div class="col-6 mt-0">
+                            Exp
+                        </div>
+                        <div class="col-6 mt-0">
+                            {{handyman.serviceExperience}}yrs
+                        </div>
+                    </div>
+
                 </div>
     
             </div>
