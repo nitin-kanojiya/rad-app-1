@@ -54,6 +54,9 @@
     font-size: 1.5rem;
     color: #22262D;
 }
+.home-head-section-data p.primary-dark-blue{
+    font-weight: 700;
+}
 .home-head-section-data h3{
     color: #22262D;
     font-size: 2rem;

@@ -13,7 +13,7 @@ import { HandymanModel } from '../handyman/handyman.model';
 })
 export class RegisterComponent implements OnInit {
 
-  termsCheck=true;
+  termsCheck=false;
   showhide=false;
 
   ourservices=[];

@@ -1,32 +1,29 @@
 .map{
-    position: relative;
     width: 100%;
-    height: 100%;
+    height: 80%;
     z-index: 1;
 }
 .map iframe{
     height: 100%;
     width: 100%;
 }
-.container{
-    position: absolute;
+.contact-us-section{
     top: 20%;
     z-index: 2;
 }
-@media only screen and (max-width: 750px){
+/* @media only screen and (max-width: 750px){
     .container{
         position: relative;
         top: 80%;
     }    
-}
+} */
 
 .container>.row{
-    background-color: #22262de7;
+    /* background-color: #22262de7;
     border: 1px solid #22262d;
-    border-radius: 0.5rem;
-    box-shadow: 5px 5px 10px #9BA5BA;
+    border-radius: 0.5rem; */
     width: fit-content;
-    color: #FFFFFF;
+    color: #22262D;
     /* font-weight: bold; */
 }
 .section-head h2{
