@@ -1,27 +1,29 @@
-const path = require("path");
 const express = require("express");
+
+const path = require("path");
+
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
-const handymansRoutes = require("./routes/handymans");
-const app=express();
 
 var mongodb = 'mongodb+srv://mmudit:uMuiTl4JaM7RAvYn@cluster0-xcjvq.mongodb.net/rad-app?retryWrites=true&w=majority';
 mongoose
-    .connect(mongodb)
-    .then(() => {
-        console.log("Connected to database");        
-    })
-    .catch(() => {
-        console.log("Connection Failed");
-    });
+.connect(mongodb)
+.then(() => {
+    console.log("Connected to database");        
+})
+.catch(() => {
+    console.log("Connection Failed");
+});
 
+const handymansRoutes = require("./routes/handymans");
+
+const app=express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/images", express.static(path.join("backend/images")));
 
-
-app.use("/", express.static(path.join(__dirname,"/..","angular-build","rad-app")));
+// app.use("/", express.static(path.join(__dirname,"/..","angular-build","rad-app")));
 
 // app.use((req, res, next) => {
 //     res.setHeader("Access-Control-Allow-Origin", "*");
@@ -39,8 +41,8 @@ app.use("/", express.static(path.join(__dirname,"/..","angular-build","rad-app")
 
 app.use("/api/handymans", handymansRoutes);
 
-app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname,"/..","angular-build","rad-app","index.html"));
-});
+// app.use((req, res, next) => {
+//   res.sendFile(path.join(__dirname,"/..","angular-build","rad-app","index.html"));
+// });
 
 module.exports = app;

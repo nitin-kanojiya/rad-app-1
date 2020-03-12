@@ -1,9 +1,24 @@
+const path = require("path");
+
+const mongoose = require("mongoose");
 const express = require("express");
 const multer = require("multer");
 
 const Handyman = require("../models/handyman");
 
 const router = express.Router();
+
+
+var mongodb = 'mongodb+srv://mmudit:uMuiTl4JaM7RAvYn@cluster0-xcjvq.mongodb.net/rad-app?retryWrites=true&w=majority';
+mongoose
+.connect(mongodb)
+.then(() => {
+    console.log("Connected to database in handymans");        
+})
+.catch(() => {
+    console.log("Connection Failed");
+});
+
 
 const MIME_TYPE_MAP = {
     "image/png": "png",
@@ -111,6 +126,8 @@ router.put(
 )
 
 router.get("", (req, res, next) => {
+    console.log("in router get");
+    
     Handyman.find().then(documents => {
         res.status(200).json({
             message: "Posts fetched successfully!",
