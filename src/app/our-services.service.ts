@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { OurServiceModel } from "./our-services/ourservices.model";
 import { HandymanModel } from './handyman/handyman.model';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
 
 const BACKEND_URL = environment.apiUrl;
 
