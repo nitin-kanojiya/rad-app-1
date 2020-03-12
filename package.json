@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start:server":"node server.js"
+    "start:server":"node server.js",
+    "deploy": "gcloud preview app deploy app.yaml --promote"
   },
   "private": true,
   "dependencies": {
