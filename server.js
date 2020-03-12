@@ -1,6 +1,7 @@
 const path = require("path");
 const express = require("express");
-const api = require("./backend/routes/handymans");
+const apihandy = require("./backend/routes/handymans");
+const apicusto = require("./backend/routes/customers");
 const bodyParser = require("body-parser");
 
 const app = express();
@@ -11,7 +12,8 @@ app.use("/images", express.static(path.join("backend/images")));
 
 app.use(express.static(__dirname + '/angular-build/rad-app'));
 
-app.use('/api/handymans',api);
+app.use('/api/handymans',apihandy);
+app.use('/api/customers',apicusto);
 
 app.get('/*', (req,res) => {
     res.sendFile(path.join(__dirname, 'angular-build/rad-app', 'index.html'))
