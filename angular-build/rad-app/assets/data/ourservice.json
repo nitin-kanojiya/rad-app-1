@@ -39,15 +39,14 @@
       "name": "Metal Work",
       "img_url": "/assets/img/services/metal-works.jpg",
       "icon": "fas fa-hand-rock",
-      "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, repellat."
+      "desc": "For Any kind of Metal works our trained Professional are here to Fix the Issues."
     },
     { 
       "id" : "7",
       "name": "AC/Refrigerator",
       "img_url": "/assets/img/services/ac-repair.jpg",
       "icon": "fas fa-wind",
-      "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, repellat."
-
+      "desc": "Having air Conditioner or Refrigerator Problems? We Will Help you out.Give us a chance to take care of your valuable equipment's. "
     },
     {
       "id" : "8",

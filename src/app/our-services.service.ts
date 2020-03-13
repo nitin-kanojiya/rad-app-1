@@ -3,7 +3,9 @@ import { HttpClient } from '@angular/common/http';
 
 import { OurServiceModel } from "./our-services/ourservices.model";
 import { HandymanModel } from './handyman/handyman.model';
-import { environment } from 'src/environments/environment.prod';
+// import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
+import { element } from 'protractor';
 
 const BACKEND_URL = environment.apiUrl;
 
@@ -25,27 +27,29 @@ export class OurServicesService {
           ( BACKEND_URL + "/handymans");
   }
 
-  createCustomer(name: string, contactNumber: string, handymanId: string) : boolean{
-    let Inserted : boolean = false;
-    let done=0;
-    const customer = new FormData();
-    customer.append("name", name);
-    customer.append("contactNumber", contactNumber);
-    customer.append("handymanId", handymanId);
+  createCustomer(name: string, contactNumber: string, handymanId: string){
+    console.log(name +" == " + contactNumber +" == "+ handymanId);
+    
+    const customerData = new FormData();
+    customerData.append(name, "name");    
+    customerData.append(contactNumber, "contactNumber");
+    customerData.append(handymanId, "handymanId");
+
+    customerData.forEach((element) => {
+      console.log(element);      
+    });
+
     this.http
-        .post<{message: string, inserted: boolean}>(
-          BACKEND_URL + "/customers",
-          customer
+        .post<{message: string, inserted: boolean, createdCustomer: any}>(
+          "http://localhost:3000/api/handymans/custo",
+          customerData
         )
         .subscribe(responseData=>{
+          console.log("added custo");
           console.log(responseData.message);
           console.log(responseData.inserted);
-          Inserted= responseData.inserted;
-          done=1;
+          console.log(responseData.createdCustomer);          
         });
-    if(done==1){
-      return Inserted;
-    }
   }
         
   createHandyman(HandymanDetails: HandymanModel){
@@ -65,14 +69,12 @@ export class OurServicesService {
           handymanData
         )
         .subscribe(responseData=>{
-          console.log(responseData.message);          
+          console.log(responseData.message);
           const handyman : HandymanModel = {
             _id: responseData.handyman._id,
             name: HandymanDetails.name,
-            dob: HandymanDetails.dob,
-        
+            dob: HandymanDetails.dob,        
             img_url: responseData.handyman.img_url,
-            
             contactNumber: HandymanDetails.contactNumber,
             aadharNumber: HandymanDetails.aadharNumber,
             serviceName: HandymanDetails.serviceName,

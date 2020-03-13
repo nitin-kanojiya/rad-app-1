@@ -67,7 +67,7 @@ export class HandymanListComponent implements OnInit {
     gotoDetailsPage(IdHandymanForDetails){
         console.log(IdHandymanForDetails);
         let entered:boolean = false;
-        let inserted:boolean = false;
+        // let inserted:boolean = false;
 
         let customerName = prompt("Please enter your Name:");
         let customerContact = prompt("Please enter your contact number:");
@@ -79,10 +79,9 @@ export class HandymanListComponent implements OnInit {
         }
         
         if(entered){
-            if(this.ourservicesservice.createCustomer(customerName,customerContact,IdHandymanForDetails)){
-                this.handymanservice.setDataForDetailPage(IdHandymanForDetails);
-                this.router.navigate(['/details'],{relativeTo: this.route});
-            }
+            this.ourservicesservice.createCustomer(customerName,customerContact,IdHandymanForDetails);
+            this.handymanservice.setDataForDetailPage(IdHandymanForDetails);
+            this.router.navigate(['/details'],{relativeTo: this.route});
         }
 
     }

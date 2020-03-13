@@ -1,3 +1,4 @@
+
 const mongoose = require("mongoose");
 const express = require("express");
 
@@ -16,18 +17,26 @@ mongoose
     console.log("Connection Failed");
 });
 
+router.post("", function(req, res) {
 
-router.post("",
-  (req, res, next) => {
-      const customer = new Customer({
+      console.log(req.body);
+      
+      console.log(req.body.name);
+      console.log(req.body.contactNumber);
+      console.log(req.body.handymanId);
+        
+      const customerdata = new Customer({
         name: req.body.name,
         contactNumber: req.body.contactNumber,
         handymanId: req.body.handymanId
       });
-      customer.save().then(createdCustomer => {
+      console.log(customerdata);
+      
+      customerdata.save().then(createdCustomer => {
           res.status(201).json({
               message: "Customer Added Successfully",
-              inserted: true
+              inserted: true,
+              createdCustomer: createdCustomer
           });
       })
       .catch(error => {
@@ -44,5 +53,6 @@ router.get("", (req, res, next) => {
         });
     });
 });
+
 
 module.exports = router;
