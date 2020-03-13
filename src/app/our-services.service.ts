@@ -5,7 +5,6 @@ import { OurServiceModel } from "./our-services/ourservices.model";
 import { HandymanModel } from './handyman/handyman.model';
 import { environment } from 'src/environments/environment.prod';
 // import { environment } from 'src/environments/environment';
-import { element } from 'protractor';
 
 const BACKEND_URL = environment.apiUrl;
 
@@ -31,9 +30,9 @@ export class OurServicesService {
     console.log(name +" == " + contactNumber +" == "+ handymanId);
     
     const customerData = new FormData();
-    customerData.append(name, "name");    
-    customerData.append(contactNumber, "contactNumber");
-    customerData.append(handymanId, "handymanId");
+    customerData.append("name", name);    
+    customerData.append("contactNumber", contactNumber);
+    customerData.append("handymanId", handymanId);
 
     customerData.forEach((element) => {
       console.log(element);      
@@ -41,7 +40,7 @@ export class OurServicesService {
 
     this.http
         .post<{message: string, inserted: boolean, createdCustomer: any}>(
-          "http://localhost:3000/api/customer",
+          BACKEND_URL + "/handymans/custo",
           customerData
         )
         .subscribe(responseData=>{

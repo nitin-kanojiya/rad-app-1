@@ -49,6 +49,7 @@ const storage = multer.diskStorage({
 });
 
 router.post("/custo",
+  multer({ storage: storage}).single("img_url"),
   (req, res, next) => {
       console.log("strt");
       

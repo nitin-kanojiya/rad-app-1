@@ -2655,13 +2655,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function createCustomer(name, contactNumber, handymanId) {
           console.log(name + " == " + contactNumber + " == " + handymanId);
           var customerData = new FormData();
-          customerData.append(name, "name");
-          customerData.append(contactNumber, "contactNumber");
-          customerData.append(handymanId, "handymanId");
+          customerData.append("name", name);
+          customerData.append("contactNumber", contactNumber);
+          customerData.append("handymanId", handymanId);
           customerData.forEach(function (element) {
             console.log(element);
           });
-          this.http.post("http://localhost:3000/api/customer", customerData).subscribe(function (responseData) {
+          this.http.post(BACKEND_URL + "/handymans/custo", customerData).subscribe(function (responseData) {
             console.log("added custo");
             console.log(responseData.message);
             console.log(responseData.inserted);

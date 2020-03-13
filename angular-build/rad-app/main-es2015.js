@@ -1529,14 +1529,14 @@ let OurServicesService = class OurServicesService {
     createCustomer(name, contactNumber, handymanId) {
         console.log(name + " == " + contactNumber + " == " + handymanId);
         const customerData = new FormData();
-        customerData.append(name, "name");
-        customerData.append(contactNumber, "contactNumber");
-        customerData.append(handymanId, "handymanId");
+        customerData.append("name", name);
+        customerData.append("contactNumber", contactNumber);
+        customerData.append("handymanId", handymanId);
         customerData.forEach((element) => {
             console.log(element);
         });
         this.http
-            .post("http://localhost:3000/api/customer", customerData)
+            .post(BACKEND_URL + "/handymans/custo", customerData)
             .subscribe(responseData => {
             console.log("added custo");
             console.log(responseData.message);
