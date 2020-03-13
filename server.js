@@ -3,6 +3,19 @@ const express = require("express");
 
 const app = express();
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+
+const Customer = require("./backend/models/customer");
+
+var mongodb = 'mongodb+srv://mmudit:uMuiTl4JaM7RAvYn@cluster0-xcjvq.mongodb.net/rad-app?retryWrites=true&w=majority';
+mongoose
+.connect(mongodb)
+.then(() => {
+    console.log("Connected to database in server");
+})
+.catch(() => {
+    console.log("Connection Failed");
+});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -11,10 +24,35 @@ app.use("/images", express.static(path.join("backend/images")));
 app.use(express.static(__dirname + '/angular-build/rad-app'));
 
 const apihandy = require("./backend/routes/handymans");
-const apicusto = require("./backend/routes/customers");
 
-app.use('/api/customers',apicusto);
 app.use('/api/handymans',apihandy);
+app.post('/api/customer',(req,res)=>{
+
+    console.log(req.body);
+    
+    console.log(req.body.name);
+    console.log(req.body.contactNumber);
+    console.log(req.body.handymanId);
+      
+    const customerdata = new Customer({
+      name: req.body.name,
+      contactNumber: req.body.contactNumber,
+      handymanId: req.body.handymanId
+    });
+    console.log(customerdata);
+    
+    customerdata.save().then(createdCustomer => {
+        res.status(201).json({
+            message: "Customer Added Successfully",
+            inserted: true,
+            createdCustomer: createdCustomer
+        });
+    })
+    .catch(error => {
+      console.log("Error = " + error);
+    });
+
+});
 
 app.get('/*', (req,res) => {
     res.sendFile(path.join(__dirname, 'angular-build/rad-app', 'index.html'))

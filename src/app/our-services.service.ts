@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 
 import { OurServiceModel } from "./our-services/ourservices.model";
 import { HandymanModel } from './handyman/handyman.model';
-// import { environment } from 'src/environments/environment.prod';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
+// import { environment } from 'src/environments/environment';
 import { element } from 'protractor';
 
 const BACKEND_URL = environment.apiUrl;
@@ -41,7 +41,7 @@ export class OurServicesService {
 
     this.http
         .post<{message: string, inserted: boolean, createdCustomer: any}>(
-          "http://localhost:3000/api/handymans/custo",
+          "http://localhost:3000/api/customer",
           customerData
         )
         .subscribe(responseData=>{

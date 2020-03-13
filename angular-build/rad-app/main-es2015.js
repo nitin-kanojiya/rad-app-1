@@ -1536,7 +1536,7 @@ let OurServicesService = class OurServicesService {
             console.log(element);
         });
         this.http
-            .post("http://localhost:3000/api/handymans/custo", customerData)
+            .post("http://localhost:3000/api/customer", customerData)
             .subscribe(responseData => {
             console.log("added custo");
             console.log(responseData.message);

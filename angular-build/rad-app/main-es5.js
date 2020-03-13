@@ -2661,7 +2661,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           customerData.forEach(function (element) {
             console.log(element);
           });
-          this.http.post("http://localhost:3000/api/handymans/custo", customerData).subscribe(function (responseData) {
+          this.http.post("http://localhost:3000/api/customer", customerData).subscribe(function (responseData) {
             console.log("added custo");
             console.log(responseData.message);
             console.log(responseData.inserted);
