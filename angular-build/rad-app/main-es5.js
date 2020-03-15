@@ -2623,12 +2623,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! src/environments/environment */
-    "./src/environments/environment.ts"); // import { environment } from 'src/environments/environment.prod';
+    var src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/environments/environment.prod */
+    "./src/environments/environment.prod.ts"); // import { environment } from 'src/environments/environment';
 
 
-    var BACKEND_URL = src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl;
+    var BACKEND_URL = src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl;
 
     var OurServicesService =
     /*#__PURE__*/
@@ -3236,6 +3236,39 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       /*! ./register.component.css */
       "./src/app/register/register.component.css")).default]
     })], RegisterComponent);
+    /***/
+  },
+
+  /***/
+  "./src/environments/environment.prod.ts":
+  /*!**********************************************!*\
+    !*** ./src/environments/environment.prod.ts ***!
+    \**********************************************/
+
+  /*! exports provided: environment */
+
+  /***/
+  function srcEnvironmentsEnvironmentProdTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "environment", function () {
+      return environment;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+
+    var environment = {
+      production: true,
+      apiUrl: "https://rad-app123.herokuapp.com/api"
+    };
     /***/
   },
 
