@@ -28,6 +28,10 @@
             </ng-template>
         </ngb-rating>
 
+        <div class="row mx-auto">
+          <button [hidden]="!hideNum" class="btn btn-warning rounded-2" (click)="hideNum = false">Book</button>
+          <button [hidden]="hideNum" class="btn btn-success rounded-2">Booked</button>
+        </div>
         <table class="my-3 table text-capitalize table-borderless">
           <tbody>
             <tr>
@@ -48,7 +52,8 @@
             </tr>
             <tr>
               <td>Contact Number</td>
-              <td>{{dataHandyman.contactNumber}}</td>
+              <td class="text-success" [hidden]="hideNum">{{dataHandyman.contactNumber}}</td>
+              <td class="text-danger"  [hidden]="!hideNum">Hidden</td>
             </tr>
             <tr>
               <td>City</td>

@@ -24,12 +24,12 @@
                     <button [routerLink]="['/contact-us']" class="contact-btn btn">
                         Contact Us
                     </button>
-                    <span class="btn">
+                    <span class="btn fb-btn">
                         <a href="https://www.facebook.com/radiatingplanet">
                             <i class="fab fa-facebook-square"></i>
                         </a>
                     </span>                    
-                    <span class="btn">
+                    <span class="btn insta-btn">
                         <a href="https://www.instagram.com/radiating.planet">
                             <i class="fab fa-instagram"></i>
                         </a>
@@ -87,6 +87,17 @@
 </div>
 <!-- END why us section -->
 
+<div class="container-fluid primary-bg-dark p-5 ">
+    <div class="row">
+        <h2 class="mx-auto text-center text-light">Suggest Service</h2>
+    </div>
+    <div class="row mt-4 mb-3 mx-auto text-center text-light">
+        <input [(ngModel)]="suggestServiceName" type="text" class="mx-auto text-center">
+    </div>
+    <div class="row my-2">
+        <button (click)="suggestService()" class="mx-auto text-center text-light btn btn-primary rounded-2">Submit</button>
+    </div>
+</div>
 
 
 <!-- OUR Services Section -->
@@ -108,7 +119,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 services-section-content-col mb-5" *ngFor="let item of services ">
             <div class="card" >
                 <div class="card-body text-center" 
-                    (click)="gotoListPage(item.id)" 
+                    (click)="gotoListPage(item._id)" 
                     [routerLink]="['/services']">
         
                     <span class="services-section-icon">
@@ -195,7 +206,7 @@
             </div>
             <div class="row card-container mt-3 mt-lg-2 justify-content-center">
                 <div
-                (click)="findIdForList()" 
+                (click)="findIdForListPage()"
                 class="card col-sm-3 handyman-section-values-img primary-light-gray"
                 [ngStyle]="{'background-image': 'url(\''+electrician.img_url+'\')'}"
                     *ngFor="let electrician of electricians">
@@ -212,7 +223,7 @@
             </div>
             <div class="row card-container mt-3 mt-lg-2 justify-content-center">
                 <div
-                (click)="findIdForList()"
+                (click)="findIdForListPage()"
                 class="card col-sm-3 handyman-section-values-img primary-light-gray"
                 [ngStyle]="{'background-image': 'url(\''+carpenter.img_url+'\')'}"
                     *ngFor="let carpenter of carpenters">
@@ -229,7 +240,7 @@
             </div>
             <div class="row card-container mt-3 mt-lg-2 justify-content-center">
                 <div
-                (click)="findIdForList()"
+                (click)="findIdForListPage()"
                 class="card col-sm-3 handyman-section-values-img primary-light-gray"
                 [ngStyle]="{'background-image': 'url(\''+plumber.img_url+'\')'}"
                     *ngFor="let plumber of plumbers">
@@ -246,7 +257,6 @@
 
 
 
-
 <!-- book-service section -->
 <div id="call-us-section" class="container-fluid call-us-section primary-bg-dark">
     <div class="row">
@@ -255,8 +265,13 @@
     <div class="row call-us-section-subhead mt-3">
         <div class="text-center mx-auto col-md-6">
             <div class="number primary-light-blue">
-                <i class="fas fa-phone-volume"></i> &nbsp;
-                +91-79008-34071
+                <a href="https://wa.me/917900834071" target="_blank">
+                    <i class="fab fa-whatsapp text-success"></i> &nbsp;
+                </a>
+                <a href="tel:+917900834071" target="_blank" >     
+                    <i class="fas fa-phone-volume"></i> &nbsp;
+                    +91-79008-34071
+                </a>
             </div>        
         </div>
     </div>

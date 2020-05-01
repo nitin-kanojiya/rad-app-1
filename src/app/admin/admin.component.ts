@@ -40,7 +40,7 @@ export class AdminComponent implements OnInit {
   
     this.ourservicesservice.getServices()
         .subscribe(data=>{
-          this.ourservices=data;
+          this.ourservices=data.documents;
         });
     this.ourservicesservice.getHandyman()
         .subscribe(data=>{

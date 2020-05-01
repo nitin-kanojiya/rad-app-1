@@ -13,6 +13,11 @@ h3{
     font-size: 1.2rem;
 }
 
+@media only screen and (max-width: 570px){
+    .mission-vision{
+        padding: 2rem;
+    }
+}
 /****************************
     Our team
 ****************************/

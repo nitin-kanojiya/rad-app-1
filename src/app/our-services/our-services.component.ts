@@ -23,10 +23,12 @@ export class OurServicesComponent implements OnInit {
   ngOnInit() {
     this.ourservicesservice.getServices()
         .subscribe(data=>{
-          this.ourservices=data;
+          this.ourservices=data.documents;
+          // console.log(data);
         });
   }
   gotoListPage(IdofService){
+    console.log(IdofService);    
     this.handymanservices.setDataForListPage(IdofService);
     this.router.navigate([`/list`],{relativeTo: this.route});
   }

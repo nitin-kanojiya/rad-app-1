@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { OurServiceModel } from "./our-services/ourservices.model";
 import { HandymanModel } from './handyman/handyman.model';
@@ -14,40 +14,57 @@ export class OurServicesService {
   constructor(private http: HttpClient) { }    
   public handymans: HandymanModel[] = [];
 
+  // services = [];
 
-  getServices(){
+  private httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json'
+    })};
+
+  getServicesApi(){
       return this.http.get<OurServiceModel[]>
       ('/assets/data/ourservice.json');
-  }
+    }
     
+    getServices(){
+      return this.http.get<{documents : OurServiceModel[]}>
+      (BACKEND_URL + "/ourservices");
+  }
+  
   getHandyman(){
     return this.http
           .get<{message: string, handymans: any }>
           ( BACKEND_URL + "/handymans");
   }
+  createSuggestion(service){
+    const newData={
+      name:service
+    }
+    this.http.post<any>(BACKEND_URL + "/suggested-services", newData)
+        .subscribe(res => {
+          console.log(res);
+        })
+  }
 
-  createCustomer(name: string, contactNumber: string, handymanId: string){
-    console.log(name +" == " + contactNumber +" == "+ handymanId);
+  createCustomer(name: string, contactNumber: string, handymanId: string, address: string){
     
-    const customerData = new FormData();
-    customerData.append("name", name);    
-    customerData.append("contactNumber", contactNumber);
-    customerData.append("handymanId", handymanId);
-
-    customerData.forEach((element) => {
-      console.log(element);      
-    });
-
+    const customerData = {
+      "name": name,    
+      "contactNumber": contactNumber,
+      "handymanId": handymanId,
+      "address": address
+    };
     this.http
         .post<{message: string, inserted: boolean, createdCustomer: any}>(
-          BACKEND_URL + "/handymans/custo",
-          customerData
+          BACKEND_URL + "/customers",
+          customerData,
+          this.httpOptions
         )
         .subscribe(responseData=>{
           console.log("added custo");
           console.log(responseData.message);
           console.log(responseData.inserted);
-          console.log(responseData.createdCustomer);          
+          console.log(responseData.createdCustomer);
         });
   }
         

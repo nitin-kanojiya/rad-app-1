@@ -10,11 +10,12 @@
             <h2 class="mx-auto primary-dark-orange">OUR SERVICES</h2>
           </div>  
           <p class="mt-5 mx-auto mb-0" style="width: 80%;">
-            <input type="text" class="form-control"
+            <input type="text"
             [(ngModel)]="searchText" 
             autocomplete="off" 
             placeholder= "Search Service.."
             aria-label= "Search Service..">  
+            <!-- class="form-control" -->
           </p>
         </div>
       </div>
@@ -54,7 +55,7 @@
       <div class="col-lg-3 col-md-4 col-sm-6 services-section-content-col mb-5" *ngFor="let item of ourservices | filter:searchText">
           <div class="card" >
               <div class="card-body text-center" 
-                  (click)="gotoListPage(item.id)" 
+                  (click)="gotoListPage(item._id)"
                   [routerLink]="['/services']">
       
                   <span class="services-section-icon">

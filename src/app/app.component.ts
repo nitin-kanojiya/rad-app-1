@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { OurServicesService } from './our-services.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,10 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit{
   title = 'rad-app';
-  constructor(private router: Router){
 
+  constructor(
+    private router: Router,
+    private ourservice: OurServicesService){
   }
 
   ngOnInit(): void {

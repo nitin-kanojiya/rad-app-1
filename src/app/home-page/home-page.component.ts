@@ -3,6 +3,7 @@ import { HandymanService } from '../handyman/handyman.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { OurServicesService } from '../our-services.service';
 import { element } from 'protractor';
+import { OurServiceModel } from '../our-services/ourservices.model';
 
 @Component({
   selector: 'app-home-page',
@@ -14,7 +15,8 @@ export class HomePageComponent implements OnInit {
   handymanCase={ value:"labour" };
   handymancaseValue: string= "";
 
-  services=[];
+  services : OurServiceModel[]=[];
+  suggestServiceName='';
 
   labours=[];
   plumbers=[];
@@ -29,9 +31,6 @@ export class HomePageComponent implements OnInit {
   
   ngOnInit() {
     this.setServices();
-    // const handys= (this.ourservicesservice.getHandyman());
-    // console.log(handys);
-    
     this.setHandymanLists();
   }
 
@@ -39,7 +38,7 @@ export class HomePageComponent implements OnInit {
     this.ourservicesservice.getServices()
     .subscribe( data =>{
       // console.log(data);
-      this.services=data.slice(0,3);
+      this.services=data.documents.slice(0,3);
     } );
   }
   setHandymanLists(){
@@ -86,99 +85,13 @@ export class HomePageComponent implements OnInit {
     this.handymancaseValue=this.handymanCase.value.toLowerCase();
     this.services.forEach(element => {
       if(this.handymancaseValue.localeCompare(element.name.toLowerCase())===0){
-        this.gotoListPage(element.id);
+        this.gotoListPage(element._id);
       }
     });
   }
 
+  suggestService(){
+    console.log(this.suggestServiceName);
+    this.ourservicesservice.createSuggestion(this.suggestServiceName);
+  }
 }
-
-
-// labours=[
-//   {
-//     "name": "ranjan pant",
-//     "age": 21,
-//     "img_url": "url('../../assets/img/labour/labour (1).jpg')"
-//   },
-//   {
-//     "name": "ravi kaler",
-//     "age": 20,
-//     "img_url": "url('../../assets/img/labour/labour (2).jpg')"
-//   },
-//   {
-//     "name": "rohit kamboj",
-//     "age": 22,
-//     "img_url": "url('../../assets/img/labour/labour (3).jpg')"
-//   },
-//   {
-//     "name": "shahid khan",
-//     "age": 20,
-//     "img_url": "url('../../assets/img/labour/labour (4).jpg')"
-//   }
-// ];
-// plumbers=[
-//   {
-//     "name": "ranjan pant",
-//     "age": 21,
-//     "img_url": "url('../../assets/img/plumber/plumber (1).jpg')"
-//   },
-//   {
-//     "name": "ravi kaler",
-//     "age": 20,
-//     "img_url": "url('../../assets/img/plumber/plumber (2).jpg')"
-//   },
-//   {
-//     "name": "rohit kamboj",
-//     "age": 22,
-//     "img_url": "url('../../assets/img/plumber/plumber (3).jpg')"
-//   },
-//   {
-//     "name": "shahid khan",
-//     "age": 20,
-//     "img_url": "url('../../assets/img/plumber/plumber (4).jpg')"
-//   }
-// ];
-// electricians=[
-//   {
-//     "name": "Aftab ahmed",
-//     "age": 21,
-//     "img_url": "url('../../assets/img/electrician/electrician (1).jpg')"
-//   },
-//   {
-//     "name": "Veer singh",
-//     "age": 20,
-//     "img_url": "url('../../assets/img/electrician/electrician (2).jpg')"
-//   },
-//   {
-//     "name": "bhole lal",
-//     "age": 22,
-//     "img_url": "url('../../assets/img/electrician/electrician (3).jpg')"
-//   },
-//   {
-//     "name": "rizwi shah",
-//     "age": 20,
-//     "img_url": "url('../../assets/img/electrician/electrician (4).jpg')"
-//   }
-// ];
-// carpenters=[
-//   {
-//     "name": "Mukesh suri",
-//     "age": 21,
-//     "img_url": "url('../../assets/img/carpenter/carpenter(1).jpg')"
-//   },
-//   {
-//     "name": "raj Ambani",
-//     "age": 20,
-//     "img_url": "url('../../assets/img/carpenter/carpenter(2).jpg')"
-//   },
-//   {
-//     "name": "Pandit ramfal",
-//     "age": 22,
-//     "img_url": "url('../../assets/img/carpenter/carpenter(3).jpg')"
-//   },
-//   {
-//     "name": "Mohd Abdul",
-//     "age": 20,
-//     "img_url": "url('../../assets/img/carpenter/carpenter(4).jpg')"
-//   }
-// ];

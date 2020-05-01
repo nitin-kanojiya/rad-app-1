@@ -10,18 +10,6 @@ const Customer = require("../models/customer");
 
 const router = express.Router();
 
-
-var mongodb = 'mongodb+srv://mmudit:uMuiTl4JaM7RAvYn@cluster0-xcjvq.mongodb.net/rad-app?retryWrites=true&w=majority';
-mongoose
-.connect(mongodb)
-.then(() => {
-    console.log("Connected to database in handymans");        
-})
-.catch(() => {
-    console.log("Connection Failed");
-});
-
-
 const MIME_TYPE_MAP = {
     "image/png": "png",
     "image/jpeg": "jpg",

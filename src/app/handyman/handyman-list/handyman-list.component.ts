@@ -3,6 +3,7 @@ import { HandymanService } from '../handyman.service';
 import { OurServicesService } from 'src/app/our-services.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
     selector: 'app-handyman-list',
@@ -16,6 +17,8 @@ export class HandymanListComponent implements OnInit {
     ourservices=[];
     // serviceData;
     handymanList=[];
+    customerForm: FormGroup;
+    IdHandymanForDetails;
 
     urlopen='url(\'';
     urlclose='\')';
@@ -31,9 +34,16 @@ export class HandymanListComponent implements OnInit {
         }
 
     ngOnInit() {
+        this.customerForm = new FormGroup({
+                'custo_name': new FormControl('',[Validators.required]),
+                'custo_number': new FormControl('',[Validators.required]),
+                    // , Validators.maxLength(10)
+                                                    // Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')
+                'custo_address': new FormControl('',[Validators.required])
+            });
         this.ourservicesservice.getServices()
                 .subscribe(data=>{
-                    this.ourservices= data;
+                    this.ourservices= data.documents;
                 });
         this.setData(this.handymanservice.getDataForListPage());
     }
@@ -41,8 +51,8 @@ export class HandymanListComponent implements OnInit {
     setData(serviceIdForListPage){
         this.ourservicesservice.getServices()
                 .subscribe(data=>{
-                    data.forEach(element=>{
-                        if(element.id === serviceIdForListPage){
+                    data.documents.forEach(element=>{
+                        if(element._id === serviceIdForListPage){
                             this.serviceName = element.name.toLowerCase();
                             this.setHandymanList();
                         }
@@ -64,13 +74,20 @@ export class HandymanListComponent implements OnInit {
                 })
     }
 
-    gotoDetailsPage(IdHandymanForDetails){
-        console.log(IdHandymanForDetails);
+    setIdForDetailsPage(data){
+        this.IdHandymanForDetails= data;
+        console.log(this.IdHandymanForDetails);
+    }
+    gotoDetailsPage(data){
         let entered:boolean = false;
         // let inserted:boolean = false;
 
-        let customerName = prompt("Please enter your Name:");
-        let customerContact = prompt("Please enter your contact number:");
+        let customerName = data.custo_name;
+        let customerContact = data.custo_number;
+        let customerAddress = data.custo_address;
+
+        console.log(customerName);
+        console.log(customerContact);
         if (customerContact == null || customerContact == "" || customerName == null || customerName == "") {
           entered = false;
           alert("Please enter details to view information !");
@@ -79,8 +96,8 @@ export class HandymanListComponent implements OnInit {
         }
         
         if(entered){
-            this.ourservicesservice.createCustomer(customerName,customerContact,IdHandymanForDetails);
-            this.handymanservice.setDataForDetailPage(IdHandymanForDetails);
+            this.ourservicesservice.createCustomer(customerName,customerContact,this.IdHandymanForDetails, customerAddress);
+            this.handymanservice.setDataForDetailPage(this.IdHandymanForDetails);
             this.router.navigate(['/details'],{relativeTo: this.route});
         }
 

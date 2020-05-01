@@ -60,7 +60,7 @@ export class RegisterComponent implements OnInit {
     });
     this.ourservicesservice.getServices()
         .subscribe(data=>{
-          this.ourservices = data;
+          this.ourservices = data.documents;
         })
   }
   

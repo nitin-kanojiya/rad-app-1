@@ -31,42 +31,48 @@ app.use((req, res, next) => {
       "Access-Control-Allow-Methods",
       "GET, POST, PATCH, PUT, DELETE, OPTIONS"
     );
-    console.log("Next doing");
+    // console.log("Next doing");
     next();
 });
 
 app.use(express.static(__dirname + '/angular-build/rad-app'));
 
 const apihandy = require("./backend/routes/handymans");
+const apiCust = require("./backend/routes/customers");
+const apiOurServ = require("./backend/routes/ourservices");
+const apiSugServ = require("./backend/routes/suggestedServices");
 
 app.use('/api/handymans',apihandy);
-app.post('/api/customer',(req,res)=>{
+app.use('/api/customers',apiCust);
+app.use('/api/ourservices',apiOurServ);
+app.use('/api/suggested-services',apiSugServ);
 
-    console.log(req.body);
+// app.post('/api/customer',(req,res)=>{
+//     console.log(req.body);
     
-    console.log(req.body.name);
-    console.log(req.body.contactNumber);
-    console.log(req.body.handymanId);
+//     console.log(req.body.name);
+//     console.log(req.body.contactNumber);
+//     console.log(req.body.handymanId);
+//     console.log(req.body.address);
       
-    const customerdata = new Customer({
-      name: req.body.name,
-      contactNumber: req.body.contactNumber,
-      handymanId: req.body.handymanId
-    });
-    console.log(customerdata);
-    
-    customerdata.save().then(createdCustomer => {
-        res.status(201).json({
-            message: "Customer Added Successfully",
-            inserted: true,
-            createdCustomer: createdCustomer
-        });
-    })
-    .catch(error => {
-      console.log("Error = " + error);
-    });
+    // const customerdata = new Customer({
+    //   name: req.body.name,
+    //   contactNumber: req.body.contactNumber,
+    //   handymanId: req.body.handymanId,
+    //   address: req.body.address
+    // });
+    // customerdata.save().then(createdCustomer => {
+    //     res.status(201).json({
+    //         message: "Customer Added Successfully",
+    //         inserted: true,
+    //         createdCustomer: createdCustomer
+    //     });
+    // })
+    // .catch(error => {
+    //   console.log("Error = " + error);
+    // });
 
-});
+// });
 
 app.get('/*', (req,res) => {
     res.sendFile(path.join(__dirname, 'angular-build/rad-app', 'index.html'))

@@ -18,6 +18,7 @@ export class HandymanDetailsComponent implements OnInit {
     ourservices=[];
     relatedHandymanList=[];
     dataHandyman;
+    hideNum = true;
 
     constructor(
         public handymanservice: HandymanService,

@@ -188,6 +188,12 @@
         width: inherit;
         margin-top: 1rem;
     }
+    .head-contact .fb-btn{
+        visibility: hidden;
+    }
+    .head-contact .insta-btn{
+        visibility: hidden;        
+    }
 
 }
 

@@ -1,5 +1,5 @@
 export interface OurServiceModel{
-    id: string,
+    _id: string,
     name: string,
     img_url: string,
     icon: string,
