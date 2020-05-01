@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: "https://rad-app123.herokuapp.com/api"
+  apiUrl: "http://161.35.132.169:3000/api"
 };
