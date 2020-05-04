@@ -25,7 +25,7 @@ router.post("", function(req, res) {
         handymanId: req.body.handymanId,
         address: req.body.address
       });
-      console.log(customerdata);
+    //   console.log(customerdata);
       
       customerdata.save().then(createdCustomer => {
           res.status(201).json({
@@ -40,10 +40,30 @@ router.post("", function(req, res) {
   }
 );
 
+router.put(
+    "/:_id",
+    (req, res, next)=>{
+        Customer.updateOne({ "_id" : req.params._id}, {hired : true})
+                .then(result => {
+                    console.log("Updated");
+                    res.status(200).json({ 
+                        message: "Update successful!",
+                        updatedCustomer: result
+                     });
+                })
+                .catch(error=>{
+                    console.log("Not updated");
+                    console.log(error);                    
+                });
+    
+    }
+)
+
+
 router.get("", (req, res, next) => {
     Customer.find().then(documents => {
         res.status(200).json({
-            message: "Posts fetched successfully!",
+            message: "Customers fetched successfully!",
             customers: documents
         });
     });

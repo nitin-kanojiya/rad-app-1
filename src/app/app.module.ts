@@ -32,6 +32,7 @@ import {
   MatButtonModule
 } from '@angular/material';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { TermsPolicyComponent } from './terms-policy/terms-policy.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     PageNotFoundComponent,
     HandymanDetailsComponent,
     HandymanListComponent,
-    AdminComponent
+    AdminComponent,
+    TermsPolicyComponent
   ],
   imports: [
     CommonModule,

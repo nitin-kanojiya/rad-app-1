@@ -15,6 +15,7 @@ export class OurServicesService {
   public handymans: HandymanModel[] = [];
 
   // services = [];
+  customerId;
 
   private httpOptions = {
     headers: new HttpHeaders({
@@ -65,8 +66,24 @@ export class OurServicesService {
           console.log(responseData.message);
           console.log(responseData.inserted);
           console.log(responseData.createdCustomer);
+          this.customerId=responseData.createdCustomer._id;
         });
   }
+
+  updateCustomer() {
+    const hired= true;
+    this.http
+      .put<any>(
+         BACKEND_URL + "/customers/"
+        + this.customerId, hired)
+      .subscribe(response => {
+        console.log(response.message);
+        console.log(response.updatedCustomer);        
+      });
+  }
+
+
+
         
   createHandyman(HandymanDetails: HandymanModel){
     const handymanData = new FormData();

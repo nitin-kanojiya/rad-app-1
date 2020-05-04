@@ -36,32 +36,6 @@ const storage = multer.diskStorage({
     }
 });
 
-router.post("/custo",
-  multer({ storage: storage}).single("img_url"),
-  (req, res, next) => {
-      console.log("strt");
-      
-    console.log(req.body);
-    console.log(req.body.name);
-    console.log("end");
-      
-      const customer = new Customer({
-        name: req.body.name,
-        contactNumber: req.body.contactNumber,
-        handymanId: req.body.handymanId
-      });
-      customer.save().then(createdCustomer => {
-          res.status(201).json({
-              message: "Customer Added Successfully",
-              createdCustomer: createdCustomer,
-              inserted: true
-          });
-      })
-      .catch(error => {
-        console.log("Error = " + error);
-      });
-  }
-);
 
 router.post("",
   multer({ storage: storage}).single("img_url"),

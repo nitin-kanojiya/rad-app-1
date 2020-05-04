@@ -6,6 +6,13 @@
 .section-head {
     margin: 4rem 0 0 0;
 }
+.section-subhead{
+    justify-content: center;
+}
+.section-subhead div{
+    font-size: 1.5rem;
+}
+
 h3{
     width: fit-content;
 }

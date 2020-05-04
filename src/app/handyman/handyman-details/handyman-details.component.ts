@@ -73,4 +73,10 @@ export class HandymanDetailsComponent implements OnInit {
         }, 2000);
     }
 
+    hireHim(){
+        this.hideNum = false;
+        console.log(this.ourservicesservice.customerId);
+        this.ourservicesservice.updateCustomer();
+    }
+
 }

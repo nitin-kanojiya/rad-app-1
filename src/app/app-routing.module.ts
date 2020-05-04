@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HandymanListComponent } from './handyman/handyman-list/handyman-list.component';
 import { HandymanDetailsComponent } from './handyman/handyman-details/handyman-details.component';
 import { AdminComponent } from './admin/admin.component';
+import { TermsPolicyComponent } from './terms-policy/terms-policy.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,9 @@ const routes: Routes = [
   },
   { 
     path: 'admin' , component: AdminComponent
+  },
+  {
+    path: 'terms' , component: TermsPolicyComponent
   }
   // ,
   // {
