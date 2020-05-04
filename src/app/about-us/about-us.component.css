@@ -9,6 +9,10 @@
 h3{
     width: fit-content;
 }
+p{
+    text-align: justify;
+}
+
 .mission-vision p{
     font-size: 1.2rem;
 }
