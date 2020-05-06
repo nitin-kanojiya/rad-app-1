@@ -6,8 +6,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const Customer = require("./backend/models/customer");
-
-var mongodb = 'mongodb+srv://mmudit:uMuiTl4JaM7RAvYn@cluster0-xcjvq.mongodb.net/rad-app?retryWrites=true&w=majority';
+var mongodb = 'mongodb+srv://nitin:nitin@first-cluster-ziwoa.mongodb.net/rad-app?retryWrites=true&w=majority'
+// var mongodb = 'mongodb+srv://mmudit:uMuiTl4JaM7RAvYn@cluster0-xcjvq.mongodb.net/rad-app?retryWrites=true&w=majority';
 mongoose
 .connect(mongodb)
 .then(() => {
