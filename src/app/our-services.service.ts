@@ -28,6 +28,8 @@ export class OurServicesService {
     }
     
     getServices(){
+      console.log("in getServices()");
+      
       return this.http.get<{documents : OurServiceModel[]}>
       (BACKEND_URL + "/ourservices");
   }

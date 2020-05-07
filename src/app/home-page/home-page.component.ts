@@ -37,7 +37,7 @@ export class HomePageComponent implements OnInit {
   setServices(){
     this.ourservicesservice.getServices()
     .subscribe( data =>{
-      // console.log(data);
+      console.log("fetched Services");
       this.services=data.documents.slice(0,3);
     } );
   }
